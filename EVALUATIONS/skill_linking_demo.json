@@ -1,0 +1,124 @@
+{
+  "resume_skill_links": [
+    {
+      "skill": "Security",
+      "category": "Information Technology",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "Microsoft Certification",
+      "category": "Information Technology",
+      "match_type": "fuzzy (0.68)"
+    },
+    {
+      "skill": "Secret Security Clearance",
+      "category": "Information Technology",
+      "match_type": "substring_alias"
+    },
+    {
+      "skill": "Manufacturing systems integration",
+      "category": "Manufacturing",
+      "match_type": "substring"
+    },
+    {
+      "skill": "Design instruction creation",
+      "category": "Design",
+      "match_type": "substring"
+    },
+    {
+      "skill": "Project management",
+      "category": "Project Management",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "SharePoint",
+      "category": "Information Technology",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "Microsoft Excel",
+      "category": "Information Technology",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "Microsoft Project",
+      "category": "Project Management",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "Microsoft Visio",
+      "category": "Information Technology",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "LAN/WAN protocols",
+      "category": "Information Technology",
+      "match_type": "exact_alias"
+    }
+  ],
+  "job_skill_links": [
+    {
+      "skill": "satellite communication protocols",
+      "category": "Engineering",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "ground infrastructure hardware",
+      "category": null,
+      "match_type": "NIL"
+    },
+    {
+      "skill": "securing satellite networks",
+      "category": "Information Technology",
+      "match_type": "substring_alias"
+    },
+    {
+      "skill": "space-based network security standards",
+      "category": "Information Technology",
+      "match_type": "substring_alias"
+    },
+    {
+      "skill": "ground station operations",
+      "category": null,
+      "match_type": "NIL"
+    },
+    {
+      "skill": "space industry standards",
+      "category": null,
+      "match_type": "NIL"
+    },
+    {
+      "skill": "designing, optimizing, troubleshooting, and managing hardware and software components in a multi-enclave network",
+      "category": "Design",
+      "match_type": "substring"
+    },
+    {
+      "skill": "network architecture design",
+      "category": "Engineering",
+      "match_type": "exact_alias"
+    },
+    {
+      "skill": "network design and development",
+      "category": "Engineering",
+      "match_type": "exact_alias"
+    }
+  ],
+  "overlap_analysis": {
+    "resume_categories": [
+      "Project Management",
+      "Manufacturing",
+      "Design",
+      "Information Technology"
+    ],
+    "job_categories": [
+      "Design",
+      "Information Technology",
+      "Engineering"
+    ],
+    "overlapping_categories": [
+      "Design",
+      "Information Technology"
+    ],
+    "match_percentage": 66.66666666666666
+  }
+}
