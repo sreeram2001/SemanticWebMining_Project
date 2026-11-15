@@ -362,6 +362,8 @@ with open("CODE/ontology.json", "w") as f:
     json.dump(ontology, f, indent=2)
 print("\n\nSaved to CODE/ontology.json")
 
+"""# Step 3 — LLM extraction"""
+
 from google.colab import userdata
 from openai import OpenAI
 
@@ -806,6 +808,8 @@ print("\nUpdated EVALUATIONS/sample_extraction.json")
 print(f"\nResume skills: {[s['name'] for s in resume_json.get('skills', [])]}")
 print(f"\nJob skills: {[s['name'] for s in job_json.get('required_skills', [])]}")
 
+"""# Step 4 — Skill Linking"""
+
 # ============================================
 # Step 4: Skill Linking (Demo on Sample)
 # ============================================
@@ -1112,3 +1116,20 @@ print("Updated CODE/README.md")
 from google.colab import userdata
 token = userdata.get('GITHUB_TOKEN')
 !git push https://Chandana0127:{token}@github.com/sreeram2001/SemanticWebMining_Project.git chandana-data-pipeline
+
+from google.colab import files
+uploaded = files.upload()  # upload the .py file here
+
+# Move it to CODE/
+import shutil
+for filename in uploaded:
+    shutil.move(filename, f"CODE/{filename}")
+    print(f"Moved {filename} to CODE/{filename}")
+
+!git add CODE/*.py
+!git commit -m "Add data pipeline script"
+
+from google.colab import userdata
+token = userdata.get('GITHUB_TOKEN')
+!git push https://Chandana0127:{token}@github.com/sreeram2001/SemanticWebMining_Project.git chandana-data-pipeline
+
