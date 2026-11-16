@@ -44,7 +44,7 @@
     "Degree": {
       "description": "An educational qualification",
       "properties": {
-        "level": "string (high_school, bachelors, masters, phd)",
+        "level": "string (high_school, associate, bachelors, masters, phd)",
         "field": "string (field of study)"
       }
     },
@@ -56,6 +56,14 @@
         "duration_months": "int (estimated)",
         "description": "string"
       }
+    },
+    "Requirement": {
+      "description": "An explicit hard requirement stated in a posting; drives the conflict penalty P",
+      "properties": {
+        "kind": "string (min_years_experience)",
+        "value": "float",
+        "importance": "string (required | preferred)"
+      }
     }
   },
   "relationship_types": {
@@ -64,7 +72,9 @@
       "to": "Skill",
       "properties": {
         "proficiency": "string (extracted if available)",
-        "source_span": "string (text evidence from resume)"
+        "source_span": "string (text evidence from resume)",
+        "span_start": "int (character offset into the cleaned text where the span starts)",
+        "span_end": "int (character offset where the span ends, exclusive)"
       }
     },
     "REQUIRES_SKILL": {
@@ -72,7 +82,9 @@
       "to": "Skill",
       "properties": {
         "importance": "string (required | preferred)",
-        "source_span": "string (text evidence from posting)"
+        "source_span": "string (text evidence from posting)",
+        "span_start": "int (character offset into the cleaned text where the span starts)",
+        "span_end": "int (character offset where the span ends, exclusive)"
       }
     },
     "HAS_DEGREE": {
@@ -80,20 +92,39 @@
       "to": "Degree",
       "properties": {
         "institution": "string",
-        "year": "string"
+        "year": "string",
+        "source_span": "string (text evidence from resume)",
+        "span_start": "int (character offset into the cleaned text where the span starts)",
+        "span_end": "int (character offset where the span ends, exclusive)"
       }
     },
     "REQUIRES_DEGREE": {
       "from": "JobPosting",
       "to": "Degree",
       "properties": {
-        "importance": "string (required | preferred)"
+        "importance": "string (required | preferred)",
+        "source_span": "string (text evidence from posting)",
+        "span_start": "int (character offset into the cleaned text where the span starts)",
+        "span_end": "int (character offset where the span ends, exclusive)"
       }
     },
     "HAS_EXPERIENCE": {
       "from": "Candidate",
       "to": "Experience",
-      "properties": {}
+      "properties": {
+        "source_span": "string (text evidence from resume)",
+        "span_start": "int (character offset into the cleaned text where the span starts)",
+        "span_end": "int (character offset where the span ends, exclusive)"
+      }
+    },
+    "HAS_REQUIREMENT": {
+      "from": "JobPosting",
+      "to": "Requirement",
+      "properties": {
+        "source_span": "string (text evidence from posting)",
+        "span_start": "int (character offset into the cleaned text where the span starts)",
+        "span_end": "int (character offset where the span ends, exclusive)"
+      }
     },
     "POSTED_BY": {
       "from": "JobPosting",

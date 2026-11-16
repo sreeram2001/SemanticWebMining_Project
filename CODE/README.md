@@ -7,8 +7,9 @@ CSE 573: Semantic Web Mining | Group 5, Project 3 | Fall 2026
 | Step | What | Output |
 |------|------|--------|
 | 1 | **Data Preprocessing** | 123,782 cleaned job postings, 1,368 resumes (12 categories), PII masked |
-| 2 | **Domain Ontology** | 6 node types, 7 relationship types → `CODE/ontology.json` |
+| 2 | **Domain Ontology** | 7 node types, 8 relationship types → `CODE/ontology.json`; extracted relationships carry a source span and character offsets |
 | 3 | **LLM Extraction** | Structured extraction (skills, degrees, experience) using Qwen3-235B via ASU Voyager |
+| 3b | **Grounded Extraction** | `CODE/extraction.py`: schema-constrained output; a fact is kept only if its span is found in the text and it passes the ontology's type checks; unsupported-fact rate per field |
 | 4 | **Skill Linking** | Fuzzy matching to LinkedIn's 35-category taxonomy (exact → substring → fuzzy → NIL) |
 
 ## What's Next
@@ -23,14 +24,18 @@ CSE 573: Semantic Web Mining | Group 5, Project 3 | Fall 2026
 ## Project Structure
 SemanticWebMining_Project/
 ├── CODE/
-│ ├── ontology.json # Domain ontology (6 nodes, 7 relationships)
+│ ├── ontology.json # Domain ontology (7 nodes, 8 relationships)
+│ ├── extraction.py # Grounded extraction (Step 3b)
+│ ├── test_extraction.py # Unit tests for extraction.py
 │ └── README.md # This file
 ├── DATA/ # Downloaded at runtime (not committed)
 │ ├── linkedin-job-postings/ # ~160MB Kaggle dataset
 │ ├── resume-dataset/ # ~55MB Kaggle dataset
-│ └── processed/ # Cleaned CSVs
+│ ├── processed/ # Cleaned CSVs
+│ └── extracted/ # Grounded extraction output (JSONL, resumable)
 ├── EVALUATIONS/
 │ ├── sample_extraction.json # Sample LLM extraction output
+│ ├── grounded_extraction_summary.json # Kept/unsupported/invalid facts per field
 │ └── skill_linking_demo.json # Skill linking results
 └── SWM_Project_Linkedin_Assistant.ipynb
 
@@ -49,9 +54,14 @@ SemanticWebMining_Project/
 
 3. Run the notebook cells in order. Datasets download automatically via Kaggle API.
 
+4. Unit tests for the extraction module (standard library only, no API key needed):
+   ```bash
+   cd CODE && python -m unittest test_extraction
+   ```
+
 ## Key Details
 
 - **Model**: `qwen3-235b-a22b` on ASU Voyager (free, OpenAI-compatible API)
 - **Datasets**: LinkedIn Job Postings (Kaggle, CC-BY-SA-4.0) + Resume Dataset (Kaggle, CC0-1.0)
-- **Extraction**: Ontology-guided prompts → structured JSON with source spans
+- **Extraction**: Ontology-guided prompts → structured JSON with source spans; ungrounded or ill-typed facts are rejected and counted
 - **Skill Linking**: Alias table + fuzzy matching (SequenceMatcher ≥ 0.6) → LinkedIn categories
