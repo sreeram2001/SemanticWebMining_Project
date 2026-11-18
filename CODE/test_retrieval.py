@@ -214,3 +214,26 @@ class DataTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PriorTests(unittest.TestCase):
+    def test_skill_list_loads(self):
+        skills = rt.load_prior_skills()
+        self.assertIn("python", skills)
+        self.assertEqual(len(skills), len(set(skills)))
+
+    def test_whole_word_matching(self):
+        skills = ["sql", "r", "power bi"]
+        self.assertEqual(rt.prior_extract_skills("MySQL and Power BI, R code", skills),
+                         ["power bi", "r"])
+
+    def test_query_is_skills_then_clean_text(self):
+        self.assertEqual(rt.prior_query("Python\n\n  dev", ["python"]), "python Python dev")
+
+    def test_job_text_title_once(self):
+        self.assertEqual(rt.prior_job_text({"title": "Dev", "description": "SQL"}), "Dev SQL")
+
+    def test_prior_tfidf_is_plain(self):
+        idx = rt.prior_tfidf(["a", "b"], ["python sql", "nurse care"])
+        self.assertFalse(idx.vectorizer.sublinear_tf)
+        self.assertIsNone(idx.vectorizer.max_features)

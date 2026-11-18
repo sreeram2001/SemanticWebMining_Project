@@ -189,3 +189,31 @@ def load_corpus(processed_dir="DATA/processed"):
     posts = pd.read_csv(os.path.join(processed_dir, "postings_cleaned.csv"))
     resumes = pd.read_csv(os.path.join(processed_dir, "resumes_cleaned.csv"))
     return posts, resumes
+
+
+PRIOR_SKILLS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "prior_skills.json")
+
+
+def load_prior_skills(path=PRIOR_SKILLS_PATH):
+    import json
+    with open(path, encoding="utf-8") as f:
+        skills = json.load(f)["skills"]
+    return sorted(set(skills), key=len, reverse=True)
+
+
+def prior_extract_skills(text, skills):
+    low = text.lower()
+    return sorted({s for s in skills if re.search(r"\b" + re.escape(s) + r"\b", low)})
+
+
+def prior_query(text, skills):
+    clean = re.sub(r"\s+", " ", str(text or "")).strip()
+    return " ".join(prior_extract_skills(clean, skills)) + " " + clean
+
+
+def prior_job_text(row):
+    return f"{row.get('title') or ''} {row.get('description') or ''}"
+
+
+def prior_tfidf(ids, texts):
+    return TfidfIndex(ids, texts, sublinear_tf=False, max_features=None)
