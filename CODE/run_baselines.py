@@ -54,7 +54,7 @@ def build_dense_index(ids, texts, cache_path, model_name=DEFAULT_MODEL):
 
 
 def main(argv=None):
-    p = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    p = argparse.ArgumentParser(description="Run the baseline rankers for each resume.")
     p.add_argument("--processed", default="DATA/processed")
     p.add_argument("--out", default="DATA/runs/baselines.json")
     p.add_argument("--cache", default="DATA/embeddings/postings.npz")

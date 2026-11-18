@@ -99,3 +99,10 @@ class DenseCacheTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CliTests(unittest.TestCase):
+    def test_help_does_not_crash(self):
+        with self.assertRaises(SystemExit) as cm:
+            rb.main(["--help"])
+        self.assertEqual(cm.exception.code, 0)
