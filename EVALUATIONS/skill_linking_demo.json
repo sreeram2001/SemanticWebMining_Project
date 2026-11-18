@@ -83,24 +83,14 @@
       "match_type": "NIL"
     },
     {
-<<<<<<< Updated upstream
-      "skill": "space industry standards",
-=======
       "skill": "ground terminals",
->>>>>>> Stashed changes
       "category": null,
       "match_type": "NIL"
     },
     {
-<<<<<<< Updated upstream
-      "skill": "designing, optimizing, troubleshooting, and managing hardware and software components in a multi-enclave network",
-      "category": "Design",
-      "match_type": "substring"
-=======
       "skill": "space industry standards",
       "category": null,
       "match_type": "NIL"
->>>>>>> Stashed changes
     },
     {
       "skill": "network architecture design",
@@ -111,47 +101,20 @@
       "skill": "network design and development",
       "category": "Engineering",
       "match_type": "exact_alias"
-<<<<<<< Updated upstream
-=======
-    },
-    {
-      "skill": "troubleshooting hardware and software components",
-      "category": null,
-      "match_type": "NIL"
->>>>>>> Stashed changes
     }
   ],
-  "overlap_analysis": {
-    "resume_categories": [
-<<<<<<< Updated upstream
-      "Project Management",
-      "Manufacturing",
-      "Design",
-      "Information Technology"
-    ],
-    "job_categories": [
-      "Design",
-=======
-      "Information Technology",
-      "Manufacturing",
-      "Design",
-      "Project Management"
-    ],
-    "job_categories": [
->>>>>>> Stashed changes
-      "Information Technology",
-      "Engineering"
-    ],
-    "overlapping_categories": [
-<<<<<<< Updated upstream
-      "Design",
-      "Information Technology"
-    ],
-    "match_percentage": 66.66666666666666
-=======
-      "Information Technology"
-    ],
-    "match_percentage": 50.0
->>>>>>> Stashed changes
-  }
+  "candidate_categories": [
+    "Information Technology",
+    "Manufacturing",
+    "Design",
+    "Project Management"
+  ],
+  "job_categories": [
+    "Information Technology",
+    "Engineering"
+  ],
+  "overlapping_categories": [
+    "Information Technology"
+  ],
+  "match_percentage": 50.0
 }

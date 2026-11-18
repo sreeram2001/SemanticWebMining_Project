@@ -53,37 +53,22 @@
         "title": "Information Technology Supervisor",
         "company": "Company Name",
         "duration_months": 41,
-<<<<<<< Updated upstream
-        "key_responsibilities": "Supervised up to 10 personnel, trained staff in IT equipment setup, maintained inventory of over $1 million in communications equipment, and ensured signal communications at Fort Bragg."
-=======
         "key_responsibilities": "Supervised up to 10 personnel, trained staff in IT equipment setup, managed inventory of over $1 million in communications equipment, and maintained signal communications for Fort Bragg under a presidential tasking."
->>>>>>> Stashed changes
       },
       {
         "title": "Information Technology Technician",
         "company": "Company Name",
         "duration_months": 25,
-<<<<<<< Updated upstream
-        "key_responsibilities": "Maintained and repaired communications equipment, installed operating systems, set up computer systems on networks, and worked with IP addresses and LAN/WAN protocols."
-=======
         "key_responsibilities": "Maintained and repaired communications equipment, installed operating systems, set up computer systems on networks, and received training in LAN/WAN protocols."
->>>>>>> Stashed changes
       },
       {
         "title": "Radiology Technologist",
         "company": "Company Name",
         "duration_months": 5,
-<<<<<<< Updated upstream
-        "key_responsibilities": "Performed radiological examinations, operated and adjusted medical equipment, assisted patients, and maintained electronic documentation."
-      }
-    ],
-    "summary": "Experienced Information Technology Supervisor with over 5 years in IT and military service, skilled in equipment maintenance, personnel training, and network communications, seeking a role as an Information Technology Specialist."
-=======
         "key_responsibilities": "Performed radiological examinations, operated and adjusted medical equipment, assisted patients, and maintained accurate electronic documentation."
       }
     ],
     "summary": "Experienced Information Technology Supervisor with over 5 years in military IT roles, including supervisory experience, equipment training, and management of high-value communications assets."
->>>>>>> Stashed changes
   },
   "job_extraction": {
     "title": "Sr. Network Engineer",
@@ -114,16 +99,6 @@
         "source_span": "Experience with ground station operations"
       },
       {
-<<<<<<< Updated upstream
-        "name": "space industry standards",
-        "importance": "required",
-        "source_span": "Knowledge of space industry standards"
-      },
-      {
-        "name": "designing, optimizing, troubleshooting, and managing hardware and software components in a multi-enclave network",
-        "importance": "required",
-        "source_span": "Designing, optimizing, troubleshooting, and managing hardware and software components in a multi-enclave network"
-=======
         "name": "ground terminals",
         "importance": "required",
         "source_span": "Ability to work with ground terminals to ensure reliable communications with the MUOS spacecraft"
@@ -132,7 +107,6 @@
         "name": "space industry standards",
         "importance": "required",
         "source_span": "Knowledge of space industry standards: Understanding industry-specific standards and regulations related to space systems for compliance and operational efficiency"
->>>>>>> Stashed changes
       },
       {
         "name": "network architecture design",
@@ -143,32 +117,9 @@
         "name": "network design and development",
         "importance": "required",
         "source_span": "Network design and development to modify, and or improve functionality"
-<<<<<<< Updated upstream
-=======
-      },
-      {
-        "name": "troubleshooting hardware and software components",
-        "importance": "required",
-        "source_span": "Designing, optimizing, troubleshooting, and managing hardware and software components in a multi-enclave network"
->>>>>>> Stashed changes
       }
     ],
-    "required_degrees": [
-      {
-        "level": "bachelors",
-        "field": "any",
-        "importance": "required"
-      }
-    ],
-    "experience_required": {
-      "min_years": 2,
-      "level": "mid"
-    },
-<<<<<<< Updated upstream
-    "summary": "Sr. Network Engineer responsible for designing, optimizing, and securing satellite communication systems and multi-enclave networks."
-=======
     "summary": "Sr. Network Engineer responsible for designing, optimizing, troubleshooting, and managing network architecture with a focus on satellite communications and space-based systems in San Antonio, TX."
->>>>>>> Stashed changes
   },
   "metadata": {
     "model": "qwen3-235b-a22b",
