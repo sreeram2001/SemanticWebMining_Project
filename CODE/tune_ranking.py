@@ -85,6 +85,21 @@ def tune(data, jobs, resumes, qrels, dev_ids, grid=None, k=10):
     return best, tried
 
 
+def pool_runs(data, jobs, resumes, ids, grid=None, k=10):
+    grid = grid or GRID
+    union = {}
+    combos = itertools.product(grid["b2"], grid["b3"], grid["lambdas"],
+                               grid.get("w_required", [2.0]), grid.get("top", [None]))
+    for b2, b3, (ls, lc), w, top in combos:
+        setting = {"betas": {"b1": 1.0, "b2": b2, "b3": b3},
+                   "lambdas": {"lam_sub": ls, "lam_cat": lc}, "w_required": w, "top": top}
+        run = full_run(data, jobs, resumes, setting["betas"], ids=ids, **setting_args(setting))
+        for rid, ranked in run.items():
+            union.setdefault(rid, [])
+            union[rid].extend(j for j in ranked[:k] if j not in union[rid])
+    return union
+
+
 def compare(runs, qrels, ids, k=10):
     table = {m: rt.evaluate(subset(run, ids), qrels, k) for m, run in runs.items()}
     key = f"nDCG@{k}"
@@ -120,7 +135,7 @@ def _load_linked(path):
 
 def main(argv=None):
     p = argparse.ArgumentParser(description="Tune and evaluate graph-aware ranking.")
-    p.add_argument("command", choices=["tune", "evaluate"])
+    p.add_argument("command", choices=["tune", "evaluate", "pool-runs"])
     p.add_argument("--split", choices=["dev", "test"], default="dev")
     p.add_argument("--runs", default="DATA/runs/baselines.json")
     p.add_argument("--resumes", default="DATA/linked/resumes.jsonl")
@@ -135,6 +150,16 @@ def main(argv=None):
         data = json.load(f)
     with open(os.path.join(a.relevance, "pool.json")) as f:
         chosen = json.load(f)["resumes"]
+    if a.command == "pool-runs":
+        resumes, jobs = _load_linked(a.resumes), _load_linked(a.postings)
+        out = pool_runs(data, jobs, resumes, set(chosen["dev"] + chosen["test"]), k=a.k)
+        path = os.path.join(a.out, "full_pool_run.json")
+        os.makedirs(a.out, exist_ok=True)
+        with open(path, "w") as f:
+            json.dump(out, f)
+        print(f"wrote {path}; next: python CODE/pooling.py --extend {path}")
+        return
+
     qrels, agree = load_qrels(a.relevance)
     if not qrels:
         raise SystemExit(f"error: no grades in {a.relevance}/grades_*.csv yet")

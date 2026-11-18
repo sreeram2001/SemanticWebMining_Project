@@ -174,6 +174,15 @@ def agreement(sheets):
     return {"pairs": pairs, "mean_kappa": mean}
 
 
+def extend_pool(pool, run, depth=10):
+    out = {}
+    for rid, rows in pool.items():
+        have = {r["job_id"] for r in rows}
+        new = [j for j in [str(x) for x in run.get(rid, [])[:depth]] if j not in have]
+        out[rid] = list(dict.fromkeys(new))
+    return out
+
+
 ANNOTATORS = ["aakash", "chandana", "chirag", "kaushal", "richitha", "sreeram"]
 POOL_METHODS = ("bm25", "dense", "hybrid", "rrf", "rerank")
 
@@ -192,7 +201,10 @@ def main(argv=None):
     p.add_argument("--depth", type=int, default=10)
     p.add_argument("--shared", type=int, default=3, help="resumes everyone grades")
     p.add_argument("--seed", type=int, default=573)
+    p.add_argument("--extend", help="json {resume id: [job ids]}; adds only the unjudged pairs as extra sheets")
     a = p.parse_args(argv)
+    if a.extend:
+        return extend_main(a)
 
     with open(a.runs) as f:
         data = json.load(f)
@@ -231,6 +243,40 @@ def main(argv=None):
         json.dump(meta, f, indent=1)
     print(f"{meta['stats']['pairs']} pairs for {len(ids)} resumes "
           f"({meta['stats']['mean_per_resume']:.1f} per resume) -> {a.out}")
+
+
+def extend_main(a):
+    import json
+
+    import pandas as pd
+
+    meta_path = os.path.join(a.out, "pool.json")
+    with open(meta_path) as f:
+        meta = json.load(f)
+    with open(a.extend) as f:
+        run = json.load(f)
+    new = extend_pool(meta["pool"], run, a.depth)
+    extra = {r: [{"job_id": j, "methods": ["full"]} for j in js] for r, js in new.items() if js}
+    if not extra:
+        print("nothing new to grade")
+        return
+    job_ids = {row["job_id"] for rows in extra.values() for row in rows}
+    posts = pd.read_csv(os.path.join(a.processed, "postings_cleaned.csv"),
+                        usecols=["job_id", "title", "company_name", "description"])
+    posts["job_id"] = posts["job_id"].astype(str)
+    info = posts[posts["job_id"].isin(job_ids)].set_index("job_id").to_dict("index")
+    tmp = os.path.join(a.out, "_extra")
+    write_sheets(extra, {r: "" for r in extra}, info, tmp, ANNOTATORS, assignment=meta["assignment"])
+    for name in ANNOTATORS:
+        os.replace(os.path.join(tmp, f"grades_{name}.csv"), os.path.join(a.out, f"grades_{name}_extra.csv"))
+    os.remove(os.path.join(tmp, "resumes.csv"))
+    os.rmdir(tmp)
+    for rid, rows in extra.items():
+        meta["pool"][rid].extend(rows)
+    meta.setdefault("extra_methods", []).append("full")
+    with open(meta_path, "w") as f:
+        json.dump(meta, f, indent=1)
+    print(f"{sum(len(v) for v in extra.values())} new pairs in grades_<name>_extra.csv")
 
 
 if __name__ == "__main__":

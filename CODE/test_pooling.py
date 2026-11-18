@@ -179,3 +179,10 @@ class AssignTests(unittest.TestCase):
             rows = {os.path.basename(p): list(csv.DictReader(open(p))) for p in paths[1:]}
         self.assertEqual([r["resume_id"] for r in rows["grades_x.csv"]], ["r1"])
         self.assertEqual(len(rows["grades_y.csv"]), 2)
+
+
+class ExtendTests(unittest.TestCase):
+    def test_only_unjudged_pairs(self):
+        pool = {"r1": [{"job_id": "j1", "methods": []}], "r2": []}
+        out = pl.extend_pool(pool, {"r1": ["j1", "j2", "j2", "j3"], "r2": [7]}, depth=3)
+        self.assertEqual(out, {"r1": ["j2"], "r2": ["7"]})

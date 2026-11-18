@@ -81,3 +81,10 @@ class ShortlistTests(unittest.TestCase):
         out = tr.setting_args({"lambdas": {"lam_sub": 0.6, "lam_cat": 0.3}, "w_required": 3.0, "top": 20})
         self.assertEqual(out["weights"], {"required": 3.0, "preferred": 1.0})
         self.assertEqual(out["top"], 20)
+
+
+class PoolRunsTests(unittest.TestCase):
+    def test_union_of_top_k_over_grid(self):
+        grid = {"b2": [0.0, 1.0], "b3": [0.0], "lambdas": [(0.5, 0.25)], "w_required": [2.0], "top": [None]}
+        out = tr.pool_runs(DATA, JOBS, RESUMES, {"r1"}, grid, k=1)
+        self.assertEqual(out, {"r1": ["jA", "jB"]})
