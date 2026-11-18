@@ -374,12 +374,13 @@ def parse_json(text):
         text = text.rsplit("```", 1)[0]
     text = text.strip()
     try:
-        return json.loads(text)
+        # Qwen sometimes leaves a raw tab or newline inside a string
+        return json.loads(text, strict=False)
     except json.JSONDecodeError:
         start, end = text.find("{"), text.rfind("}")
         if start < 0 or end <= start:
             raise ValueError("no JSON object in model reply")
-        return json.loads(text[start:end + 1])
+        return json.loads(text[start:end + 1], strict=False)
 
 
 def _status(exc):
