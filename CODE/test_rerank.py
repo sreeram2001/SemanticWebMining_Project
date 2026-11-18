@@ -40,7 +40,7 @@ class RerankerTests(unittest.TestCase):
         out = self.r.rerank("python sql data engineer", self.cands)
         self.assertEqual(out[0][2], 1.0)
         self.assertEqual(out[-1][2], 0.0)
-        self.assertEqual(out[0][1], 3.0)  # raw score kept
+        self.assertEqual(out[0][1], 3.0)
 
     def test_top_n_drops_the_tail(self):
         out = self.r.rerank("python sql data", self.cands, top_n=2)

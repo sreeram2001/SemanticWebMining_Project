@@ -1,14 +1,3 @@
-"""Retrieval baselines and ranking metrics
-
-Four rankers over the job postings, each returning a ranked list of job ids:
-  * BM25            lexical (Robertson and Zaragoza, 2009), pure Python
-  * dense           sentence-embedding cosine similarity (SBERT)
-  * weighted hybrid equal-weight TF-IDF + SBERT, the previous team's ranker
-  * RRF             Reciprocal Rank Fusion of BM25 and dense (Cormack 2009)
-plus Precision@k and nDCG@k for the evaluation harness.
-
-"""
-
 import math
 import os
 import re
