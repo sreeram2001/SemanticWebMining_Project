@@ -12,8 +12,8 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from assistant.chat import HELP, CareerAgent  # noqa: E402
-from core.config import load_config  # noqa: E402
-from core.pipeline import Pipeline  # noqa: E402
+from core.config import ConfigError, load_config  # noqa: E402
+from core.pipeline import InputError, Pipeline  # noqa: E402
 from rank.ranking import METHODS  # noqa: E402
 
 SAMPLE_CONFIG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "sample_data", "config_sample.json")
@@ -76,6 +76,10 @@ def build_app(agent):
             return history, state
         return _say(history, f"method {method}", _agent(state).recommend()), state
 
+    import inspect
+    # Gradio 4.44/5.x default to tuple history; 6.x accepts only messages and dropped `type`.
+    chat_kwargs = {"type": "messages"} if "type" in inspect.signature(gr.Chatbot.__init__).parameters else {}
+
     with gr.Blocks(title="LinkedIn Assistant") as demo:
         gr.Markdown("# LinkedIn Assistant\nKnowledge-graph job matching with grounded explanations "
                     "(CSE 573, Group 5).")
@@ -91,16 +95,17 @@ def build_app(agent):
                 gr.Markdown(f"<small>Backends: dense = {backends['dense']}; reranker = {backends['reranker']}; "
                             f"linker = {backends['linker']}</small>")
             with gr.Column(scale=2):
-                chat = gr.Chatbot(value=[{"role": "assistant", "content": HELP}], height=560, label="Assistant")
-                msg = gr.Textbox(placeholder="e.g. jobs, why 1, gaps, compare", show_label=False)
+                chat = gr.Chatbot(value=[{"role": "assistant", "content": HELP}], height=560, label="Assistant",
+                                  **chat_kwargs)
+                msg = gr.Textbox(placeholder="e.g. jobs, why 1, gaps, compare", label="Message", show_label=False)
                 with gr.Row():
-                    quick = [gr.Button(t, size="sm") for t in ("jobs", "why 1", "gaps", "skills", "compare")]
+                    quick = {t: gr.Button(t, size="sm") for t in ("jobs", "why 1", "gaps", "skills", "compare")}
 
         load_btn.click(load, [sample, upload, pasted, chat, state], [chat, state, pasted])
         msg.submit(respond, [msg, chat, state], [chat, state, msg])
         method.change(set_method, [method, chat, state], [chat, state])
-        for b in quick:
-            b.click(respond, [b, chat, state], [chat, state, msg])
+        for text, b in quick.items():               # bind the command text; don't read it back from the Button
+            b.click(lambda history, st, text=text: respond(text, history, st), [chat, state], [chat, state, msg])
     return demo
 
 
@@ -113,10 +118,18 @@ def main(argv=None):
     ap.add_argument("--host", default="127.0.0.1")
     ap.add_argument("--port", type=int, default=7860)
     ap.add_argument("--share", action="store_true", help="create a public Gradio link")
+    ap.add_argument("--debug", action="store_true", help="show full tracebacks")
     args = ap.parse_args(argv)
-    cfg = load_config(args.config or (SAMPLE_CONFIG if args.sample else None))
-    print("building the knowledge graph ...")
-    agent = CareerAgent(Pipeline(cfg, use_models=not args.no_models), use_llm=not args.no_llm)
+    try:
+        cfg = load_config(args.config or (SAMPLE_CONFIG if args.sample else None))
+        print("building the knowledge graph ...")
+        agent = CareerAgent(Pipeline(cfg, use_models=not args.no_models), use_llm=not args.no_llm)
+    except (ConfigError, InputError) as exc:
+        if args.debug:
+            raise
+        hint = "" if args.sample or args.config else \
+            "\n(no real data yet? try the offline demo: python CODE/app.py --sample)"
+        sys.exit(f"error: {exc}{hint}")
     print("backends:", agent.ranker.backends)
     build_app(agent).launch(server_name=args.host, server_port=args.port, share=args.share)
 
