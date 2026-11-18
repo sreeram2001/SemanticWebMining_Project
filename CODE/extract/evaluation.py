@@ -1,10 +1,4 @@
-"""Extraction gold set and scoring.
-
-Gold documents are JSON files that annotators fill in by hand, one file per
-document. Model output (the JSONL records written by extraction.run_batch) is
-scored against them per field with precision, recall and F1, for the grounded
-pipeline and for the same output with the grounding check switched off.
-"""
+"""Extraction gold set and scoring: per-field P/R/F1, grounded vs. ungrounded."""
 
 import glob
 import json
@@ -13,7 +7,7 @@ import random
 import re
 from collections import Counter
 
-from extraction import (
+from extract.extraction import (
     FIELDS, SINGLE_FIELDS, UNSUPPORTED, Extractor, ground, load_records, run_batch, summarize,
 )
 
@@ -30,12 +24,7 @@ def _norm(value):
 
 
 def fact_key(field, fact):
-    """What has to agree for a predicted fact to count as the gold fact.
-
-    Spans are not part of the key: where a fact is quoted from is scored by
-    the unsupported-fact rate, and a skill mentioned twice may be labeled at
-    either mention.
-    """
+    """Matching key for a fact (span-independent)."""
     if field in ("skills", "required_skills"):
         return _norm(fact.get("name"))
     if field in ("degrees", "required_degrees"):
@@ -57,17 +46,13 @@ def _keys(kind, facts):
     out = {}
     for field in FIELDS[kind]:
         keys = [fact_key(field, f) for f in _as_list(field, facts.get(field))]
-        # one gold fact per distinct key, so a skill listed twice counts once
+        # dedupe by key
         out[field] = Counter(set(keys)) if field in ("skills", "required_skills") else Counter(keys)
     return out
 
 
 def ungrounded(record):
-    """The record's facts as they would be without the span check.
-
-    Facts rejected only because their span was missing are put back; facts
-    that failed the type checks stay out, so the ablation isolates grounding.
-    """
+    """Facts without the span check (type failures still excluded)."""
     kind = record["kind"]
     facts = {f: list(_as_list(f, v)) for f, v in record["facts"].items()}
     for r in record["rejected"]:
@@ -88,11 +73,7 @@ def _filename(kind, doc_id):
 
 
 def write_templates(kind, docs, out_dir):
-    """Write one blank gold file per (doc_id, text, category) tuple.
-
-    Existing files are never overwritten, because they may already hold an
-    annotator's work. Returns (written, kept) counts.
-    """
+    """Write blank gold files (no overwrite). Returns (written, kept)."""
     if kind not in FIELDS:
         raise ValueError(f"unknown kind: {kind}")
     os.makedirs(out_dir, exist_ok=True)
@@ -113,13 +94,7 @@ def write_templates(kind, docs, out_dir):
 
 
 def load_gold(gold_dir):
-    """Read labeled gold files.
-
-    A file counts as labeled once its "annotator" field is filled in. Every
-    labeled fact goes through the same span and type checks as model output,
-    so a typo in a copied span is reported instead of silently scored.
-    Returns (gold, problems, unlabeled): gold maps (kind, doc_id) to facts.
-    """
+    """Load and check gold files -> ({(kind, doc_id): facts}, problems, n_unlabeled)."""
     gold, problems, unlabeled = {}, [], 0
     for path in sorted(glob.glob(os.path.join(gold_dir, "*.json"))):
         name = os.path.basename(path)
@@ -144,11 +119,10 @@ def load_gold(gold_dir):
 
 
 def gold_docs(gold_dir, kind):
-    """(doc_id, text) pairs for labeled gold documents, to run models on."""
+    """(doc_id, text) for labeled gold documents."""
     out = []
     for path in sorted(glob.glob(os.path.join(gold_dir, f"{kind}_*.json"))):
-        # a file an annotator is halfway through saving is skipped here;
-        # load_gold is what reports it
+        # skip half-saved files
         try:
             with open(path, encoding="utf-8") as f:
                 doc = json.load(f)
@@ -164,13 +138,13 @@ def gold_docs(gold_dir, kind):
 def _prf(tp, fp, fn):
     p = tp / (tp + fp) if tp + fp else None
     r = tp / (tp + fn) if tp + fn else None
-    # written in counts so predicting nothing against real gold scores 0, not undefined
+    # empty prediction vs. real gold = 0
     f1 = 2 * tp / (2 * tp + fp + fn) if tp + fp + fn else None
     return p, r, f1
 
 
 def _counts(kind, predicted, gold):
-    """Per-document tp/fp/fn per field. predicted and gold map doc_id -> facts."""
+    """Per-document tp/fp/fn per field (doc_id -> facts)."""
     per_doc = {}
     for doc_id, g in gold.items():
         gk = _keys(kind, g)
@@ -192,8 +166,7 @@ def _aggregate(kind, per_doc, doc_ids):
         fn = sum(per_doc[d][field][2] for d in doc_ids)
         p, r, f1 = _prf(tp, fp, fn)
         fields[field] = {"tp": tp, "fp": fp, "fn": fn, "precision": p, "recall": r, "f1": f1}
-        # a field with no gold facts says nothing about recall, so leave it
-        # out of the macro average rather than scoring it 0 or 1
+        # skip fields with no gold in macro avg
         if tp + fn:
             f1s.append(f1)
     macro = sum(f1s) / len(f1s) if f1s else None
@@ -226,12 +199,7 @@ def for_kind(gold, kind):
 
 
 def score(kind, predicted, gold):
-    """Score predicted facts against gold; both map doc_id -> facts.
-
-    Documents in the gold set with no prediction (the model errored on them)
-    count as predicting nothing, so failures lower recall instead of
-    disappearing from the score.
-    """
+    """Score predicted vs. gold; missing predictions = empty."""
     if not gold:
         return None
     per_doc = _counts(kind, predicted, gold)
@@ -242,10 +210,7 @@ def score(kind, predicted, gold):
 
 
 def evaluate_run(path, gold, kind):
-    """Score one model's JSONL output, with and without grounding.
-
-    gold is load_gold's mapping; only documents of this kind are scored.
-    """
+    """Score one JSONL run of this kind, with and without grounding."""
     gold = for_kind(gold, kind)
     records = [r for r in load_records(path) if r["kind"] == kind and r["status"] == "ok"]
     grounded = {r["doc_id"]: r["facts"] for r in records}
@@ -254,11 +219,7 @@ def evaluate_run(path, gold, kind):
 
 
 def agreement(dir_a, dir_b):
-    """Agreement between two annotators on the documents both labeled.
-
-    F1 is symmetric, so scoring one annotator against the other gives the
-    usual pairwise F1 agreement for span extraction.
-    """
+    """Pairwise annotator F1 on shared documents."""
     a, _, _ = load_gold(dir_a)
     b, _, _ = load_gold(dir_b)
     out = {}
@@ -278,12 +239,7 @@ def run_slug(model):
 
 
 def compare_models(client, models, gold_dir, out_dir, **extractor_args):
-    """Run each model on the labeled gold documents and score it.
-
-    Documents are extracted whole (no truncation) so a fact the annotator
-    labeled late in a long posting is not counted as a miss. Runs append to
-    one JSONL file per model and kind, so an interrupted comparison resumes.
-    """
+    """Run and score each model on gold documents (resumable)."""
     gold, _, _ = load_gold(gold_dir)
     results = {}
     for model in models:
@@ -302,7 +258,7 @@ def compare_models(client, models, gold_dir, out_dir, **extractor_args):
 
 
 def comparison_rows(results):
-    """Flatten compare_models output into one row per model, kind and mode."""
+    """One row per model, kind and mode."""
     rows = []
     for model, kinds in results.items():
         for kind, entry in kinds.items():
@@ -318,8 +274,7 @@ def comparison_rows(results):
                        "failed_docs": s["missing_predictions"]}
                 for field, c in s["fields"].items():
                     row[f"{field}_f1"] = c["f1"]
-                # the grounded pipeline drops every unsupported fact, so only
-                # the ablation keeps any in its output
+                # grounding drops all unsupported facts
                 row["unsupported_rate"] = (round(unsupported / total, 4) if total else None) \
                     if mode == "ungrounded" else 0.0
                 rows.append(row)

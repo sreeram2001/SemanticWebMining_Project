@@ -1,6 +1,6 @@
-"""Unit tests for skill_linking.py (standard library only, no API key needed).
+"""skill_linking.py tests (stdlib only, no key).
 
-    cd CODE && python -m unittest test_skill_linking
+    cd CODE && python -m unittest tests.test_skill_linking
 """
 
 import json
@@ -8,7 +8,7 @@ import os
 import tempfile
 import unittest
 
-import skill_linking as sl
+from linking import skill_linking as sl
 
 RAW = [
     {"id": "KS1", "name": "Python (Programming Language)",
@@ -48,7 +48,7 @@ class FakeResponse:
 
 
 class FakeSession:
-    """Replays queued responses per URL and records every call."""
+    """Replays queued responses per URL; records calls."""
 
     def __init__(self, get_responses, post_response=None):
         self.get_responses = {url: list(r) for url, r in get_responses.items()}

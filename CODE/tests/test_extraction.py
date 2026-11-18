@@ -4,7 +4,7 @@ import tempfile
 import unittest
 from types import SimpleNamespace
 
-from extraction import (
+from extract.extraction import (
     Extractor, UNSUPPORTED, done_ids, ground, load_records, locate_span,
     parse_json, run_batch, summarize,
 )
@@ -30,7 +30,7 @@ class FakeError(Exception):
 
 
 class FakeClient:
-    """Stands in for openai.OpenAI; replies are queued per call."""
+    """Fake OpenAI client with queued replies."""
 
     def __init__(self, replies, reject_schema=False):
         self.replies = list(replies)

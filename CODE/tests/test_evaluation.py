@@ -4,11 +4,11 @@ import tempfile
 import unittest
 from types import SimpleNamespace
 
-from evaluation import (
+from extract.evaluation import (
     agreement, compare_models, comparison_rows, fact_key, for_kind, gold_docs,
     load_gold, score, ungrounded, write_templates,
 )
-from extraction import UNSUPPORTED, ground
+from extract.extraction import UNSUPPORTED, ground
 
 RESUME = "Skills: Python, SQL, Tableau.  Experience: Data Analyst at Company Name.  Education: BS Statistics"
 POSTING = "Need 3+ years of experience. Must know SQL. Spark is a plus. Bachelor's in Computer Science required."
@@ -31,7 +31,7 @@ GOLD_POSTING = {
 
 
 class ResponderClient:
-    """openai.OpenAI stand-in whose reply depends on the model and prompt."""
+    """Fake OpenAI client; reply depends on model and prompt."""
 
     def __init__(self, respond):
         self.respond = respond
@@ -202,7 +202,7 @@ class CompareTest(unittest.TestCase):
         resume = "RESUME TEXT" in prompt
         if model == "careful":
             return GOLD_RESUME if resume else GOLD_POSTING
-        # invents a skill with a span that is not in the text, and misses one
+        # invents one skill, misses one
         if resume:
             return dict(GOLD_RESUME, skills=GOLD_RESUME["skills"][:2] + [
                 {"name": "Kubernetes", "source_span": "Kubernetes"}])
@@ -219,10 +219,10 @@ class CompareTest(unittest.TestCase):
         self.assertEqual(results["careful"]["posting"]["grounded"]["macro_f1"], 1.0)
 
         sloppy = results["org/sloppy"]
-        # grounding drops the invented skill, so precision stays perfect
+        # grounding drops the invented skill
         self.assertEqual(sloppy["resume"]["grounded"]["fields"]["skills"]["precision"], 1.0)
         self.assertLess(sloppy["resume"]["ungrounded"]["fields"]["skills"]["precision"], 1.0)
-        # but a real skill quoted with a wrong span is lost to grounding
+        # a wrong-span real skill is lost
         self.assertEqual(sloppy["posting"]["grounded"]["fields"]["required_skills"]["recall"], 0.5)
         self.assertEqual(sloppy["posting"]["ungrounded"]["fields"]["required_skills"]["recall"], 1.0)
         self.assertTrue(os.path.exists(os.path.join(self.out_dir, "org_sloppy_resume.jsonl")))
@@ -235,7 +235,7 @@ class CompareTest(unittest.TestCase):
         self.assertAlmostEqual(row["unsupported_rate"], 0.2)
         self.assertEqual(row["failed_docs"], 0)
 
-        # rerunning reuses the saved output instead of calling the model again
+        # rerun reuses saved output
         calls = []
         counting = ResponderClient(lambda m, p: calls.append(m) or self.respond(m, p))
         again = compare_models(counting, ["careful"], self.gold_dir, self.out_dir)

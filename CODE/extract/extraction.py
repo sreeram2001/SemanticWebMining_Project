@@ -1,9 +1,4 @@
-"""Ontology-guided, source-grounded extraction for resumes and job postings.
-
-A fact is kept only if its source_span can be found in the document and it
-passes the ontology's type checks. Rejected facts are kept alongside the
-accepted ones so the unsupported-fact rate can be measured.
-"""
+"""Ontology-guided, grounded extraction: facts must have a matching span and pass type checks."""
 
 import json
 import os
@@ -170,7 +165,7 @@ KINDS = {
     "posting": {"schema": POSTING_SCHEMA, "prompt": POSTING_PROMPT},
 }
 
-# One-for-one substitutions so normalized offsets still map back to the source.
+# 1:1 substitutions keep offsets aligned.
 _CHAR_MAP = str.maketrans({
     "‘": "'", "’": "'", "“": '"', "”": '"',
     "–": "-", "—": "-", " ": " ",
@@ -178,11 +173,7 @@ _CHAR_MAP = str.maketrans({
 
 
 def _normalize(text):
-    """Lower-case, unify quotes and dashes, collapse whitespace.
-
-    Returns the normalized string and, for each of its characters, the index
-    of the source character it came from.
-    """
+    """Normalize text -> (text, source index per char)."""
     chars, index = [], []
     in_space = False
     for i, ch in enumerate(text.translate(_CHAR_MAP)):
@@ -203,12 +194,7 @@ def _normalize(text):
 
 
 def locate_span(source, span):
-    """Return (start, end) of span in source, or None.
-
-    The resumes are full of runs of spaces and the model tends to tidy them,
-    so after an exact search the match is retried ignoring case, quote style
-    and whitespace.
-    """
+    """(start, end) of span in source (exact, then normalized), or None."""
     if not isinstance(span, str) or not span.strip():
         return None
     pos = source.find(span)
@@ -280,7 +266,7 @@ def _check_experience(fact):
     if not ok:
         return None, "experience company is not text"
     months = fact.get("duration_months")
-    # bool is an int subclass; a model emitting true/false here is a type error
+    # reject bools (int subclass)
     if months is not None and (
         isinstance(months, bool) or not isinstance(months, int)
         or not 0 <= months <= MAX_DURATION_MONTHS
@@ -311,7 +297,7 @@ FIELDS = {
     },
 }
 
-# experience_required is a single object (or null), not a list
+# experience_required: object or null
 SINGLE_FIELDS = {"experience_required"}
 
 
@@ -322,11 +308,7 @@ def _dedupe_key(field, fact):
 
 
 def ground(kind, raw, source):
-    """Check a parsed model output against the source text and the ontology.
-
-    Returns (facts, rejected). Each kept fact carries source_span exactly as
-    it appears in the source, plus start and end character offsets.
-    """
+    """Validate output -> (facts with offsets, rejected)."""
     if kind not in FIELDS:
         raise ValueError(f"unknown kind: {kind}")
     if not isinstance(raw, dict):
@@ -374,11 +356,7 @@ _THINK = re.compile(r"<think>.*?</think>", re.DOTALL)
 
 
 def parse_json(text):
-    """Pull the JSON object out of a model reply.
-
-    Qwen3 may prepend a <think> block and some servers wrap output in code
-    fences even when told not to.
-    """
+    """Parse JSON from a reply (strips <think> and fences)."""
     if not isinstance(text, str):
         raise ValueError("empty model reply")
     text = _THINK.sub("", text).strip()
@@ -411,13 +389,7 @@ def _is_transient(exc):
 
 
 class Extractor:
-    """Runs grounded extraction against an OpenAI-compatible chat endpoint.
-
-    constrained=True asks the server for schema-constrained decoding. If the
-    server rejects that request format, the extractor falls back to plain
-    JSON prompting for the rest of the session and records which mode
-    produced each document.
-    """
+    """Grounded extraction via an OpenAI-compatible API (schema-constrained, else plain JSON)."""
 
     def __init__(self, client, model, constrained=True, max_chars=8000,
                  max_tokens=4000, temperature=0.0, retries=3, backoff=2.0):
@@ -470,8 +442,7 @@ class Extractor:
             record.update(status="error", error="empty document")
             return record
 
-        # Offsets refer to this truncated text, which is a prefix of the
-        # original, so they stay valid against the full document.
+        # prefix keeps offsets valid
         source = text[: self.max_chars] if self.max_chars else text
         record.update(source_chars=len(source), truncated=len(source) < len(text))
         try:
@@ -489,7 +460,7 @@ class Extractor:
 
 
 def done_ids(path):
-    """IDs already written to a JSONL output file, so a run can resume."""
+    """IDs already in a JSONL output (for resuming)."""
     ids = set()
     if not os.path.exists(path):
         return ids
@@ -501,7 +472,7 @@ def done_ids(path):
             try:
                 rec = json.loads(line)
             except json.JSONDecodeError:
-                # a run killed mid-write leaves a partial last line
+                # skip partial last line
                 continue
             if rec.get("status") == "ok":
                 ids.add(rec["doc_id"])
@@ -509,17 +480,12 @@ def done_ids(path):
 
 
 def run_batch(extractor, kind, docs, out_path, limit=None, log_every=25):
-    """Extract (doc_id, text) pairs into a JSONL file, one record per line.
-
-    Documents already extracted successfully are skipped and failed ones are
-    retried, so the same call can be rerun after an interruption.
-    """
+    """Extract (doc_id, text) pairs to JSONL; resumable."""
     skip = done_ids(out_path)
     os.makedirs(os.path.dirname(out_path) or ".", exist_ok=True)
     counts = {"ok": 0, "error": 0, "skipped": 0}
     with open(out_path, "a", encoding="utf-8") as out:
-        # Without this, the first new record would be glued onto a partial
-        # line left by a killed run and lost with it.
+        # terminate a partial line
         if out.tell() > 0:
             with open(out_path, "rb") as f:
                 f.seek(-1, os.SEEK_END)
@@ -542,7 +508,7 @@ def run_batch(extractor, kind, docs, out_path, limit=None, log_every=25):
 
 
 def load_records(path):
-    """Latest record per document from a JSONL output file."""
+    """Latest record per document in a JSONL file."""
     latest = {}
     with open(path, encoding="utf-8") as f:
         for line in f:
@@ -558,11 +524,7 @@ def load_records(path):
 
 
 def summarize(records):
-    """Per-field fact counts.
-
-    unsupported = the model's span is not in the text (an invented or
-    paraphrased fact); invalid = the fact fails the ontology's type checks.
-    """
+    """Per-field kept/unsupported/invalid counts."""
     summary = {"documents": len(records), "errors": 0, "truncated": 0, "fields": {}, "reasons": {}}
     blank = lambda: {"kept": 0, "unsupported": 0, "invalid": 0}
     for rec in records:
