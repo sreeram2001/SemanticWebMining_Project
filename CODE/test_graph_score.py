@@ -182,3 +182,19 @@ class FinalScoreTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ExperienceTests(unittest.TestCase):
+    def test_dated_entries_alone_can_meet(self):
+        j = job(exp={"min_years": 3, "importance": "required"})
+        p = gs.penalty(j, resume(months=[48, None]))
+        self.assertEqual(p["details"][0]["status"], "met")
+
+    def test_short_dated_with_undated_is_unknown(self):
+        self.assertEqual(gs.experience_status(5, 1.0, False), "unknown")
+
+    def test_short_and_complete_is_mismatch(self):
+        self.assertEqual(gs.experience_status(5, 1.0, True), "mismatch")
+
+    def test_no_dates(self):
+        self.assertEqual(gs.resume_years({"experience": [{"duration_months": None}]}), (None, False))

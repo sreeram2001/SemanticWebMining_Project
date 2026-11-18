@@ -40,9 +40,18 @@ def graph_score(
 
 def resume_years(resume_facts):
     exp = resume_facts.get("experience") or []
-    if not exp or any(e.get("duration_months") is None for e in exp):
-        return None
-    return sum(e["duration_months"] for e in exp) / 12.0
+    dated = [e["duration_months"] for e in exp if e.get("duration_months") is not None]
+    if not dated:
+        return None, False
+    return sum(dated) / 12.0, len(dated) == len(exp)
+
+
+def experience_status(min_years, years, complete):
+    if years is not None and years >= min_years:
+        return "met"
+    if years is not None and complete:
+        return "mismatch"
+    return "unknown"
 
 
 def penalty(job_record, resume_record):
@@ -73,14 +82,8 @@ def penalty(job_record, resume_record):
 
     exp = job.get("experience_required")
     if exp and exp.get("importance") == "required" and exp.get("min_years") is not None:
-        years = resume_years(res)
-        status = (
-            "unknown"
-            if years is None
-            else "met"
-            if years >= exp["min_years"]
-            else "mismatch"
-        )
+        years, complete = resume_years(res)
+        status = experience_status(exp["min_years"], years, complete)
         details.append(
             {
                 "type": "experience",
