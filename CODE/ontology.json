@@ -1,0 +1,112 @@
+{
+  "node_types": {
+    "Candidate": {
+      "description": "A job seeker parsed from a resume",
+      "properties": {
+        "candidate_id": "string (unique ID)",
+        "category": "string (resume category, e.g., IT, Finance)",
+        "summary": "string (career summary if present)",
+        "source_file": "string (reference to original resume)"
+      }
+    },
+    "JobPosting": {
+      "description": "A job listing from LinkedIn",
+      "properties": {
+        "job_id": "string (unique ID from dataset)",
+        "title": "string",
+        "company_name": "string",
+        "location": "string",
+        "experience_level": "string (entry, mid, senior, etc.)",
+        "work_type": "string (full-time, part-time, contract)",
+        "min_salary": "float",
+        "max_salary": "float",
+        "description_snippet": "string (first 500 chars for reference)"
+      }
+    },
+    "Skill": {
+      "description": "A normalized skill linked to Lightcast taxonomy",
+      "properties": {
+        "skill_id": "string (Lightcast ID when linked, else generated)",
+        "name": "string (canonical skill name)",
+        "category": "string (Lightcast category)",
+        "subcategory": "string (Lightcast subcategory)",
+        "source": "string (lightcast | extracted)"
+      }
+    },
+    "Company": {
+      "description": "An employer organization",
+      "properties": {
+        "company_id": "string",
+        "name": "string",
+        "industry": "string"
+      }
+    },
+    "Degree": {
+      "description": "An educational qualification",
+      "properties": {
+        "level": "string (high_school, bachelors, masters, phd)",
+        "field": "string (field of study)"
+      }
+    },
+    "Experience": {
+      "description": "A work experience entry",
+      "properties": {
+        "title": "string (job title)",
+        "company": "string",
+        "duration_months": "int (estimated)",
+        "description": "string"
+      }
+    }
+  },
+  "relationship_types": {
+    "HAS_SKILL": {
+      "from": "Candidate",
+      "to": "Skill",
+      "properties": {
+        "proficiency": "string (extracted if available)",
+        "source_span": "string (text evidence from resume)"
+      }
+    },
+    "REQUIRES_SKILL": {
+      "from": "JobPosting",
+      "to": "Skill",
+      "properties": {
+        "importance": "string (required | preferred)",
+        "source_span": "string (text evidence from posting)"
+      }
+    },
+    "HAS_DEGREE": {
+      "from": "Candidate",
+      "to": "Degree",
+      "properties": {
+        "institution": "string",
+        "year": "string"
+      }
+    },
+    "REQUIRES_DEGREE": {
+      "from": "JobPosting",
+      "to": "Degree",
+      "properties": {
+        "importance": "string (required | preferred)"
+      }
+    },
+    "HAS_EXPERIENCE": {
+      "from": "Candidate",
+      "to": "Experience",
+      "properties": {}
+    },
+    "POSTED_BY": {
+      "from": "JobPosting",
+      "to": "Company",
+      "properties": {}
+    },
+    "RELATED_TO": {
+      "from": "Skill",
+      "to": "Skill",
+      "properties": {
+        "relation_type": "string (same_subcategory | same_category)",
+        "weight": "float (lambda_sub or lambda_cat from proposal eq. 3)"
+      }
+    }
+  }
+}

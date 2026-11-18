@@ -1,0 +1,132 @@
+{
+  "resume_extraction": {
+    "name": "Unknown",
+    "skills": [
+      {
+        "name": "Security",
+        "source_span": "Possess a Security"
+      },
+      {
+        "name": "Microsoft Certification",
+        "source_span": "Microsoft Certification"
+      },
+      {
+        "name": "Secret Security Clearance",
+        "source_span": "Secret Security Clearance"
+      },
+      {
+        "name": "Manufacturing systems integration",
+        "source_span": "Manufacturing systems integration"
+      },
+      {
+        "name": "Design instruction creation",
+        "source_span": "Design instruction creation"
+      },
+      {
+        "name": "Project management",
+        "source_span": "Project management"
+      },
+      {
+        "name": "SharePoint",
+        "source_span": "SharePoint"
+      },
+      {
+        "name": "Microsoft Excel",
+        "source_span": "Microsoft Excel"
+      },
+      {
+        "name": "Microsoft Project",
+        "source_span": "Project"
+      },
+      {
+        "name": "Microsoft Visio",
+        "source_span": "Visio"
+      },
+      {
+        "name": "LAN/WAN protocols",
+        "source_span": "LAN/WAN protocols"
+      }
+    ],
+    "degrees": [],
+    "experience": [
+      {
+        "title": "Information Technology Supervisor",
+        "company": "Company Name",
+        "duration_months": 41,
+        "key_responsibilities": "Supervised up to 10 personnel, trained staff in IT equipment setup, managed inventory of over $1 million in communications equipment, and maintained signal communications for Fort Bragg under a presidential tasking."
+      },
+      {
+        "title": "Information Technology Technician",
+        "company": "Company Name",
+        "duration_months": 25,
+        "key_responsibilities": "Maintained and repaired communications equipment, installed operating systems, set up computer systems on networks, and received training in LAN/WAN protocols."
+      },
+      {
+        "title": "Radiology Technologist",
+        "company": "Company Name",
+        "duration_months": 5,
+        "key_responsibilities": "Performed radiological examinations, operated and adjusted medical equipment, assisted patients, and maintained accurate electronic documentation."
+      }
+    ],
+    "summary": "Experienced Information Technology Supervisor with over 5 years in military IT roles, including supervisory experience, equipment training, and management of high-value communications assets."
+  },
+  "job_extraction": {
+    "title": "Sr. Network Engineer",
+    "required_skills": [
+      {
+        "name": "satellite communication protocols",
+        "importance": "required",
+        "source_span": "knowledge of satellite communication protocols"
+      },
+      {
+        "name": "ground infrastructure hardware",
+        "importance": "required",
+        "source_span": "ground infrastructure hardware"
+      },
+      {
+        "name": "securing satellite networks",
+        "importance": "required",
+        "source_span": "expertise in securing satellite networks and communication links"
+      },
+      {
+        "name": "space-based network security standards",
+        "importance": "required",
+        "source_span": "Understanding of space-based network security standards"
+      },
+      {
+        "name": "ground station operations",
+        "importance": "required",
+        "source_span": "Experience with ground station operations"
+      },
+      {
+        "name": "ground terminals",
+        "importance": "required",
+        "source_span": "Ability to work with ground terminals to ensure reliable communications with the MUOS spacecraft"
+      },
+      {
+        "name": "space industry standards",
+        "importance": "required",
+        "source_span": "Knowledge of space industry standards: Understanding industry-specific standards and regulations related to space systems for compliance and operational efficiency"
+      },
+      {
+        "name": "network architecture design",
+        "importance": "required",
+        "source_span": "Leading network architecture design, analysis, testing and hardware implementation"
+      },
+      {
+        "name": "network design and development",
+        "importance": "required",
+        "source_span": "Network design and development to modify, and or improve functionality"
+      }
+    ],
+    "summary": "Sr. Network Engineer responsible for designing, optimizing, troubleshooting, and managing network architecture with a focus on satellite communications and space-based systems in San Antonio, TX."
+  },
+  "metadata": {
+    "model": "qwen3-235b-a22b",
+    "api": "ASU Voyager",
+    "resume_category": "INFORMATION-TECHNOLOGY",
+    "job_title": "Sr. Network Engineer with Security Clearance",
+    "job_company": "ClearanceJobs",
+    "extraction_date": "2026-11-14"
+  }
+}
