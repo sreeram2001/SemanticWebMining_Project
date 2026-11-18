@@ -15,7 +15,22 @@ def build_linker(skills_path, embed=False, llm=False, cache="DATA/lightcast/skil
         client = OpenAI(api_key=os.environ["ASU_VOYAGER_KEY"],
                         base_url=os.environ.get("VOYAGER_BASE_URL", "https://openai.rc.asu.edu/v1"))
         decider = sl.LLMDecider(client)
-    return sl.Linker(skills, sl.load_aliases(ALIASES), retriever=retriever, decider=decider)
+    linker = sl.Linker(skills, sl.load_aliases(ALIASES), retriever=retriever, decider=decider)
+    add_alt_names(linker, skills)
+    return linker
+
+
+def add_alt_names(linker, skills):
+    added = 0
+    for s in skills:
+        for alt in s.get("alt_names") or []:
+            key = sl.normalize_name(alt)
+            if key and s["id"] not in linker.index.setdefault(key, []):
+                linker.index[key].append(s["id"])
+                added += 1
+    if added and linker.fuzzy is not None:
+        linker.fuzzy = sl.FuzzyMatcher(linker.index)
+    return added
 
 
 def main(argv=None):
