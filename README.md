@@ -27,7 +27,7 @@ A resume and job matching assistant that extracts facts from resumes and posting
    - P is the share of required degree and experience requirements the resume explicitly fails. Missing information counts as unknown and is not penalized.
    - The graph ablation sets b2 = 0.
 8. Relevance judgments (`pooling.py`): 30 resumes (15 dev, 15 test) chosen from the gold split by category. The top 10 jobs of each method are pooled (973 pairs) and split into one grading sheet per person, with 3 resumes shared by everyone for agreement (weighted Cohen's kappa). Once G and P have data, `tune_ranking.py pool-runs` and `pooling.py --extend` add the full pipeline's top 10 jobs that nobody has graded yet as `grades_<name>_extra.csv`.
-9. Tuning and evaluation (`tune_ranking.py`): b2, b3, the partial-credit values, the required-skill weight and the cross-encoder shortlist size (20, 30 or 50) are tuned on dev only. A job counts as relevant for P@10 at grade 1 or higher. Every method is reported with P@10 and nDCG@10, plus ΔnDCG@10 between the full score and the no-graph ablation.
+9. Tuning and evaluation (`tune_ranking.py`): b2, b3, the partial-credit values, the required-skill weight and the cross-encoder shortlist size (20, 30 or 50) are tuned on dev only. A job counts as relevant for P@10 at grade 1 or higher. Tuning and evaluation stop if fewer than 95% of the resume-job pairs in the shortlists have extracted facts, since G and P would otherwise favour jobs that happen to be extracted. `error_analysis.py` lists the jobs the graph moved into or out of the top 10 and the relevant jobs it missed, sorted by cause: extraction, linking, retrieval, graph scoring, penalty or ranking. Every method is reported with P@10 and nDCG@10, plus ΔnDCG@10 between the full score and the no-graph ablation.
 10. Chat assistant (`assistant.py`, `app.py`): a Gradio web UI over the modules above. Load a resume (sample, .txt/.pdf upload or pasted text), then ask for the top jobs, the skill evidence behind a match, missing skills, job details, or a side-by-side comparison, and switch the ranking method.
 
 ## Status
@@ -36,7 +36,7 @@ A resume and job matching assistant that extracts facts from resumes and posting
 |---|---|
 | Retrieval run on the real data | done (`EVALUATIONS/runs/baselines.json`, with the input data hash) |
 | Grading sheets | ready in `EVALUATIONS/relevance/`, not graded yet |
-| Documents to extract for G and P | listed in `EVALUATIONS/runs/extraction_ids.json` (30 resumes, 1,336 postings) |
+| Documents to extract for G and P | 30 resumes and 300 postings done; the remaining 1,036 postings are in `EVALUATIONS/runs/extraction_priority.json`, in order |
 | Linked extraction records for G and P | not produced yet (expected in `DATA/linked/`) |
 | Tuning, ablation, test results | waiting on grades and linked records |
 
@@ -49,10 +49,12 @@ python CODE/prepare_data.py --postings <path>/postings.csv --resumes <path>/Resu
 python CODE/run_baselines.py --split EVALUATIONS/gold_split.json --k 100 --rerank
 python CODE/pooling.py
 # after grading: fill the grade column (0, 1 or 2) in EVALUATIONS/relevance/grades_<name>.csv
-python CODE/tune_ranking.py pool-runs        # once linked records exist
+python CODE/link_extracted.py                # DATA/extracted/*.jsonl -> DATA/linked/*.jsonl, needs DATA/lightcast/skills.json
+python CODE/tune_ranking.py pool-runs
 python CODE/pooling.py --extend EVALUATIONS/runs/full_pool_run.json
 python CODE/tune_ranking.py tune
 python CODE/tune_ranking.py evaluate --split dev
+python CODE/error_analysis.py --split dev
 python CODE/tune_ranking.py evaluate --split test   # once, for the final report
 ```
 
@@ -85,7 +87,9 @@ SemanticWebMining_Project/
 │   ├── retrieval.py, run_baselines.py        # BM25, dense, hybrid, RRF, metrics
 │   ├── prior_skills.json                     # previous team's skill keywords
 │   ├── rerank.py, graph_score.py             # cross-encoder, G, P and S
+│   ├── link_extracted.py                     # extraction output -> linked records
 │   ├── pooling.py, tune_ranking.py           # judgments, tuning, ablation
+│   ├── error_analysis.py                     # ranking errors by pipeline stage
 │   └── test_*.py
 ├── DATA/                       # downloaded at runtime, not committed
 └── EVALUATIONS/
