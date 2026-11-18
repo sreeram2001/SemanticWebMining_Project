@@ -194,7 +194,7 @@ def main(argv=None):
     import pandas as pd
 
     p = argparse.ArgumentParser(description="Build the relevance pool and grading sheets.")
-    p.add_argument("--runs", default="DATA/runs/baselines.json")
+    p.add_argument("--runs", default="EVALUATIONS/runs/baselines.json")
     p.add_argument("--split", default="EVALUATIONS/gold_split.json")
     p.add_argument("--processed", default="DATA/processed")
     p.add_argument("--out", default="EVALUATIONS/relevance")

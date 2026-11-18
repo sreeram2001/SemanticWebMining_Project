@@ -166,7 +166,7 @@ def main(argv=None):
     p = argparse.ArgumentParser(description="Tune and evaluate graph-aware ranking.")
     p.add_argument("command", choices=["tune", "evaluate", "pool-runs"])
     p.add_argument("--split", choices=["dev", "test"], default="dev")
-    p.add_argument("--runs", default="DATA/runs/baselines.json")
+    p.add_argument("--runs", default="EVALUATIONS/runs/baselines.json")
     p.add_argument("--resumes", default="DATA/linked/resumes.jsonl")
     p.add_argument("--postings", default="DATA/linked/postings.jsonl")
     p.add_argument("--relevance", default="EVALUATIONS/relevance")
