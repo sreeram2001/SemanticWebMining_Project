@@ -1,0 +1,439 @@
+{
+  "resume": {
+    "documents": 20,
+    "errors": 0,
+    "truncated": 4,
+    "fields": {
+      "skills": {
+        "kept": 679,
+        "unsupported": 1,
+        "invalid": 4,
+        "unsupported_rate": 0.0015
+      },
+      "degrees": {
+        "kept": 37,
+        "unsupported": 1,
+        "invalid": 0,
+        "unsupported_rate": 0.0263
+      },
+      "experience": {
+        "kept": 87,
+        "unsupported": 6,
+        "invalid": 0,
+        "unsupported_rate": 0.0645
+      }
+    },
+    "reasons": {
+      "source_span not found in text": 8,
+      "skill name missing or too long": 4
+    },
+    "example": {
+      "doc_id": "16852973",
+      "kind": "resume",
+      "model": "qwen3-235b-a22b",
+      "config": {
+        "model": "qwen3-235b-a22b",
+        "prompt": "b3c5fd48",
+        "temperature": 0.0,
+        "max_tokens": 4000,
+        "max_chars": 8000,
+        "seed": null
+      },
+      "source_chars": 5442,
+      "truncated": false,
+      "source_sha": "68ec0e1576f5",
+      "constrained": true,
+      "status": "ok",
+      "facts": {
+        "skills": [
+          {
+            "name": "Accounting",
+            "source_span": "Accounting",
+            "start": 4944,
+            "end": 4954
+          },
+          {
+            "name": "ads",
+            "source_span": "ads",
+            "start": 3886,
+            "end": 3889
+          },
+          {
+            "name": "advertising",
+            "source_span": "advertising",
+            "start": 2050,
+            "end": 2061
+          },
+          {
+            "name": "analytical skills",
+            "source_span": "analytical skills",
+            "start": 2841,
+            "end": 2858
+          },
+          {
+            "name": "benefits",
+            "source_span": "benefits",
+            "start": 1334,
+            "end": 1342
+          },
+          {
+            "name": "billing",
+            "source_span": "billing",
+            "start": 2719,
+            "end": 2726
+          },
+          {
+            "name": "budgeting",
+            "source_span": "budgeting",
+            "start": 3171,
+            "end": 3180
+          },
+          {
+            "name": "clients",
+            "source_span": "clients",
+            "start": 4250,
+            "end": 4257
+          },
+          {
+            "name": "Customer Service",
+            "source_span": "Customer Service",
+            "start": 92,
+            "end": 108
+          },
+          {
+            "name": "data analysis",
+            "source_span": "data analysis",
+            "start": 2967,
+            "end": 2980
+          },
+          {
+            "name": "delivery",
+            "source_span": "delivery",
+            "start": 4192,
+            "end": 4200
+          },
+          {
+            "name": "documentation",
+            "source_span": "documentation",
+            "start": 1427,
+            "end": 1440
+          },
+          {
+            "name": "employee relations",
+            "source_span": "employee relations",
+            "start": 1723,
+            "end": 1741
+          },
+          {
+            "name": "financial management",
+            "source_span": "financial management",
+            "start": 3185,
+            "end": 3205
+          },
+          {
+            "name": "government relations",
+            "source_span": "government relations",
+            "start": 5132,
+            "end": 5152
+          },
+          {
+            "name": "Human Resources",
+            "source_span": "Human Resources",
+            "start": 3932,
+            "end": 3947
+          },
+          {
+            "name": "insurance",
+            "source_span": "insurance",
+            "start": 1496,
+            "end": 1505
+          },
+          {
+            "name": "labor relations",
+            "source_span": "labor relations",
+            "start": 1317,
+            "end": 1332
+          },
+          {
+            "name": "layout",
+            "source_span": "layout",
+            "start": 5199,
+            "end": 5205
+          },
+          {
+            "name": "Marketing",
+            "source_span": "Marketing",
+            "start": 404,
+            "end": 413
+          },
+          {
+            "name": "marketing collateral",
+            "source_span": "marketing collateral",
+            "start": 1951,
+            "end": 1971
+          },
+          {
+            "name": "medical billing",
+            "source_span": "medical billing",
+            "start": 2711,
+            "end": 2726
+          },
+          {
+            "name": "medical terminology",
+            "source_span": "medical terminology",
+            "start": 2900,
+            "end": 2919
+          },
+          {
+            "name": "office",
+            "source_span": "office",
+            "start": 3484,
+            "end": 3490
+          },
+          {
+            "name": "organizational",
+            "source_span": "organizational",
+            "start": 2822,
+            "end": 2836
+          },
+          {
+            "name": "payroll",
+            "source_span": "payroll",
+            "start": 3236,
+            "end": 3243
+          },
+          {
+            "name": "performance reviews",
+            "source_span": "performance reviews",
+            "start": 1585,
+            "end": 1604
+          },
+          {
+            "name": "personnel",
+            "source_span": "personnel",
+            "start": 1524,
+            "end": 1533
+          },
+          {
+            "name": "policies",
+            "source_span": "policies",
+            "start": 1238,
+            "end": 1246
+          },
+          {
+            "name": "posters",
+            "source_span": "posters",
+            "start": 5353,
+            "end": 5360
+          },
+          {
+            "name": "presentations",
+            "source_span": "presentations",
+            "start": 5362,
+            "end": 5375
+          },
+          {
+            "name": "public relations",
+            "source_span": "public relations",
+            "start": 3631,
+            "end": 3647
+          },
+          {
+            "name": "purchasing",
+            "source_span": "purchasing",
+            "start": 3248,
+            "end": 3258
+          },
+          {
+            "name": "reporting",
+            "source_span": "reporting",
+            "start": 1663,
+            "end": 1672
+          },
+          {
+            "name": "statistics",
+            "source_span": "statistics",
+            "start": 1637,
+            "end": 1647
+          },
+          {
+            "name": "website",
+            "source_span": "website",
+            "start": 2180,
+            "end": 2187
+          }
+        ],
+        "degrees": [
+          {
+            "level": "associate",
+            "field": "Business Administration",
+            "institution": "Jefferson College",
+            "year": "1999",
+            "source_span": "N/A  ,   Business Administration   1999     Jefferson College",
+            "start": 4594,
+            "end": 4655
+          },
+          {
+            "level": "associate",
+            "field": "Marketing / Advertising",
+            "institution": "Jefferson College",
+            "year": null,
+            "source_span": "Business Administration  Marketing / Advertising",
+            "start": 4684,
+            "end": 4732
+          },
+          {
+            "level": "high_school",
+            "field": "College Prep.",
+            "institution": "Sainte Genevieve Senior High",
+            "year": "1998",
+            "source_span": "High School Diploma  ,   College Prep. studies   1998     Sainte Genevieve Senior High",
+            "start": 4741,
+            "end": 4827
+          }
+        ],
+        "experience": [
+          {
+            "title": "HR Administrator",
+            "company": "Company Name",
+            "duration_months": null,
+            "source_span": "HR Administrator     Dec 2013   to   Current      Company Name",
+            "start": 1132,
+            "end": 1194
+          },
+          {
+            "title": "Marketing Associate",
+            "company": "Company Name",
+            "duration_months": null,
+            "source_span": "Marketing Associate",
+            "start": 1111,
+            "end": 1130
+          },
+          {
+            "title": "Advanced Medical Claims Analyst",
+            "company": "Company Name",
+            "duration_months": 22,
+            "source_span": "Advanced Medical Claims Analyst     Mar 2012   to   Dec 2013      Company Name",
+            "start": 2410,
+            "end": 2488
+          },
+          {
+            "title": "Assistant General Manager",
+            "company": "Company Name",
+            "duration_months": 7,
+            "source_span": "Assistant General Manager     Jun 2010   to   Dec 2010      Company Name",
+            "start": 3025,
+            "end": 3097
+          },
+          {
+            "title": "Executive Support / Marketing Assistant",
+            "company": "Company Name",
+            "duration_months": 35,
+            "source_span": "Executive Support / Marketing Assistant     Jul 2007   to   Jun 2010      Company Name",
+            "start": 3729,
+            "end": 3815
+          },
+          {
+            "title": "Reservation & Front Office Manager",
+            "company": "Company Name",
+            "duration_months": 37,
+            "source_span": "Reservation & Front Office Manager     Jun 2004   to   Jul 2007      Company Name",
+            "start": 4267,
+            "end": 4348
+          },
+          {
+            "title": "Owner/ Partner",
+            "company": "Company Name",
+            "duration_months": 42,
+            "source_span": "Owner/ Partner     Dec 2001   to   May 2004      Company Name",
+            "start": 4380,
+            "end": 4441
+          },
+          {
+            "title": "Price Integrity Coordinator",
+            "company": "Company Name",
+            "duration_months": 29,
+            "source_span": "Price Integrity Coordinator     Aug 1999   to   Dec 2001      Company Name",
+            "start": 4473,
+            "end": 4547
+          }
+        ]
+      },
+      "rejected": []
+    }
+  },
+  "posting": {
+    "documents": 20,
+    "errors": 0,
+    "truncated": 1,
+    "fields": {
+      "required_skills": {
+        "kept": 126,
+        "unsupported": 10,
+        "invalid": 1,
+        "unsupported_rate": 0.073
+      },
+      "required_degrees": {
+        "kept": 20,
+        "unsupported": 1,
+        "invalid": 0,
+        "unsupported_rate": 0.0476
+      },
+      "experience_required": {
+        "kept": 11,
+        "unsupported": 0,
+        "invalid": 0,
+        "unsupported_rate": 0.0
+      }
+    },
+    "reasons": {
+      "source_span not found in text": 11,
+      "skill name missing or too long": 1
+    },
+    "example": {
+      "doc_id": "921716",
+      "kind": "posting",
+      "model": "qwen3-235b-a22b",
+      "config": {
+        "model": "qwen3-235b-a22b",
+        "prompt": "32de7bdd",
+        "temperature": 0.0,
+        "max_tokens": 4000,
+        "max_chars": 8000,
+        "seed": null
+      },
+      "source_chars": 2526,
+      "truncated": false,
+      "source_sha": "ac7b14653d7c",
+      "constrained": true,
+      "status": "ok",
+      "facts": {
+        "required_skills": [
+          {
+            "name": "Adobe Creative Cloud (Indesign, Illustrator, Photoshop)",
+            "importance": "required",
+            "source_span": "proficient in Adobe Creative Cloud (Indesign, Illustrator, Photoshop)",
+            "start": 659,
+            "end": 728
+          },
+          {
+            "name": "Microsoft Office Suite",
+            "importance": "required",
+            "source_span": "proficient in Adobe Creative Cloud (Indesign, Illustrator, Photoshop) and Microsoft Office Suite",
+            "start": 659,
+            "end": 755
+          }
+        ],
+        "required_degrees": [],
+        "experience_required": {
+          "min_years": 1,
+          "importance": "preferred",
+          "source_span": "Marketing: 1 year (Preferred)",
+          "start": 2437,
+          "end": 2466
+        }
+      },
+      "rejected": []
+    }
+  }
+}
