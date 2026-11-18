@@ -237,6 +237,18 @@ class ExtractorTest(unittest.TestCase):
         with self.assertRaises(ValueError):
             Extractor(FakeClient([]), "m").extract("letter", 1, RESUME)
 
+    def test_records_run_settings(self):
+        client = FakeClient([resume_reply()])
+        rec = Extractor(client, "m", seed=7).extract("resume", 1, RESUME)
+        self.assertEqual(client.calls[0]["seed"], 7)
+        self.assertEqual(rec["config"]["seed"], 7)
+        self.assertEqual(rec["config"]["temperature"], 0.0)
+        self.assertEqual(len(rec["config"]["prompt"]), 8)
+        self.assertEqual(len(rec["source_sha"]), 12)
+        plain = FakeClient([resume_reply()])
+        Extractor(plain, "m").extract("resume", 1, RESUME)
+        self.assertNotIn("seed", plain.calls[0])
+
 
 class BatchTest(unittest.TestCase):
     def setUp(self):

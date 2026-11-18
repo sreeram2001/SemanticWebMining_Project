@@ -5,10 +5,10 @@ import unittest
 from types import SimpleNamespace
 
 from evaluation import (
-    agreement, compare_models, comparison_rows, fact_key, for_kind, gold_docs,
+    agreement, compare_models, comparison_rows, fact_key, for_kind, freeze_split, gold_docs,
     load_gold, mask_contacts, score, ungrounded, write_templates,
 )
-from extraction import UNSUPPORTED, ground
+from extraction import UNSUPPORTED, ground, prompt_hash
 
 RESUME = "Skills: Python, SQL, Tableau.  Experience: Data Analyst at Company Name.  Education: BS Statistics"
 POSTING = "Need 3+ years of experience. Must know SQL. Spark is a plus. Bachelor's in Computer Science required."
@@ -65,16 +65,24 @@ class KeyTest(unittest.TestCase):
 
 
 class UngroundedTest(unittest.TestCase):
-    def test_restores_only_unsupported(self):
+    def test_restores_all_rejected_facts(self):
         raw = {"skills": [{"name": "SQL", "source_span": "SQL"},
                           {"name": "Kubernetes", "source_span": "Kubernetes"},
                           {"name": "", "source_span": "Python"}],
-               "degrees": [], "experience": []}
+               "degrees": [{"level": "diploma", "field": None, "institution": None, "year": None,
+                            "source_span": "Education"}],
+               "experience": "not a list"}
         facts, rejected = ground("resume", raw, RESUME)
         rec = {"kind": "resume", "facts": facts, "rejected": rejected}
-        self.assertEqual([s["name"] for s in ungrounded(rec)["skills"]], ["SQL", "Kubernetes"])
-        # the original record is left alone
+        plain = ungrounded(rec)
+        self.assertEqual([s["name"] for s in plain["skills"]], ["SQL", "Kubernetes", ""])
+        self.assertEqual(plain["degrees"][0]["level"], "diploma")
+        self.assertEqual(plain["experience"], [])
         self.assertEqual([s["name"] for s in facts["skills"]], ["SQL"])
+
+    def test_bad_values_still_score(self):
+        self.assertEqual(fact_key("experience_required", {"min_years": "five"}), "five")
+        self.assertEqual(fact_key("experience_required", {"min_years": True}), "True")
 
     def test_single_field(self):
         raw = {"required_skills": [], "required_degrees": [],
@@ -233,7 +241,9 @@ class CompareTest(unittest.TestCase):
         # but a real skill quoted with a wrong span is lost to grounding
         self.assertEqual(sloppy["posting"]["grounded"]["fields"]["required_skills"]["recall"], 0.5)
         self.assertEqual(sloppy["posting"]["ungrounded"]["fields"]["required_skills"]["recall"], 1.0)
-        self.assertTrue(os.path.exists(os.path.join(self.out_dir, "org_sloppy_resume.jsonl")))
+        self.assertTrue(os.path.exists(os.path.join(self.out_dir, f"org_sloppy_resume_{prompt_hash('resume')}.jsonl")))
+        self.assertEqual(sloppy["resume"]["config"]["model"], "org/sloppy")
+        self.assertEqual(sloppy["resume"]["part"], "all")
 
         rows = comparison_rows(results)
         self.assertEqual(len(rows), 8)
@@ -257,6 +267,56 @@ class CompareTest(unittest.TestCase):
         result = agreement(self.gold_dir, second)
         self.assertEqual(list(result), ["resume"])
         self.assertAlmostEqual(result["resume"]["fields"]["skills"]["f1"], 0.8)
+
+
+class SplitTest(unittest.TestCase):
+    def setUp(self):
+        self.tmp = tempfile.TemporaryDirectory()
+        self.dir = os.path.join(self.tmp.name, "gold")
+        self.path = os.path.join(self.tmp.name, "split.json")
+        for cat in ("IT", "HR", "SALES"):
+            write_templates("resume", [(f"{cat}{i}", RESUME, cat) for i in range(5)], self.dir)
+        write_templates("posting", [(i, POSTING, None) for i in range(10)], self.dir)
+
+    def tearDown(self):
+        self.tmp.cleanup()
+
+    def test_stratified_halves(self):
+        split = freeze_split(self.dir, self.path)
+        self.assertEqual(len(split), 25)
+        self.assertEqual(sum(v == "dev" for v in split.values()), 13)
+        for cat in ("IT", "HR", "SALES"):
+            dev = sum(split[("resume", f"{cat}{i}")] == "dev" for i in range(5))
+            self.assertIn(dev, (2, 3))
+        posting_dev = sum(v == "dev" for (k, _), v in split.items() if k == "posting")
+        self.assertEqual(posting_dev, 5)
+
+    def test_frozen(self):
+        first = freeze_split(self.dir, self.path)
+        write_templates("posting", [(99, POSTING, None)], self.dir)
+        self.assertEqual(freeze_split(self.dir, self.path, seed=1), first)
+        self.assertNotIn(("posting", "99"), first)
+
+    def test_compare_on_dev_only(self):
+        split = freeze_split(self.dir, self.path)
+        dev_id = next(d for (k, d), v in split.items() if k == "posting" and v == "dev")
+        test_id = next(d for (k, d), v in split.items() if k == "posting" and v == "test")
+        for doc_id in (dev_id, test_id):
+            write_gold_over(self.dir, "posting", doc_id, POSTING, GOLD_POSTING)
+        seen = []
+        client = ResponderClient(lambda m, p: seen.append(p) or GOLD_POSTING)
+        results = compare_models(client, ["m"], self.dir, os.path.join(self.tmp.name, "runs"), split=split)
+        entry = results["m"]["posting"]
+        self.assertEqual((entry["part"], entry["grounded"]["documents"], len(seen)), ("dev", 1, 1))
+
+
+def write_gold_over(gold_dir, kind, doc_id, text, facts):
+    path = os.path.join(gold_dir, f"{kind}_{doc_id}.json")
+    with open(path) as f:
+        doc = json.load(f)
+    doc.update(annotator="richitha", facts=facts)
+    with open(path, "w") as f:
+        json.dump(doc, f)
 
 
 class ForKindTest(unittest.TestCase):
