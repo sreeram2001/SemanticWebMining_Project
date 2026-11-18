@@ -88,3 +88,18 @@ class PoolRunsTests(unittest.TestCase):
         grid = {"b2": [0.0, 1.0], "b3": [0.0], "lambdas": [(0.5, 0.25)], "w_required": [2.0], "top": [None]}
         out = tr.pool_runs(DATA, JOBS, RESUMES, {"r1"}, grid, k=1)
         self.assertEqual(out, {"r1": ["jA", "jB"]})
+
+
+class CoverageTests(unittest.TestCase):
+    def test_counts_resumes_and_jobs(self):
+        cov = tr.fact_coverage(DATA, {"jA": JOBS["jA"]}, RESUMES, ["r1"])
+        self.assertEqual((cov["resumes"], cov["jobs"]), ("1/1", "1/2"))
+        self.assertAlmostEqual(cov["rate"], 0.5)
+
+    def test_missing_resume_zeroes_rate(self):
+        self.assertEqual(tr.fact_coverage(DATA, JOBS, {}, ["r1"])["rate"], 0.0)
+
+    def test_check_blocks_partial_and_passes_full(self):
+        with self.assertRaises(SystemExit):
+            tr.check_coverage(DATA, {"jA": JOBS["jA"]}, RESUMES, ["r1"], [None], 0.95, "dev")
+        self.assertEqual(tr.check_coverage(DATA, JOBS, RESUMES, ["r1"], [None], 0.95, "dev"), 1.0)

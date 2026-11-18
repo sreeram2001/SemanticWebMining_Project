@@ -100,6 +100,35 @@ def pool_runs(data, jobs, resumes, ids, grid=None, k=10):
     return union
 
 
+def fact_coverage(data, jobs, resumes, ids, top=None):
+    per = {}
+    for rid in ids:
+        rid = str(rid)
+        cands = [j for j, _ in shortlist(data, rid, top)]
+        have = sum(1 for j in cands if j in jobs)
+        per[rid] = {"resume": rid in resumes, "jobs": have, "shortlist": len(cands)}
+    resumes_ok = sum(v["resume"] for v in per.values())
+    jobs_ok = sum(v["jobs"] for v in per.values())
+    total = sum(v["shortlist"] for v in per.values())
+    return {"resumes": f"{resumes_ok}/{len(per)}", "jobs": f"{jobs_ok}/{total}",
+            "rate": (jobs_ok / total if total else 0.0) * (resumes_ok / len(per) if per else 0.0),
+            "per_resume": per}
+
+
+def check_coverage(data, jobs, resumes, ids, tops, minimum, label):
+    worst = None
+    for top in tops:
+        cov = fact_coverage(data, jobs, resumes, ids, top)
+        print(f"{label}: facts for {cov['resumes']} resumes and {cov['jobs']} shortlist jobs "
+              f"(shortlist {top or 'all'})")
+        worst = cov["rate"] if worst is None else min(worst, cov["rate"])
+    if worst < minimum:
+        raise SystemExit(f"error: only {worst:.0%} of {label} pairs have facts (need {minimum:.0%}); "
+                         "G and P would reward extracted jobs, not matching ones. "
+                         "Extract the rest, lower the shortlist (--top), or pass --min-coverage")
+    return worst
+
+
 def compare(runs, qrels, ids, k=10):
     table = {m: rt.evaluate(subset(run, ids), qrels, k) for m, run in runs.items()}
     key = f"nDCG@{k}"
@@ -144,6 +173,9 @@ def main(argv=None):
     p.add_argument("--out", default="EVALUATIONS/runs")
     p.add_argument("--k", type=int, default=10)
     p.add_argument("--force", action="store_true", help="overwrite an existing test result")
+    p.add_argument("--min-coverage", type=float, default=0.95,
+                   help="share of resume-job pairs that must have extracted facts")
+    p.add_argument("--top", type=int, nargs="+", help="shortlist sizes to tune (default 20 30 50)")
     a = p.parse_args(argv)
 
     with open(a.runs) as f:
@@ -168,7 +200,9 @@ def main(argv=None):
     tuned_path = os.path.join(a.out, "tuned_scoring.json")
 
     if a.command == "tune":
-        best, tried = tune(data, jobs, resumes, qrels, chosen["dev"], k=a.k)
+        grid = dict(GRID, top=a.top) if a.top else GRID
+        check_coverage(data, jobs, resumes, chosen["dev"], grid["top"], a.min_coverage, "dev")
+        best, tried = tune(data, jobs, resumes, qrels, chosen["dev"], grid, k=a.k)
         with open(tuned_path, "w") as f:
             json.dump({"best": best, "tried": tried, "dev_resumes": chosen["dev"]}, f, indent=1)
         print(f"best on dev: {best} -> {tuned_path}")
@@ -183,6 +217,7 @@ def main(argv=None):
     else:
         print("warning: no tuned_scoring.json; using default betas and lambdas")
         setting = {"betas": dict(gs.DEFAULT_BETAS), "lambdas": dict(gs.DEFAULT_LAMBDAS)}
+    check_coverage(data, jobs, resumes, chosen[a.split], [setting.get("top")], a.min_coverage, a.split)
     runs = method_runs(data, jobs, resumes, setting["betas"], **setting_args(setting))
     table = compare(runs, qrels, chosen[a.split], a.k)
     with open(out_json, "w") as f:
