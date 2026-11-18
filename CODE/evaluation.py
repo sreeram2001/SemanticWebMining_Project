@@ -82,6 +82,22 @@ def ungrounded(record):
 
 # --- gold set files -----------------------------------------------------------
 
+# Same patterns as Step 1's mask_pii. Step 1 masks only resumes, but gold
+# files are committed to a public repo and postings carry recruiters'
+# emails and phone numbers.
+_EMAIL = re.compile(r"[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}")
+_PHONE = re.compile(r"(\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]?\d{3}[-.\s]?\d{4}")
+_URL = re.compile(r"https?://\S+")
+
+
+def mask_contacts(text):
+    if not isinstance(text, str):
+        return text
+    text = _EMAIL.sub("[EMAIL]", text)
+    text = _PHONE.sub("[PHONE]", text)
+    return _URL.sub("[URL]", text)
+
+
 def _filename(kind, doc_id):
     safe = re.sub(r"[^A-Za-z0-9_.-]", "_", str(doc_id))
     return f"{kind}_{safe}.json"

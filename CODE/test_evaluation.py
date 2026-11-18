@@ -6,7 +6,7 @@ from types import SimpleNamespace
 
 from evaluation import (
     agreement, compare_models, comparison_rows, fact_key, for_kind, gold_docs,
-    load_gold, score, ungrounded, write_templates,
+    load_gold, mask_contacts, score, ungrounded, write_templates,
 )
 from extraction import UNSUPPORTED, ground
 
@@ -83,6 +83,14 @@ class UngroundedTest(unittest.TestCase):
         self.assertIsNone(facts["experience_required"])
         rec = {"kind": "posting", "facts": facts, "rejected": rejected}
         self.assertEqual(ungrounded(rec)["experience_required"]["min_years"], 5)
+
+
+class MaskTest(unittest.TestCase):
+    def test_mask_contacts(self):
+        text = "Apply to jobs@acme.co or call (480) 555-0199, see https://acme.co/jobs. Salary $95,000."
+        self.assertEqual(mask_contacts(text),
+                         "Apply to [EMAIL] or call [PHONE], see [URL] Salary $95,000.")
+        self.assertIsNone(mask_contacts(None))
 
 
 class GoldFilesTest(unittest.TestCase):
