@@ -1,34 +1,35 @@
 {
   "resume": {
-    "documents": 20,
+    "documents": 60,
     "errors": 0,
-    "truncated": 4,
+    "truncated": 15,
     "fields": {
       "skills": {
-        "kept": 679,
-        "unsupported": 1,
-        "invalid": 4,
-        "unsupported_rate": 0.0015
+        "kept": 1882,
+        "unsupported": 2,
+        "invalid": 20,
+        "unsupported_rate": 0.0011
       },
       "degrees": {
-        "kept": 37,
-        "unsupported": 1,
+        "kept": 103,
+        "unsupported": 0,
         "invalid": 0,
-        "unsupported_rate": 0.0263
+        "unsupported_rate": 0.0
       },
       "experience": {
-        "kept": 87,
-        "unsupported": 6,
-        "invalid": 0,
-        "unsupported_rate": 0.0645
+        "kept": 283,
+        "unsupported": 4,
+        "invalid": 1,
+        "unsupported_rate": 0.0139
       }
     },
     "reasons": {
-      "source_span not found in text": 8,
-      "skill name missing or too long": 4
+      "source_span not found in text": 6,
+      "experience title missing": 1,
+      "skill name missing or too long": 20
     },
     "example": {
-      "doc_id": "16852973",
+      "doc_id": "10235211",
       "kind": "resume",
       "model": "qwen3-235b-a22b",
       "config": {
@@ -39,323 +40,333 @@
         "max_chars": 8000,
         "seed": null
       },
-      "source_chars": 5442,
-      "truncated": false,
-      "source_sha": "68ec0e1576f5",
+      "source_chars": 8000,
+      "truncated": true,
+      "source_sha": "a21fcf4a74d9",
       "constrained": true,
       "status": "ok",
       "facts": {
         "skills": [
           {
-            "name": "Accounting",
-            "source_span": "Accounting",
-            "start": 4944,
-            "end": 4954
+            "name": "acquisitions",
+            "source_span": "acquisitions",
+            "start": 3745,
+            "end": 3757
           },
           {
-            "name": "ads",
-            "source_span": "ads",
-            "start": 3886,
-            "end": 3889
+            "name": "audio",
+            "source_span": "audio",
+            "start": 5822,
+            "end": 5827
           },
           {
-            "name": "advertising",
-            "source_span": "advertising",
-            "start": 2050,
-            "end": 2061
+            "name": "Bachelors",
+            "source_span": "Bachelors",
+            "start": 5859,
+            "end": 5868
           },
           {
-            "name": "analytical skills",
-            "source_span": "analytical skills",
-            "start": 2841,
-            "end": 2858
+            "name": "business development",
+            "source_span": "business development",
+            "start": 3604,
+            "end": 3624
           },
           {
-            "name": "benefits",
-            "source_span": "benefits",
-            "start": 1334,
-            "end": 1342
+            "name": "contracts",
+            "source_span": "contracts",
+            "start": 1879,
+            "end": 1888
           },
           {
-            "name": "billing",
-            "source_span": "billing",
-            "start": 2719,
-            "end": 2726
-          },
-          {
-            "name": "budgeting",
-            "source_span": "budgeting",
-            "start": 3171,
-            "end": 3180
+            "name": "client",
+            "source_span": "client",
+            "start": 586,
+            "end": 592
           },
           {
             "name": "clients",
             "source_span": "clients",
-            "start": 4250,
-            "end": 4257
+            "start": 643,
+            "end": 650
           },
           {
-            "name": "Customer Service",
-            "source_span": "Customer Service",
-            "start": 92,
-            "end": 108
+            "name": "databases",
+            "source_span": "databases",
+            "start": 5087,
+            "end": 5096
           },
           {
-            "name": "data analysis",
-            "source_span": "data analysis",
-            "start": 2967,
-            "end": 2980
+            "name": "financial",
+            "source_span": "financial",
+            "start": 3779,
+            "end": 3788
           },
           {
-            "name": "delivery",
-            "source_span": "delivery",
-            "start": 4192,
-            "end": 4200
+            "name": "notes",
+            "source_span": "notes",
+            "start": 4937,
+            "end": 4942
           },
           {
-            "name": "documentation",
-            "source_span": "documentation",
-            "start": 1427,
-            "end": 1440
+            "name": "meetings",
+            "source_span": "meetings",
+            "start": 4476,
+            "end": 4484
           },
           {
-            "name": "employee relations",
-            "source_span": "employee relations",
-            "start": 1723,
-            "end": 1741
+            "name": "money",
+            "source_span": "money",
+            "start": 3544,
+            "end": 3549
           },
           {
-            "name": "financial management",
-            "source_span": "financial management",
-            "start": 3185,
-            "end": 3205
+            "name": "Negotiating",
+            "source_span": "Negotiating",
+            "start": 5121,
+            "end": 5132
           },
           {
-            "name": "government relations",
-            "source_span": "government relations",
-            "start": 5132,
-            "end": 5152
+            "name": "negotiator",
+            "source_span": "negotiator",
+            "start": 3562,
+            "end": 3572
           },
           {
-            "name": "Human Resources",
-            "source_span": "Human Resources",
-            "start": 3932,
-            "end": 3947
+            "name": "Oct",
+            "source_span": "Oct",
+            "start": 4765,
+            "end": 4768
           },
           {
-            "name": "insurance",
-            "source_span": "insurance",
-            "start": 1496,
-            "end": 1505
+            "name": "progress",
+            "source_span": "progress",
+            "start": 5880,
+            "end": 5888
           },
           {
-            "name": "labor relations",
-            "source_span": "labor relations",
-            "start": 1317,
-            "end": 1332
+            "name": "Psychology",
+            "source_span": "Psychology",
+            "start": 5400,
+            "end": 5410
           },
           {
-            "name": "layout",
-            "source_span": "layout",
-            "start": 5199,
-            "end": 5205
+            "name": "real estate",
+            "source_span": "real estate",
+            "start": 3577,
+            "end": 3588
           },
           {
-            "name": "Marketing",
-            "source_span": "Marketing",
-            "start": 404,
-            "end": 413
+            "name": "settlements",
+            "source_span": "settlements",
+            "start": 4970,
+            "end": 4981
           },
           {
-            "name": "marketing collateral",
-            "source_span": "marketing collateral",
-            "start": 1951,
-            "end": 1971
+            "name": "sound",
+            "source_span": "sound",
+            "start": 919,
+            "end": 924
           },
           {
-            "name": "medical billing",
-            "source_span": "medical billing",
-            "start": 2711,
-            "end": 2726
+            "name": "structured",
+            "source_span": "structured",
+            "start": 4775,
+            "end": 4785
           },
           {
-            "name": "medical terminology",
-            "source_span": "medical terminology",
-            "start": 2900,
-            "end": 2919
+            "name": "Client-focused",
+            "source_span": "Client-focused",
+            "start": 3148,
+            "end": 3162
           },
           {
-            "name": "office",
-            "source_span": "office",
-            "start": 3484,
-            "end": 3490
+            "name": "Results-oriented",
+            "source_span": "Results-oriented",
+            "start": 3164,
+            "end": 3180
           },
           {
-            "name": "organizational",
-            "source_span": "organizational",
-            "start": 2822,
-            "end": 2836
+            "name": "Quick learner",
+            "source_span": "Quick learner",
+            "start": 3182,
+            "end": 3195
           },
           {
-            "name": "payroll",
-            "source_span": "payroll",
-            "start": 3236,
-            "end": 3243
+            "name": "Contract negotiation/review/drafting",
+            "source_span": "Contract negotiation/review/drafting",
+            "start": 3197,
+            "end": 3233
           },
           {
-            "name": "performance reviews",
-            "source_span": "performance reviews",
-            "start": 1585,
-            "end": 1604
+            "name": "File/records maintenance",
+            "source_span": "File/records maintenance",
+            "start": 3235,
+            "end": 3259
           },
           {
-            "name": "personnel",
-            "source_span": "personnel",
-            "start": 1524,
-            "end": 1533
+            "name": "Microsoft Office",
+            "source_span": "Microsoft Office",
+            "start": 3261,
+            "end": 3277
           },
           {
-            "name": "policies",
-            "source_span": "policies",
-            "start": 1238,
-            "end": 1246
+            "name": "Goal-oriented",
+            "source_span": "Goal-oriented",
+            "start": 3284,
+            "end": 3297
           },
           {
-            "name": "posters",
-            "source_span": "posters",
-            "start": 5353,
-            "end": 5360
+            "name": "Excellent negotiating tactics",
+            "source_span": "Excellent negotiating tactics",
+            "start": 3299,
+            "end": 3328
           },
           {
-            "name": "presentations",
-            "source_span": "presentations",
-            "start": 5362,
-            "end": 5375
+            "name": "Business negotiation",
+            "source_span": "Business negotiation",
+            "start": 3330,
+            "end": 3350
           },
           {
-            "name": "public relations",
-            "source_span": "public relations",
-            "start": 3631,
-            "end": 3647
+            "name": "Cold Calling",
+            "source_span": "Cold Calling",
+            "start": 3352,
+            "end": 3364
           },
           {
-            "name": "purchasing",
-            "source_span": "purchasing",
-            "start": 3248,
-            "end": 3258
+            "name": "Sales Force",
+            "source_span": "Sales Force",
+            "start": 3366,
+            "end": 3377
           },
           {
-            "name": "reporting",
-            "source_span": "reporting",
-            "start": 1663,
-            "end": 1672
+            "name": "Ability to Work Well in a Team Atmosphere",
+            "source_span": "Ability to Work Well in a Team Atmosphere",
+            "start": 2339,
+            "end": 2380
           },
           {
-            "name": "statistics",
-            "source_span": "statistics",
-            "start": 1637,
-            "end": 1647
+            "name": "Ability to multitask in a fast paced environment",
+            "source_span": "Ability to multitask in a fast paced environment",
+            "start": 2381,
+            "end": 2429
           },
           {
-            "name": "website",
-            "source_span": "website",
-            "start": 2180,
-            "end": 2187
+            "name": "Team player",
+            "source_span": "Team player",
+            "start": 2430,
+            "end": 2441
+          },
+          {
+            "name": "Strong problem-solving, analytical, and quantitative skills",
+            "source_span": "Strong problem-solving, analytical, and quantitative skills",
+            "start": 2497,
+            "end": 2556
+          },
+          {
+            "name": "Good oral and written communication skills",
+            "source_span": "Good oral and written communication skills",
+            "start": 2558,
+            "end": 2600
+          },
+          {
+            "name": "Professional presence",
+            "source_span": "Professional presence",
+            "start": 2671,
+            "end": 2692
+          },
+          {
+            "name": "Ability to balance multiple projects simultaneously",
+            "source_span": "Ability to balance multiple projects simultaneously",
+            "start": 2746,
+            "end": 2797
+          },
+          {
+            "name": "Ability to work effectively with diverse personalities",
+            "source_span": "Ability to work effectively with diverse personalities",
+            "start": 2828,
+            "end": 2882
+          },
+          {
+            "name": "Resourceful, reliable, get-things-done kind of person",
+            "source_span": "Resourceful, reliable, get-things-done kind of person",
+            "start": 2884,
+            "end": 2937
+          },
+          {
+            "name": "Willing to take responsibility, be held accountable",
+            "source_span": "Willing to take responsibility, be held accountable",
+            "start": 2939,
+            "end": 2990
+          },
+          {
+            "name": "Current Valid California Drivers License",
+            "source_span": "Possession of Current Valid California Drivers License",
+            "start": 3021,
+            "end": 3075
           }
         ],
         "degrees": [
           {
             "level": "associate",
-            "field": "Business Administration",
-            "institution": "Jefferson College",
-            "year": "1999",
-            "source_span": "N/A  ,   Business Administration   1999     Jefferson College",
-            "start": 4594,
-            "end": 4655
+            "field": "Sport Psychology",
+            "institution": "National University",
+            "year": "2012",
+            "source_span": "Associate Degree   :   Sport Psychology  ,   2012    National University",
+            "start": 5371,
+            "end": 5443
           },
           {
             "level": "associate",
-            "field": "Marketing / Advertising",
-            "institution": "Jefferson College",
-            "year": null,
-            "source_span": "Business Administration  Marketing / Advertising",
-            "start": 4684,
-            "end": 4732
+            "field": "Golf Management",
+            "institution": "PGCC Professional Golfers Career College",
+            "year": "08/2011",
+            "source_span": "Associate of Arts   :   Golf Management  ,   08/2011    PGCC Professional Golfers Career College",
+            "start": 5585,
+            "end": 5681
           },
           {
             "level": "high_school",
-            "field": "College Prep.",
-            "institution": "Sainte Genevieve Senior High",
-            "year": "1998",
-            "source_span": "High School Diploma  ,   College Prep. studies   1998     Sainte Genevieve Senior High",
-            "start": 4741,
-            "end": 4827
+            "field": null,
+            "institution": null,
+            "year": "1983",
+            "source_span": "High School Diploma   :     1983    Midfield high School",
+            "start": 5486,
+            "end": 5542
           }
         ],
         "experience": [
           {
-            "title": "HR Administrator",
+            "title": "Senior Associate Business Development",
             "company": "Company Name",
             "duration_months": null,
-            "source_span": "HR Administrator     Dec 2013   to   Current      Company Name",
-            "start": 1132,
-            "end": 1194
+            "source_span": "Senior Associate Business Development    January 2015   to   Current",
+            "start": 3405,
+            "end": 3473
           },
           {
-            "title": "Marketing Associate",
+            "title": "CEO",
             "company": "Company Name",
             "duration_months": null,
-            "source_span": "Marketing Associate",
-            "start": 1111,
-            "end": 1130
+            "source_span": "CEO    January 2011   to   Current",
+            "start": 3858,
+            "end": 3892
           },
           {
-            "title": "Advanced Medical Claims Analyst",
+            "title": "CEO",
             "company": "Company Name",
-            "duration_months": 22,
-            "source_span": "Advanced Medical Claims Analyst     Mar 2012   to   Dec 2013      Company Name",
-            "start": 2410,
-            "end": 2488
+            "duration_months": 48,
+            "source_span": "CEO    January 2001   to   January 2005",
+            "start": 4644,
+            "end": 4683
           },
           {
-            "title": "Assistant General Manager",
+            "title": "Field Radio Operator Communication specialist",
             "company": "Company Name",
-            "duration_months": 7,
-            "source_span": "Assistant General Manager     Jun 2010   to   Dec 2010      Company Name",
-            "start": 3025,
-            "end": 3097
-          },
-          {
-            "title": "Executive Support / Marketing Assistant",
-            "company": "Company Name",
-            "duration_months": 35,
-            "source_span": "Executive Support / Marketing Assistant     Jul 2007   to   Jun 2010      Company Name",
-            "start": 3729,
-            "end": 3815
-          },
-          {
-            "title": "Reservation & Front Office Manager",
-            "company": "Company Name",
-            "duration_months": 37,
-            "source_span": "Reservation & Front Office Manager     Jun 2004   to   Jul 2007      Company Name",
-            "start": 4267,
-            "end": 4348
-          },
-          {
-            "title": "Owner/ Partner",
-            "company": "Company Name",
-            "duration_months": 42,
-            "source_span": "Owner/ Partner     Dec 2001   to   May 2004      Company Name",
-            "start": 4380,
-            "end": 4441
-          },
-          {
-            "title": "Price Integrity Coordinator",
-            "company": "Company Name",
-            "duration_months": 29,
-            "source_span": "Price Integrity Coordinator     Aug 1999   to   Dec 2001      Company Name",
-            "start": 4473,
-            "end": 4547
+            "duration_months": 48,
+            "source_span": "Field Radio Operator Communication specialist    January 1983   to   January 1987",
+            "start": 5224,
+            "end": 5305
           }
         ]
       },
@@ -363,35 +374,35 @@
     }
   },
   "posting": {
-    "documents": 20,
+    "documents": 60,
     "errors": 0,
-    "truncated": 1,
+    "truncated": 3,
     "fields": {
       "required_skills": {
-        "kept": 126,
-        "unsupported": 10,
-        "invalid": 1,
-        "unsupported_rate": 0.073
+        "kept": 412,
+        "unsupported": 4,
+        "invalid": 13,
+        "unsupported_rate": 0.0093
       },
       "required_degrees": {
-        "kept": 20,
-        "unsupported": 1,
+        "kept": 48,
+        "unsupported": 0,
         "invalid": 0,
-        "unsupported_rate": 0.0476
+        "unsupported_rate": 0.0
       },
       "experience_required": {
-        "kept": 11,
+        "kept": 50,
         "unsupported": 0,
         "invalid": 0,
         "unsupported_rate": 0.0
       }
     },
     "reasons": {
-      "source_span not found in text": 11,
-      "skill name missing or too long": 1
+      "skill name missing or too long": 13,
+      "source_span not found in text": 4
     },
     "example": {
-      "doc_id": "921716",
+      "doc_id": "3366698309",
       "kind": "posting",
       "model": "qwen3-235b-a22b",
       "config": {
@@ -402,38 +413,91 @@
         "max_chars": 8000,
         "seed": null
       },
-      "source_chars": 2526,
+      "source_chars": 3861,
       "truncated": false,
-      "source_sha": "ac7b14653d7c",
+      "source_sha": "a64614b584f0",
       "constrained": true,
       "status": "ok",
       "facts": {
         "required_skills": [
           {
-            "name": "Adobe Creative Cloud (Indesign, Illustrator, Photoshop)",
+            "name": "Anaplan Hands-On Model building experience",
             "importance": "required",
-            "source_span": "proficient in Adobe Creative Cloud (Indesign, Illustrator, Photoshop)",
-            "start": 659,
-            "end": 728
+            "source_span": "Anaplan Hands-On Model building experience",
+            "start": 3445,
+            "end": 3487
           },
           {
-            "name": "Microsoft Office Suite",
+            "name": "Advanced Excel knowledge",
             "importance": "required",
-            "source_span": "proficient in Adobe Creative Cloud (Indesign, Illustrator, Photoshop) and Microsoft Office Suite",
-            "start": 659,
-            "end": 755
+            "source_span": "Advanced Excel knowledge",
+            "start": 3490,
+            "end": 3514
           }
         ],
-        "required_degrees": [],
+        "required_degrees": [
+          {
+            "level": "bachelors",
+            "field": "Computer Science",
+            "importance": "required",
+            "source_span": "Bachelor\u2019s Degree (Computer Science, Mathematics or Statistics)",
+            "start": 3213,
+            "end": 3276
+          },
+          {
+            "level": "bachelors",
+            "field": "Mathematics",
+            "importance": "required",
+            "source_span": "Bachelor\u2019s Degree (Computer Science, Mathematics or Statistics)",
+            "start": 3213,
+            "end": 3276
+          },
+          {
+            "level": "bachelors",
+            "field": "Statistics",
+            "importance": "required",
+            "source_span": "Bachelor\u2019s Degree (Computer Science, Mathematics or Statistics)",
+            "start": 3213,
+            "end": 3276
+          }
+        ],
         "experience_required": {
-          "min_years": 1,
-          "importance": "preferred",
-          "source_span": "Marketing: 1 year (Preferred)",
-          "start": 2437,
-          "end": 2466
+          "min_years": 3,
+          "importance": "required",
+          "source_span": "experience of successfully implementing Anaplan solutions as Solution Architect or Model Builder on 3 or more Anaplan implementation projects",
+          "start": 3301,
+          "end": 3442
         }
       },
-      "rejected": []
+      "rejected": [
+        {
+          "field": "required_skills",
+          "fact": {
+            "importance": "preferred",
+            "name": "Experience of successfully implementing Anaplan solutions as Model Builder on 3 or more Anaplan implementation projects",
+            "source_span": "Experience of successfully implementing Anaplan solutions as Model Builder on 3 or more Anaplan implementation projects"
+          },
+          "reason": "skill name missing or too long"
+        },
+        {
+          "field": "required_skills",
+          "fact": {
+            "importance": "preferred",
+            "name": "consulting/implementation prior experience with on premise systems such as SAP BPC, IBM Cognos TM1, Oracle Hyperion etc.",
+            "source_span": "consulting/implementation prior experience with on premise systems such as SAP BPC, IBM Cognos TM1, Oracle Hyperion etc."
+          },
+          "reason": "skill name missing or too long"
+        },
+        {
+          "field": "required_skills",
+          "fact": {
+            "importance": "preferred",
+            "name": "Delivered projects for large multi-national companies in an Analytical environment",
+            "source_span": "Delivered projects for large multi-national companies in an Analytical environment"
+          },
+          "reason": "source_span not found in text"
+        }
+      ]
     }
   }
 }

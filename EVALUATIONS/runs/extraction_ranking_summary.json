@@ -1,0 +1,621 @@
+{
+  "resume": {
+    "documents": 30,
+    "errors": 0,
+    "truncated": 6,
+    "fields": {
+      "skills": {
+        "kept": 998,
+        "unsupported": 1,
+        "invalid": 9,
+        "unsupported_rate": 0.001
+      },
+      "degrees": {
+        "kept": 59,
+        "unsupported": 0,
+        "invalid": 0,
+        "unsupported_rate": 0.0
+      },
+      "experience": {
+        "kept": 146,
+        "unsupported": 4,
+        "invalid": 1,
+        "unsupported_rate": 0.0265
+      }
+    },
+    "reasons": {
+      "source_span not found in text": 5,
+      "experience title missing": 1,
+      "skill name missing or too long": 9
+    },
+    "example": {
+      "doc_id": "13328680",
+      "kind": "resume",
+      "model": "qwen3-235b-a22b",
+      "config": {
+        "model": "qwen3-235b-a22b",
+        "prompt": "b3c5fd48",
+        "temperature": 0.0,
+        "max_tokens": 4000,
+        "max_chars": 8000,
+        "seed": null
+      },
+      "source_chars": 6059,
+      "truncated": false,
+      "source_sha": "a5ab7814a2ae",
+      "constrained": true,
+      "status": "ok",
+      "facts": {
+        "skills": [
+          {
+            "name": "PPC",
+            "source_span": "PPC",
+            "start": 72,
+            "end": 75
+          },
+          {
+            "name": "Digital Media Planning",
+            "source_span": "Digital Media Planning",
+            "start": 77,
+            "end": 99
+          },
+          {
+            "name": "DSP",
+            "source_span": "DSP",
+            "start": 101,
+            "end": 104
+          },
+          {
+            "name": "Behavioral Targeting",
+            "source_span": "Behavioral Targeting",
+            "start": 106,
+            "end": 126
+          },
+          {
+            "name": "Comscore",
+            "source_span": "Comscore",
+            "start": 128,
+            "end": 136
+          },
+          {
+            "name": "SimilarWeb",
+            "source_span": "SimilarWeb",
+            "start": 138,
+            "end": 148
+          },
+          {
+            "name": "Kenshoo",
+            "source_span": "Kenshoo",
+            "start": 150,
+            "end": 157
+          },
+          {
+            "name": "MS Excel",
+            "source_span": "MS Excel",
+            "start": 159,
+            "end": 167
+          },
+          {
+            "name": "PPT",
+            "source_span": "PPT",
+            "start": 169,
+            "end": 172
+          },
+          {
+            "name": "Agile Marketing",
+            "source_span": "Agile Marketing",
+            "start": 174,
+            "end": 189
+          },
+          {
+            "name": "Ads",
+            "source_span": "Ads",
+            "start": 191,
+            "end": 194
+          },
+          {
+            "name": "Portuguese",
+            "source_span": "Portuguese",
+            "start": 196,
+            "end": 206
+          },
+          {
+            "name": "Advertising",
+            "source_span": "Advertising",
+            "start": 208,
+            "end": 219
+          },
+          {
+            "name": "Presentations",
+            "source_span": "Presentations",
+            "start": 221,
+            "end": 234
+          },
+          {
+            "name": "Agile",
+            "source_span": "Agile",
+            "start": 174,
+            "end": 179
+          },
+          {
+            "name": "Quality",
+            "source_span": "Quality",
+            "start": 243,
+            "end": 250
+          },
+          {
+            "name": "Agency",
+            "source_span": "Agency",
+            "start": 252,
+            "end": 258
+          },
+          {
+            "name": "Quality control",
+            "source_span": "Quality control",
+            "start": 260,
+            "end": 275
+          },
+          {
+            "name": "Auditing",
+            "source_span": "Auditing",
+            "start": 277,
+            "end": 285
+          },
+          {
+            "name": "Reporting",
+            "source_span": "Reporting",
+            "start": 287,
+            "end": 296
+          },
+          {
+            "name": "Branding",
+            "source_span": "Branding",
+            "start": 298,
+            "end": 306
+          },
+          {
+            "name": "Sales",
+            "source_span": "Sales",
+            "start": 308,
+            "end": 313
+          },
+          {
+            "name": "Budget",
+            "source_span": "Budget",
+            "start": 315,
+            "end": 321
+          },
+          {
+            "name": "Bilingual",
+            "source_span": "Bilingual",
+            "start": 323,
+            "end": 332
+          },
+          {
+            "name": "BI",
+            "source_span": "BI",
+            "start": 334,
+            "end": 336
+          },
+          {
+            "name": "Spanish",
+            "source_span": "Spanish",
+            "start": 338,
+            "end": 345
+          },
+          {
+            "name": "Capital Markets",
+            "source_span": "Capital Markets",
+            "start": 347,
+            "end": 362
+          },
+          {
+            "name": "Strategy",
+            "source_span": "Strategy",
+            "start": 364,
+            "end": 372
+          },
+          {
+            "name": "Clients",
+            "source_span": "Clients",
+            "start": 378,
+            "end": 385
+          },
+          {
+            "name": "Strategic",
+            "source_span": "Strategic",
+            "start": 387,
+            "end": 396
+          },
+          {
+            "name": "Client",
+            "source_span": "Client",
+            "start": 378,
+            "end": 384
+          },
+          {
+            "name": "Data analysis",
+            "source_span": "Data analysis",
+            "start": 406,
+            "end": 419
+          },
+          {
+            "name": "Designing",
+            "source_span": "Designing",
+            "start": 421,
+            "end": 430
+          },
+          {
+            "name": "Direction",
+            "source_span": "Direction",
+            "start": 437,
+            "end": 446
+          },
+          {
+            "name": "English",
+            "source_span": "English",
+            "start": 448,
+            "end": 455
+          },
+          {
+            "name": "Fast",
+            "source_span": "Fast",
+            "start": 457,
+            "end": 461
+          },
+          {
+            "name": "Features",
+            "source_span": "Features",
+            "start": 463,
+            "end": 471
+          },
+          {
+            "name": "Financial",
+            "source_span": "Financial",
+            "start": 473,
+            "end": 482
+          },
+          {
+            "name": "French",
+            "source_span": "French",
+            "start": 484,
+            "end": 490
+          },
+          {
+            "name": "Innovation",
+            "source_span": "Innovation",
+            "start": 492,
+            "end": 502
+          },
+          {
+            "name": "Investments",
+            "source_span": "Investments",
+            "start": 504,
+            "end": 515
+          },
+          {
+            "name": "Leadership",
+            "source_span": "Leadership",
+            "start": 517,
+            "end": 527
+          },
+          {
+            "name": "Marketing",
+            "source_span": "Marketing",
+            "start": 180,
+            "end": 189
+          },
+          {
+            "name": "Market",
+            "source_span": "Market",
+            "start": 180,
+            "end": 186
+          },
+          {
+            "name": "Media Planning",
+            "source_span": "Media Planning",
+            "start": 85,
+            "end": 99
+          },
+          {
+            "name": "Meetings",
+            "source_span": "Meetings",
+            "start": 564,
+            "end": 572
+          },
+          {
+            "name": "Modeling",
+            "source_span": "Modeling",
+            "start": 584,
+            "end": 592
+          },
+          {
+            "name": "Next",
+            "source_span": "Next",
+            "start": 594,
+            "end": 598
+          },
+          {
+            "name": "Optimization",
+            "source_span": "Optimization",
+            "start": 600,
+            "end": 612
+          }
+        ],
+        "degrees": [
+          {
+            "level": "bachelors",
+            "field": "Business Administration",
+            "institution": "Boston College",
+            "year": "05/1994",
+            "source_span": "B.S  :   Business Administration  ,   05/1994     Boston College   -   City  ,   State",
+            "start": 5748,
+            "end": 5834
+          },
+          {
+            "level": "masters",
+            "field": "Business Strategy",
+            "institution": null,
+            "year": "04/2017",
+            "source_span": "WPP Mini MBA  :   Business Strategy  ,   04/2017",
+            "start": 5689,
+            "end": 5737
+          }
+        ],
+        "experience": [
+          {
+            "title": "Director",
+            "company": "Company Name",
+            "duration_months": 46,
+            "source_span": "Director  ,     07/2017   to   05/2021     Company Name",
+            "start": 642,
+            "end": 697
+          },
+          {
+            "title": "Digital Media Solutions Executive Director",
+            "company": "Company Name \u2013 City , State",
+            "duration_months": 6,
+            "source_span": "Digital Media Solutions Executive Director  ,     01/2016   to   07/2017     Company Name    \u2013    City  ,   State",
+            "start": 1579,
+            "end": 1692
+          },
+          {
+            "title": "Account Director",
+            "company": "Blinks",
+            "duration_months": 24,
+            "source_span": "Account Director  ,     01/2014   to   12/2015",
+            "start": 3172,
+            "end": 3218
+          },
+          {
+            "title": "Account Manager",
+            "company": null,
+            "duration_months": 37,
+            "source_span": "Account Manager  ,     12/2010   to   12/2013",
+            "start": 4105,
+            "end": 4150
+          },
+          {
+            "title": "Behavior Targeting Specialist",
+            "company": "Company Name \u2013 City , State",
+            "duration_months": 60,
+            "source_span": "Behavior Targeting Specialist  ,     01/2008   to   01/2013     Company Name    \u2013    City  ,   State",
+            "start": 4456,
+            "end": 4556
+          },
+          {
+            "title": "Senior Investment Specialist",
+            "company": "Company Name \u2013 City , State",
+            "duration_months": 51,
+            "source_span": "Senior Investment Specialist  ,     01/1999   to   03/2003     Company Name    \u2013    City  ,   State",
+            "start": 4569,
+            "end": 4668
+          },
+          {
+            "title": "Equity Trading Liaison",
+            "company": null,
+            "duration_months": 18,
+            "source_span": "Equity Trading Liaison  ,     07/1997   to   01/1999",
+            "start": 4992,
+            "end": 5044
+          },
+          {
+            "title": "Floor Broker",
+            "company": "Company Name \u2013 City , State",
+            "duration_months": 24,
+            "source_span": "Floor Broker  ,     01/1995   to   01/1997     Company Name    \u2013    City  ,   State",
+            "start": 5410,
+            "end": 5493
+          }
+        ]
+      },
+      "rejected": []
+    }
+  },
+  "posting": {
+    "documents": 300,
+    "errors": 0,
+    "truncated": 30,
+    "fields": {
+      "required_skills": {
+        "kept": 2676,
+        "unsupported": 43,
+        "invalid": 155,
+        "unsupported_rate": 0.015
+      },
+      "required_degrees": {
+        "kept": 318,
+        "unsupported": 7,
+        "invalid": 0,
+        "unsupported_rate": 0.0215
+      },
+      "experience_required": {
+        "kept": 268,
+        "unsupported": 1,
+        "invalid": 0,
+        "unsupported_rate": 0.0037
+      }
+    },
+    "reasons": {
+      "source_span not found in text": 51,
+      "skill name missing or too long": 155
+    },
+    "example": {
+      "doc_id": "3619548798",
+      "kind": "posting",
+      "model": "qwen3-235b-a22b",
+      "config": {
+        "model": "qwen3-235b-a22b",
+        "prompt": "32de7bdd",
+        "temperature": 0.0,
+        "max_tokens": 4000,
+        "max_chars": 8000,
+        "seed": null
+      },
+      "source_chars": 4205,
+      "truncated": false,
+      "source_sha": "2313f3580624",
+      "constrained": true,
+      "status": "ok",
+      "facts": {
+        "required_skills": [
+          {
+            "name": "3D CAD",
+            "importance": "required",
+            "source_span": "Significant experience using 3D CAD, preferably SolidWorks",
+            "start": 2676,
+            "end": 2734
+          },
+          {
+            "name": "SolidWorks",
+            "importance": "preferred",
+            "source_span": "preferably SolidWorks",
+            "start": 2713,
+            "end": 2734
+          },
+          {
+            "name": "2D drawings",
+            "importance": "required",
+            "source_span": "including 2D drawings and simulations",
+            "start": 2737,
+            "end": 2774
+          },
+          {
+            "name": "simulations",
+            "importance": "required",
+            "source_span": "including 2D drawings and simulations",
+            "start": 2737,
+            "end": 2774
+          },
+          {
+            "name": "motion control systems",
+            "importance": "required",
+            "source_span": "Experience designing motion control systems with sensors, actuators and complex mechanisms",
+            "start": 2776,
+            "end": 2866
+          },
+          {
+            "name": "ASME drafting standards",
+            "importance": "required",
+            "source_span": "A working knowledge of ASME and ISO drafting standards including GD&T, (Y14.5-2009)",
+            "start": 2868,
+            "end": 2951
+          },
+          {
+            "name": "ISO drafting standards",
+            "importance": "required",
+            "source_span": "A working knowledge of ASME and ISO drafting standards including GD&T, (Y14.5-2009)",
+            "start": 2868,
+            "end": 2951
+          },
+          {
+            "name": "GD&T",
+            "importance": "required",
+            "source_span": "including GD&T, (Y14.5-2009)",
+            "start": 2923,
+            "end": 2951
+          },
+          {
+            "name": "DFM/A",
+            "importance": "required",
+            "source_span": "A working knowledge of DFM/A and statistical tolerance analysis",
+            "start": 2953,
+            "end": 3016
+          },
+          {
+            "name": "statistical tolerance analysis",
+            "importance": "required",
+            "source_span": "and statistical tolerance analysis",
+            "start": 2982,
+            "end": 3016
+          },
+          {
+            "name": "DFMEA",
+            "importance": "required",
+            "source_span": "failure avoidance methods including DFMEA/PFMEA and fault tree analysis",
+            "start": 3041,
+            "end": 3112
+          },
+          {
+            "name": "PFMEA",
+            "importance": "required",
+            "source_span": "failure avoidance methods including DFMEA/PFMEA and fault tree analysis",
+            "start": 3041,
+            "end": 3112
+          },
+          {
+            "name": "fault tree analysis",
+            "importance": "required",
+            "source_span": "failure avoidance methods including DFMEA/PFMEA and fault tree analysis",
+            "start": 3041,
+            "end": 3112
+          },
+          {
+            "name": "technical writing",
+            "importance": "required",
+            "source_span": "High level of technical writing proficiency (specs, test plans, reports, white papers, etc.)",
+            "start": 3239,
+            "end": 3331
+          },
+          {
+            "name": "electrical design and integration",
+            "importance": "preferred",
+            "source_span": "Familiarity with electrical design and integration (cable harnesses, wiring diagrams) is a plus",
+            "start": 3333,
+            "end": 3428
+          }
+        ],
+        "required_degrees": [
+          {
+            "level": "bachelors",
+            "field": "Mechanical Engineering",
+            "importance": "required",
+            "source_span": "Bachelor's or Master's in Mechanical Engineering",
+            "start": 2501,
+            "end": 2549
+          },
+          {
+            "level": "masters",
+            "field": "Mechanical Engineering",
+            "importance": "required",
+            "source_span": "Bachelor's or Master's in Mechanical Engineering",
+            "start": 2501,
+            "end": 2549
+          }
+        ],
+        "experience_required": {
+          "min_years": 5,
+          "importance": "required",
+          "source_span": "5 or more years of related work experience",
+          "start": 2551,
+          "end": 2593
+        }
+      },
+      "rejected": []
+    }
+  },
+  "documents": {
+    "resumes": "all 30 in extraction_ids.json",
+    "postings": "first 300 in extraction_ids.json"
+  }
+}
