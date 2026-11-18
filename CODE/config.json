@@ -1,0 +1,97 @@
+{
+  "paths": {
+    "raw_postings": "DATA/linkedin-job-postings/postings.csv",
+    "raw_resumes": "DATA/resume-dataset/Resume/Resume.csv",
+    "postings": "DATA/processed/postings_cleaned.csv",
+    "resumes": "DATA/processed/resumes_cleaned.csv",
+    "extracted_postings": "DATA/extracted/postings.jsonl",
+    "extracted_resumes": "DATA/extracted/resumes.jsonl",
+    "skills": "DATA/lightcast/skills.json",
+    "aliases": "CODE/resources/skill_aliases.json",
+    "ontology": "CODE/resources/ontology.json",
+    "split": "EVALUATIONS/split.json",
+    "graded_qrels": "EVALUATIONS/relevance/graded_qrels.csv",
+    "linking_gold": "EVALUATIONS/linking/linking_gold.csv",
+    "out_dir": "EVALUATIONS/runs"
+  },
+  "corpus": {
+    "n_postings": 2000,
+    "n_resumes": null,
+    "seed": 573
+  },
+  "extraction": {
+    "mode": "llm",
+    "model": "qwen3-235b-a22b",
+    "base_url": "https://openai.rc.asu.edu/v1",
+    "api_key_env": "ASU_VOYAGER_KEY",
+    "max_chars": 8000
+  },
+  "linking": {
+    "top_k": 5,
+    "min_score": 0.65,
+    "margin": 0.0,
+    "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "cross_encoder": null,
+    "use_llm": true,
+    "llm_accept": 0.9,
+    "llm_reject": 0.3,
+    "llm_cache": "DATA/lightcast/link_llm_cache.json",
+    "emb_cache": "DATA/lightcast/skill_embeddings.npy"
+  },
+  "retrieval": {
+    "query": "skills",
+    "first_stage_k": 100,
+    "rrf_k": 60,
+    "dense_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "hybrid_weight": 0.5,
+    "emb_cache": "DATA/embeddings/postings.npz"
+  },
+  "rerank": {
+    "model": "cross-encoder/ms-marco-MiniLM-L-6-v2",
+    "top_n": 50
+  },
+  "scoring": {
+    "beta_ce": 0.6,
+    "beta_graph": 0.4,
+    "beta_penalty": 0.3,
+    "lambda_sub": 0.6,
+    "lambda_cat": 0.3,
+    "w_required": 1.0,
+    "w_preferred": 0.5,
+    "fuzzy_threshold": 0.9,
+    "current_date": "2021-12"
+  },
+  "evaluation": {
+    "k": 10,
+    "dev_ratio": 0.5,
+    "seed": 573,
+    "bootstrap": 1000,
+    "permutations": 10000,
+    "pool_depth": 10
+  },
+  "neo4j": {
+    "uri": "bolt://localhost:7687",
+    "user": "neo4j",
+    "password_env": "NEO4J_PASSWORD"
+  },
+  "strict_models": false,
+  "labeling": {
+    "annotators": [
+      "aakash",
+      "richitha",
+      "kaushal",
+      "chandana",
+      "sreeram",
+      "chirag"
+    ],
+    "sheets_dir": "EVALUATIONS/labeling",
+    "graded_resumes": 30,
+    "shared_resumes": 3,
+    "linking_mentions": 300,
+    "shared_mentions": 30,
+    "extraction_docs": 60,
+    "extraction_shared": 10,
+    "gold_dir": "EVALUATIONS/gold",
+    "gold_second_dir": "EVALUATIONS/gold_second"
+  }
+}
