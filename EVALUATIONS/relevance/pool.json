@@ -105,16 +105,33 @@
  },
  "stats": {
   "resumes": 30,
-  "pairs": 898,
-  "mean_per_resume": 29.933333333333334
+  "pairs": 973,
+  "mean_per_resume": 32.43333333333333
  },
  "pool": {
   "13328680": [
    {
-    "job_id": "3903459792",
+    "job_id": "3884933304",
     "methods": [
-     "bm25",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3904365421",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884896651",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884929286",
+    "methods": [
+     "rrf"
     ]
    },
    {
@@ -125,27 +142,9 @@
     ]
    },
    {
-    "job_id": "3902354417",
+    "job_id": "3886894136",
     "methods": [
      "dense"
-    ]
-   },
-   {
-    "job_id": "3902342942",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905249756",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905341105",
-    "methods": [
-     "bm25"
     ]
    },
    {
@@ -155,33 +154,9 @@
     ]
    },
    {
-    "job_id": "3884896651",
+    "job_id": "3903459792",
     "methods": [
-     "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3904928899",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3902371357",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3904574374",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3884933304",
-    "methods": [
+     "bm25",
      "rerank"
     ]
    },
@@ -199,32 +174,88 @@
     ]
    },
    {
+    "job_id": "3884444629",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894901116",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889104364",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902354417",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902371357",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905341105",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901960681",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3902840735",
     "methods": [
      "bm25"
     ]
    },
    {
-    "job_id": "3886894136",
+    "job_id": "3905249756",
     "methods": [
-     "dense"
+     "rerank"
     ]
    },
    {
-    "job_id": "3906097241",
+    "job_id": "3891255642",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3902367662",
+    "job_id": "3889416410",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904928899",
     "methods": [
      "rrf"
     ]
    },
    {
-    "job_id": "3906099041",
+    "job_id": "3888825690",
     "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905372904",
+    "methods": [
+     "hybrid",
      "rrf"
     ]
    },
@@ -242,9 +273,14 @@
     ]
    },
    {
-    "job_id": "3905372904",
+    "job_id": "3901946524",
     "methods": [
-     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902344828",
+    "methods": [
      "rrf"
     ]
    },
@@ -256,6 +292,12 @@
     ]
    },
    {
+    "job_id": "3891072541",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3905377271",
     "methods": [
      "hybrid",
@@ -263,47 +305,14 @@
     ]
    },
    {
-    "job_id": "3894901116",
+    "job_id": "3904574374",
     "methods": [
-     "hybrid",
-     "rerank"
+     "dense"
     ]
    },
    {
-    "job_id": "3888825690",
+    "job_id": "3902342942",
     "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3905237869",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3898169794",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3901946524",
-    "methods": [
-     "hybrid",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3902344828",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3889104364",
-    "methods": [
-     "bm25",
      "rerank"
     ]
    },
@@ -326,21 +335,27 @@
     ]
    },
    {
+    "job_id": "3902367662",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
     "job_id": "3905256332",
     "methods": [
      "bm25"
     ]
    },
    {
-    "job_id": "3884929286",
+    "job_id": "3906099041",
     "methods": [
      "rrf"
     ]
    },
    {
-    "job_id": "3904365421",
+    "job_id": "3902830791",
     "methods": [
-     "rrf"
+     "hybrid"
     ]
    },
    {
@@ -353,22 +368,33 @@
   ],
   "51681660": [
    {
+    "job_id": "3905393267",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904722893",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3901640979",
     "methods": [
      "bm25"
     ]
    },
    {
-    "job_id": "3905393271",
+    "job_id": "3905389911",
     "methods": [
-     "bm25",
-     "rrf"
+     "bm25"
     ]
    },
    {
-    "job_id": "3902937252",
+    "job_id": "3901647510",
     "methods": [
-     "hybrid"
+     "bm25"
     ]
    },
    {
@@ -386,21 +412,17 @@
     ]
    },
    {
+    "job_id": "3905393271",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
     "job_id": "3903871967",
     "methods": [
+     "hybrid",
      "rerank"
-    ]
-   },
-   {
-    "job_id": "3905389911",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3901647510",
-    "methods": [
-     "bm25"
     ]
    },
    {
@@ -410,10 +432,36 @@
     ]
    },
    {
+    "job_id": "3904384838",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
     "job_id": "3901395357",
     "methods": [
      "dense",
-     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891091648",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901349910",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905695814",
+    "methods": [
+     "dense",
      "rerank"
     ]
    },
@@ -426,38 +474,15 @@
     ]
    },
    {
-    "job_id": "3901349910",
+    "job_id": "3905214462",
     "methods": [
-     "dense",
-     "rerank"
+     "hybrid"
     ]
    },
    {
     "job_id": "3901941241",
     "methods": [
-     "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3904384838",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905393267",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3905695814",
-    "methods": [
-     "dense",
-     "rerank"
+     "dense"
     ]
    },
    {
@@ -516,21 +541,21 @@
     ]
    },
    {
-    "job_id": "3901631043",
+    "job_id": "3894286217",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3891091648",
+    "job_id": "3904422490",
     "methods": [
-     "rerank"
+     "hybrid"
     ]
    }
   ],
   "29050809": [
    {
-    "job_id": "3902772892",
+    "job_id": "3901693597",
     "methods": [
      "rerank"
     ]
@@ -557,7 +582,6 @@
     "job_id": "3901634983",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -569,7 +593,7 @@
     ]
    },
    {
-    "job_id": "3906247358",
+    "job_id": "3894979614",
     "methods": [
      "hybrid"
     ]
@@ -596,9 +620,9 @@
     ]
    },
    {
-    "job_id": "3895280035",
+    "job_id": "3900962710",
     "methods": [
-     "bm25"
+     "rerank"
     ]
    },
    {
@@ -643,15 +667,15 @@
     ]
    },
    {
-    "job_id": "3901941531",
+    "job_id": "3887906634",
     "methods": [
-     "rrf"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3884433257",
+    "job_id": "3901941531",
     "methods": [
-     "hybrid"
+     "rrf"
     ]
    },
    {
@@ -667,10 +691,9 @@
     ]
    },
    {
-    "job_id": "3901693597",
+    "job_id": "3884433257",
     "methods": [
-     "hybrid",
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -686,9 +709,16 @@
     ]
    },
    {
-    "job_id": "3894979614",
+    "job_id": "3906247358",
     "methods": [
      "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902772892",
+    "methods": [
+     "hybrid",
+     "rerank"
     ]
    },
    {
@@ -705,9 +735,10 @@
     ]
    },
    {
-    "job_id": "3900962710",
+    "job_id": "3902916919",
     "methods": [
-     "rerank"
+     "bm25",
+     "rrf"
     ]
    },
    {
@@ -717,16 +748,15 @@
     ]
    },
    {
-    "job_id": "3901377575",
+    "job_id": "3905207996",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3902916919",
+    "job_id": "3895280035",
     "methods": [
-     "bm25",
-     "rrf"
+     "bm25"
     ]
    },
    {
@@ -752,10 +782,15 @@
   ],
   "86184722": [
    {
-    "job_id": "3902348924",
+    "job_id": "3905833656",
     "methods": [
-     "dense",
      "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905295445",
+    "methods": [
+     "rerank"
     ]
    },
    {
@@ -767,13 +802,7 @@
     ]
    },
    {
-    "job_id": "3906226836",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3905242006",
+    "job_id": "3884808478",
     "methods": [
      "hybrid"
     ]
@@ -786,7 +815,14 @@
     ]
    },
    {
-    "job_id": "3901960784",
+    "job_id": "3887107156",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906226836",
     "methods": [
      "dense"
     ]
@@ -799,15 +835,52 @@
     ]
    },
    {
-    "job_id": "3902785002",
+    "job_id": "3901650285",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3904719444",
+    "job_id": "3905824247",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901960784",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904944231",
     "methods": [
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3894284830",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894299506",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904392601",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902348924",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -817,13 +890,7 @@
     ]
    },
    {
-    "job_id": "3887107156",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3894299506",
+    "job_id": "3901393821",
     "methods": [
      "bm25",
      "rrf"
@@ -836,40 +903,16 @@
     ]
    },
    {
-    "job_id": "3894284830",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3905295445",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3901393821",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3905824247",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
     "job_id": "3905335957",
     "methods": [
      "bm25"
     ]
    },
    {
-    "job_id": "3891011926",
+    "job_id": "3901677830",
     "methods": [
-     "hybrid"
+     "rrf",
+     "rerank"
     ]
    },
    {
@@ -893,7 +936,7 @@
     ]
    },
    {
-    "job_id": "3901630033",
+    "job_id": "3905242006",
     "methods": [
      "hybrid"
     ]
@@ -906,7 +949,7 @@
     ]
    },
    {
-    "job_id": "3904392601",
+    "job_id": "3899531612",
     "methods": [
      "rerank"
     ]
@@ -918,11 +961,21 @@
     ]
    },
    {
-    "job_id": "3901677830",
+    "job_id": "3904935974",
     "methods": [
-     "hybrid",
-     "rrf",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904719444",
+    "methods": [
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3906202115",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -935,27 +988,9 @@
     ]
    },
    {
-    "job_id": "3906202115",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3899531612",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
     "job_id": "3902806579",
     "methods": [
      "rrf"
-    ]
-   },
-   {
-    "job_id": "3904944231",
-    "methods": [
-     "rerank"
     ]
    },
    {
@@ -974,33 +1009,9 @@
   ],
   "42304307": [
    {
-    "job_id": "3904403904",
+    "job_id": "3898167222",
     "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3904721983",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3888002437",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3898172830",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3885115007",
-    "methods": [
-     "bm25",
+     "dense",
      "rrf"
     ]
    },
@@ -1011,21 +1022,21 @@
     ]
    },
    {
-    "job_id": "3894612556",
+    "job_id": "3895546115",
     "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3902358950",
+    "job_id": "3898178335",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3902754749",
+    "job_id": "3904721983",
     "methods": [
-     "dense"
+     "rerank"
     ]
    },
    {
@@ -1035,9 +1046,9 @@
     ]
    },
    {
-    "job_id": "3895546115",
+    "job_id": "3888002437",
     "methods": [
-     "rerank"
+     "bm25"
     ]
    },
    {
@@ -1047,9 +1058,40 @@
     ]
    },
    {
-    "job_id": "3884898860",
+    "job_id": "3885115007",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901354990",
     "methods": [
      "hybrid"
+    ]
+   },
+   {
+    "job_id": "3898179053",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904403904",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3888973758",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902754749",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -1060,10 +1102,9 @@
     ]
    },
    {
-    "job_id": "3898167222",
+    "job_id": "3894612556",
     "methods": [
-     "dense",
-     "rrf"
+     "rerank"
     ]
    },
    {
@@ -1080,7 +1121,7 @@
     ]
    },
    {
-    "job_id": "3886835914",
+    "job_id": "3904071983",
     "methods": [
      "rerank"
     ]
@@ -1099,13 +1140,13 @@
     ]
    },
    {
-    "job_id": "3904071983",
+    "job_id": "3900945020",
     "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3898178335",
+    "job_id": "3900943270",
     "methods": [
      "hybrid"
     ]
@@ -1147,7 +1188,7 @@
     ]
    },
    {
-    "job_id": "3905612332",
+    "job_id": "3898172830",
     "methods": [
      "hybrid"
     ]
@@ -1163,22 +1204,21 @@
     ]
    },
    {
-    "job_id": "3889279966",
+    "job_id": "3902831418",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3888973758",
+    "job_id": "3886835914",
     "methods": [
-     "bm25"
+     "rerank"
     ]
    },
    {
-    "job_id": "3900945020",
+    "job_id": "3889279966",
     "methods": [
-     "hybrid",
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -1191,18 +1231,9 @@
   ],
   "11415967": [
    {
-    "job_id": "3906230100",
+    "job_id": "3905829282",
     "methods": [
-     "dense",
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3887909807",
-    "methods": [
-     "bm25",
-     "rrf"
+     "hybrid"
     ]
    },
    {
@@ -1212,45 +1243,16 @@
     ]
    },
    {
-    "job_id": "3904988780",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3889412913",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3904384636",
+    "job_id": "3901353910",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3903472866",
-    "methods": [
-     "dense",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905650597",
+    "job_id": "3901949253",
     "methods": [
      "bm25",
      "rrf"
-    ]
-   },
-   {
-    "job_id": "3904962481",
-    "methods": [
-     "rerank"
     ]
    },
    {
@@ -1272,16 +1274,69 @@
     ]
    },
    {
+    "job_id": "3903844788",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3888804559",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3904383858",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3901949253",
+    "job_id": "3904384636",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3885860175",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905650597",
     "methods": [
      "bm25",
      "rrf"
+    ]
+   },
+   {
+    "job_id": "3904962481",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906230100",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889412913",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903472866",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
     ]
    },
    {
@@ -1291,10 +1346,28 @@
     ]
    },
    {
+    "job_id": "3902787129",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3887909807",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902736148",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3884915227",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -1306,17 +1379,27 @@
     ]
    },
    {
-    "job_id": "3895242424",
+    "job_id": "3902371389",
     "methods": [
-     "dense",
-     "rrf",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894297721",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900069923",
+    "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3905832930",
+    "job_id": "3902865779",
     "methods": [
-     "hybrid"
+     "bm25"
     ]
    },
    {
@@ -1329,7 +1412,6 @@
     "job_id": "3884438592",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -1341,22 +1423,24 @@
     ]
    },
    {
-    "job_id": "3903844788",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902865779",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
     "job_id": "3905311253",
     "methods": [
      "bm25",
      "rrf"
+    ]
+   },
+   {
+    "job_id": "3895242424",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904988780",
+    "methods": [
+     "bm25"
     ]
    },
    {
@@ -1365,46 +1449,20 @@
      "bm25",
      "rrf"
     ]
-   },
-   {
-    "job_id": "3905364612",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3900069923",
-    "methods": [
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3901344591",
-    "methods": [
-     "hybrid"
-    ]
    }
   ],
   "30713796": [
    {
-    "job_id": "3904991519",
+    "job_id": "3904388489",
     "methods": [
      "dense",
-     "hybrid"
+     "rerank"
     ]
    },
    {
-    "job_id": "3901372781",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3905331606",
+    "job_id": "3903842933",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -1415,13 +1473,19 @@
     ]
    },
    {
-    "job_id": "3887889015",
+    "job_id": "3902783910",
     "methods": [
-     "rerank"
+     "rrf"
     ]
    },
    {
-    "job_id": "3905327736",
+    "job_id": "3884436647",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901631125",
     "methods": [
      "dense",
      "hybrid",
@@ -1429,16 +1493,21 @@
     ]
    },
    {
-    "job_id": "3905392551",
+    "job_id": "3894401091",
     "methods": [
-     "dense",
-     "hybrid"
+     "bm25"
     ]
    },
    {
-    "job_id": "3904390351",
+    "job_id": "3905331606",
     "methods": [
-     "hybrid",
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887889015",
+    "methods": [
      "rerank"
     ]
    },
@@ -1449,19 +1518,13 @@
     ]
    },
    {
-    "job_id": "3903842158",
+    "job_id": "3905885478",
     "methods": [
      "rrf"
     ]
    },
    {
-    "job_id": "3895545204",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3904567708",
+    "job_id": "3903842158",
     "methods": [
      "rrf"
     ]
@@ -1473,14 +1536,27 @@
     ]
    },
    {
-    "job_id": "3901469933",
+    "job_id": "3905392551",
     "methods": [
-     "hybrid",
-     "rrf"
+     "dense",
+     "hybrid"
     ]
    },
    {
-    "job_id": "3901631125",
+    "job_id": "3903813021",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904991519",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905327736",
     "methods": [
      "dense",
      "hybrid",
@@ -1497,18 +1573,16 @@
     ]
    },
    {
-    "job_id": "3904388489",
+    "job_id": "3901469933",
     "methods": [
-     "dense",
      "hybrid",
-     "rerank"
+     "rrf"
     ]
    },
    {
-    "job_id": "3904569468",
+    "job_id": "3905303186",
     "methods": [
-     "bm25",
-     "rrf"
+     "rerank"
     ]
    },
    {
@@ -1518,15 +1592,33 @@
     ]
    },
    {
-    "job_id": "3887886524",
+    "job_id": "3895545204",
     "methods": [
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3905205568",
+    "methods": [
+     "bm25"
     ]
    },
    {
     "job_id": "3901941737",
     "methods": [
      "bm25"
+    ]
+   },
+   {
+    "job_id": "3902351744",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3887886524",
+    "methods": [
+     "rerank"
     ]
    },
    {
@@ -1543,9 +1635,14 @@
     ]
    },
    {
-    "job_id": "3905885478",
+    "job_id": "3884434686",
     "methods": [
-     "hybrid",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904567708",
+    "methods": [
      "rrf"
     ]
    },
@@ -1556,74 +1653,38 @@
     ]
    },
    {
-    "job_id": "3905205568",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3903842933",
-    "methods": [
-     "dense",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3894401091",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3905303186",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902783910",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3903813021",
-    "methods": [
-     "bm25"
-    ]
-   }
-  ],
-  "16702198": [
-   {
-    "job_id": "3901672281",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3901372215",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3904717669",
+    "job_id": "3902756336",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3902861834",
+    "job_id": "3901372781",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904390351",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904569468",
     "methods": [
      "bm25",
      "rrf"
     ]
-   },
+   }
+  ],
+  "16702198": [
    {
-    "job_id": "3904435355",
+    "job_id": "3901372215",
     "methods": [
-     "rerank"
+     "bm25",
+     "hybrid",
+     "rrf"
     ]
    },
    {
@@ -1639,41 +1700,9 @@
     ]
    },
    {
-    "job_id": "3902735893",
+    "job_id": "3904717669",
     "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3902814021",
-    "methods": [
-     "dense",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3902737513",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3906227955",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902751839",
-    "methods": [
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3904963010",
-    "methods": [
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -1684,12 +1713,78 @@
     ]
    },
    {
+    "job_id": "3888801850",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3875041552",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884441917",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
     "job_id": "3902846241",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3902735893",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904435355",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902737513",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904963010",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906227955",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902814021",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891248749",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901672281",
+    "methods": [
+     "bm25"
     ]
    },
    {
@@ -1702,7 +1797,7 @@
     ]
    },
    {
-    "job_id": "3905204757",
+    "job_id": "3905327234",
     "methods": [
      "hybrid"
     ]
@@ -1715,9 +1810,10 @@
     ]
    },
    {
-    "job_id": "3891248749",
+    "job_id": "3895520299",
     "methods": [
-     "rerank"
+     "bm25",
+     "rrf"
     ]
    },
    {
@@ -1728,9 +1824,9 @@
     ]
    },
    {
-    "job_id": "3906250525",
+    "job_id": "3905204757",
     "methods": [
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -1744,8 +1840,7 @@
    {
     "job_id": "3901349069",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    },
    {
@@ -1757,8 +1852,7 @@
    {
     "job_id": "3901175613",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    },
    {
@@ -1772,18 +1866,24 @@
     "job_id": "3903800663",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
    {
-    "job_id": "3884441917",
+    "job_id": "3902751839",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906250525",
     "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3895520299",
+    "job_id": "3902861834",
     "methods": [
      "bm25",
      "rrf"
@@ -1792,34 +1892,21 @@
   ],
   "25959103": [
    {
-    "job_id": "3903806888",
+    "job_id": "3901341765",
     "methods": [
-     "dense"
+     "bm25"
     ]
    },
    {
-    "job_id": "3901351878",
-    "methods": [
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3900067885",
+    "job_id": "3904383638",
     "methods": [
      "dense",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902349760",
-    "methods": [
+     "hybrid",
      "rrf"
     ]
    },
    {
-    "job_id": "3885854571",
+    "job_id": "3887991953",
     "methods": [
      "hybrid"
     ]
@@ -1832,9 +1919,46 @@
     ]
    },
    {
-    "job_id": "3885826873",
+    "job_id": "3891289141",
     "methods": [
-     "bm25"
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903806888",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3891288484",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902349760",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3900067885",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905882618",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902739664",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -1844,17 +1968,15 @@
     ]
    },
    {
-    "job_id": "3891285732",
+    "job_id": "3905201407",
     "methods": [
-     "dense",
-     "hybrid",
-     "rerank"
+     "dense"
     ]
    },
    {
-    "job_id": "3885823916",
+    "job_id": "3889718748",
     "methods": [
-     "bm25"
+     "rerank"
     ]
    },
    {
@@ -1864,14 +1986,26 @@
     ]
    },
    {
-    "job_id": "3905201407",
+    "job_id": "3905254732",
     "methods": [
-     "dense",
-     "hybrid"
+     "bm25"
     ]
    },
    {
-    "job_id": "3905254732",
+    "job_id": "3891285732",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905284704",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3885826873",
     "methods": [
      "bm25"
     ]
@@ -1884,22 +2018,24 @@
     ]
    },
    {
-    "job_id": "3905284704",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3902739664",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3894546216",
+    "job_id": "3901351878",
     "methods": [
      "hybrid",
-     "rrf"
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904952403",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3899524648",
+    "methods": [
+     "rrf",
+     "rerank"
     ]
    },
    {
@@ -1909,18 +2045,24 @@
     ]
    },
    {
+    "job_id": "3905342098",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
     "job_id": "3905214623",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3905342098",
+    "job_id": "3905886139",
     "methods": [
-     "rerank"
+     "dense",
+     "rrf"
     ]
    },
    {
@@ -1939,69 +2081,55 @@
     ]
    },
    {
-    "job_id": "3899524648",
-    "methods": [
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3903844554",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3901341765",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
     "job_id": "3901949285",
     "methods": [
      "dense"
     ]
    },
    {
-    "job_id": "3904383638",
+    "job_id": "3898155877",
     "methods": [
-     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3885823916",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902744018",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894546216",
+    "methods": [
      "hybrid",
      "rrf"
-    ]
-   },
-   {
-    "job_id": "3905886139",
-    "methods": [
-     "dense",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3891288484",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3889718748",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3891289141",
-    "methods": [
-     "rerank"
     ]
    }
   ],
   "17095812": [
    {
-    "job_id": "3900981838",
+    "job_id": "3886897291",
     "methods": [
-     "bm25"
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884820702",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902344439",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -2012,7 +2140,13 @@
     ]
    },
    {
-    "job_id": "3887860395",
+    "job_id": "3900981838",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905828821",
     "methods": [
      "hybrid"
     ]
@@ -2025,35 +2159,28 @@
     ]
    },
    {
-    "job_id": "3902780852",
+    "job_id": "3889412923",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884861123",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3884820702",
+    "job_id": "3885811459",
     "methods": [
      "bm25",
-     "rrf"
+     "rerank"
     ]
    },
    {
-    "job_id": "3904421475",
+    "job_id": "3902922510",
     "methods": [
-     "dense",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3902344439",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3887860416",
-    "methods": [
-     "hybrid"
+     "rerank"
     ]
    },
    {
@@ -2064,36 +2191,28 @@
     ]
    },
    {
-    "job_id": "3886897291",
+    "job_id": "3902341738",
     "methods": [
      "dense"
     ]
    },
    {
-    "job_id": "3904359985",
+    "job_id": "3894541769",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884857552",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904421475",
     "methods": [
      "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3901695972",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3905237882",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3902922510",
-    "methods": [
-     "rerank"
+     "rrf"
     ]
    },
    {
@@ -2117,14 +2236,16 @@
     ]
    },
    {
-    "job_id": "3904419251",
+    "job_id": "3904363371",
     "methods": [
-     "hybrid"
+     "rerank"
     ]
    },
    {
-    "job_id": "3894541769",
+    "job_id": "3904429947",
     "methods": [
+     "dense",
+     "rrf",
      "rerank"
     ]
    },
@@ -2143,9 +2264,15 @@
     ]
    },
    {
-    "job_id": "3889412923",
+    "job_id": "3884857422",
     "methods": [
-     "rerank"
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884855645",
+    "methods": [
+     "hybrid"
     ]
    },
    {
@@ -2167,6 +2294,18 @@
     ]
    },
    {
+    "job_id": "3884860248",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884861093",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3884440238",
     "methods": [
      "bm25",
@@ -2174,47 +2313,69 @@
     ]
    },
    {
-    "job_id": "3885811459",
-    "methods": [
-     "bm25",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902341738",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3904363371",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3904429947",
+    "job_id": "3904359985",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3887860394",
+    "job_id": "3884817707",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3904419242",
+    "job_id": "3905868994",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905333478",
     "methods": [
      "hybrid"
     ]
    }
   ],
   "27914096": [
+   {
+    "job_id": "3894260885",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904584467",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900958891",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905656058",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903879634",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901392460",
+    "methods": [
+     "bm25"
+    ]
+   },
    {
     "job_id": "3890899193",
     "methods": [
@@ -2225,40 +2386,15 @@
     ]
    },
    {
-    "job_id": "3905287351",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
     "job_id": "3904969510",
     "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3900958891",
+    "job_id": "3905287351",
     "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3887905793",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3885108059",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3889744181",
-    "methods": [
-     "bm25"
+     "rerank"
     ]
    },
    {
@@ -2268,7 +2404,25 @@
     ]
    },
    {
-    "job_id": "3901392460",
+    "job_id": "3901340849",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894562535",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887870852",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3889744181",
     "methods": [
      "bm25"
     ]
@@ -2281,11 +2435,42 @@
     ]
    },
    {
+    "job_id": "3884434421",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3887905793",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902930908",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
     "job_id": "3902350480",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3885108059",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905207996",
+    "methods": [
+     "hybrid"
     ]
    },
    {
@@ -2295,24 +2480,15 @@
     ]
    },
    {
-    "job_id": "3902930908",
+    "job_id": "3899521424",
     "methods": [
-     "dense",
-     "hybrid",
      "rrf"
     ]
    },
    {
-    "job_id": "3887870852",
+    "job_id": "3894601004",
     "methods": [
-     "dense",
      "hybrid"
-    ]
-   },
-   {
-    "job_id": "3894562535",
-    "methods": [
-     "bm25"
     ]
    },
    {
@@ -2331,10 +2507,8 @@
     ]
    },
    {
-    "job_id": "3887470450",
+    "job_id": "3905359773",
     "methods": [
-     "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -2345,57 +2519,9 @@
     ]
    },
    {
-    "job_id": "3903455559",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3899521424",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
     "job_id": "3898165987",
     "methods": [
      "rrf"
-    ]
-   },
-   {
-    "job_id": "3905302985",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3902358312",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3898166224",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905656058",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905359773",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902948538",
-    "methods": [
-     "hybrid"
     ]
    },
    {
@@ -2408,14 +2534,33 @@
     ]
    },
    {
-    "job_id": "3894260885",
+    "job_id": "3898166224",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887470450",
     "methods": [
      "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900076890",
+    "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3903879634",
+    "job_id": "3884935447",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905302985",
     "methods": [
      "bm25"
     ]
@@ -2423,18 +2568,17 @@
   ],
   "10985403": [
    {
-    "job_id": "3905253038",
+    "job_id": "3902367719",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3902833833",
+    "job_id": "3901393098",
     "methods": [
-     "bm25"
+     "dense"
     ]
    },
    {
@@ -2444,10 +2588,9 @@
     ]
    },
    {
-    "job_id": "3901393098",
+    "job_id": "3901942967",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    },
    {
@@ -2457,11 +2600,9 @@
     ]
    },
    {
-    "job_id": "3903807798",
+    "job_id": "3898167036",
     "methods": [
-     "hybrid",
-     "rrf",
-     "rerank"
+     "rrf"
     ]
    },
    {
@@ -2476,7 +2617,6 @@
     "job_id": "3906258307",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -2487,15 +2627,18 @@
     ]
    },
    {
-    "job_id": "3901942967",
+    "job_id": "3780003361",
     "methods": [
-     "dense"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3898167036",
+    "job_id": "3905253038",
     "methods": [
-     "rrf"
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
     ]
    },
    {
@@ -2507,15 +2650,8 @@
     ]
    },
    {
-    "job_id": "3905331963",
+    "job_id": "3903807798",
     "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3902367719",
-    "methods": [
-     "dense",
      "hybrid",
      "rrf",
      "rerank"
@@ -2528,10 +2664,21 @@
     ]
    },
    {
+    "job_id": "3891080309",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902833833",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
     "job_id": "3887904814",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -2542,9 +2689,10 @@
     ]
    },
    {
-    "job_id": "3780003361",
+    "job_id": "3905331963",
     "methods": [
-     "hybrid"
+     "hybrid",
+     "rrf"
     ]
    },
    {
@@ -2567,6 +2715,12 @@
     ]
    },
    {
+    "job_id": "3888936542",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3905231370",
     "methods": [
      "rerank"
@@ -2586,29 +2740,30 @@
     ]
    },
    {
-    "job_id": "3901936927",
+    "job_id": "3895250294",
     "methods": [
-     "hybrid",
-     "rrf"
+     "hybrid"
     ]
    },
    {
     "job_id": "3884814773",
     "methods": [
      "dense",
+     "hybrid",
      "rerank"
-    ]
-   },
-   {
-    "job_id": "3891080309",
-    "methods": [
-     "rrf"
     ]
    },
    {
     "job_id": "3906225638",
     "methods": [
+     "hybrid",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3901936927",
+    "methods": [
+     "rrf"
     ]
    },
    {
@@ -2620,75 +2775,15 @@
   ],
   "28679359": [
    {
-    "job_id": "3905216404",
+    "job_id": "3901976733",
     "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3886877053",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3884437433",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3900960597",
-    "methods": [
-     "rrf"
+     "rerank"
     ]
    },
    {
     "job_id": "3904391385",
     "methods": [
      "bm25"
-    ]
-   },
-   {
-    "job_id": "3884433264",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3884819675",
-    "methods": [
-     "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3905864300",
-    "methods": [
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3901390852",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3889770752",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3885111456",
-    "methods": [
-     "dense",
-     "rerank"
     ]
    },
    {
@@ -2699,15 +2794,16 @@
     ]
    },
    {
-    "job_id": "3905821192",
+    "job_id": "3885111456",
     "methods": [
-     "dense"
+     "dense",
+     "rerank"
     ]
    },
    {
-    "job_id": "3906225502",
+    "job_id": "3884437433",
     "methods": [
-     "rrf"
+     "bm25"
     ]
    },
    {
@@ -2715,6 +2811,73 @@
     "methods": [
      "dense",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3884929286",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884433264",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3891072541",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901960681",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903459078",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884819675",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901390852",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889770752",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905821192",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901661644",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906225502",
+    "methods": [
+     "rrf"
     ]
    },
    {
@@ -2741,8 +2904,17 @@
     ]
    },
    {
-    "job_id": "3903459078",
+    "job_id": "3905377271",
     "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905864300",
+    "methods": [
+     "rrf",
      "rerank"
     ]
    },
@@ -2754,27 +2926,41 @@
     ]
    },
    {
+    "job_id": "3900960597",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
     "job_id": "3887713709",
     "methods": [
      "bm25"
     ]
    },
    {
-    "job_id": "3901960681",
+    "job_id": "3894913863",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3895532863",
     "methods": [
      "rrf"
     ]
    },
    {
-    "job_id": "3891072541",
+    "job_id": "3905249090",
     "methods": [
-     "rerank"
+     "dense",
+     "hybrid"
     ]
    },
    {
-    "job_id": "3901976733",
+    "job_id": "3906074302",
     "methods": [
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -2790,37 +2976,16 @@
     ]
    },
    {
-    "job_id": "3884929286",
+    "job_id": "3886877053",
     "methods": [
-     "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3906074302",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3905249090",
-    "methods": [
-     "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3905377271",
-    "methods": [
-     "bm25",
      "hybrid",
      "rrf"
     ]
    },
    {
-    "job_id": "3895532863",
+    "job_id": "3905216404",
     "methods": [
-     "rrf"
+     "bm25"
     ]
    },
    {
@@ -2832,11 +2997,11 @@
   ],
   "28663949": [
    {
-    "job_id": "3904095007",
+    "job_id": "3905218400",
     "methods": [
      "bm25",
-     "rrf",
-     "rerank"
+     "dense",
+     "rrf"
     ]
    },
    {
@@ -2846,7 +3011,7 @@
     ]
    },
    {
-    "job_id": "3903863453",
+    "job_id": "3905241545",
     "methods": [
      "dense"
     ]
@@ -2860,19 +3025,18 @@
     ]
    },
    {
-    "job_id": "3905218400",
-    "methods": [
-     "bm25",
-     "dense",
-     "hybrid",
-     "rrf"
-    ]
-   },
-   {
     "job_id": "3901479956",
     "methods": [
      "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904095007",
+    "methods": [
+     "bm25",
      "hybrid",
+     "rrf",
      "rerank"
     ]
    },
@@ -2880,13 +3044,6 @@
     "job_id": "3895201186",
     "methods": [
      "dense"
-    ]
-   },
-   {
-    "job_id": "3903457515",
-    "methods": [
-     "dense",
-     "rerank"
     ]
    },
    {
@@ -2898,10 +3055,17 @@
     ]
    },
    {
-    "job_id": "3905241545",
+    "job_id": "3903457515",
     "methods": [
      "dense",
-     "hybrid"
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903863453",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -2913,10 +3077,16 @@
     ]
    },
    {
-    "job_id": "3891248759",
+    "job_id": "3905299454",
     "methods": [
      "hybrid",
-     "rrf"
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904071232",
+    "methods": [
+     "hybrid"
     ]
    },
    {
@@ -2938,7 +3108,7 @@
     ]
    },
    {
-    "job_id": "3905299454",
+    "job_id": "3902310200",
     "methods": [
      "rerank"
     ]
@@ -2950,10 +3120,10 @@
     ]
    },
    {
-    "job_id": "3902759261",
+    "job_id": "3891248759",
     "methods": [
-     "rrf",
-     "rerank"
+     "hybrid",
+     "rrf"
     ]
    },
    {
@@ -2973,13 +3143,14 @@
     ]
    },
    {
-    "job_id": "3902310200",
+    "job_id": "3902759224",
     "methods": [
+     "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3902759224",
+    "job_id": "3902759261",
     "methods": [
      "rrf",
      "rerank"
@@ -3002,8 +3173,7 @@
    {
     "job_id": "3899529274",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    }
   ],
@@ -3021,7 +3191,13 @@
     ]
    },
    {
-    "job_id": "3903803942",
+    "job_id": "3903490777",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906256333",
     "methods": [
      "hybrid"
     ]
@@ -3033,15 +3209,9 @@
     ]
    },
    {
-    "job_id": "3901628021",
+    "job_id": "3888028751",
     "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3891013967",
-    "methods": [
-     "hybrid"
+     "rrf"
     ]
    },
    {
@@ -3063,19 +3233,19 @@
     ]
    },
    {
-    "job_id": "3884800381",
+    "job_id": "3902881366",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3888028751",
+    "job_id": "3891077296",
     "methods": [
      "rrf"
     ]
    },
    {
-    "job_id": "3905340387",
+    "job_id": "3903448903",
     "methods": [
      "hybrid"
     ]
@@ -3106,7 +3276,7 @@
     ]
    },
    {
-    "job_id": "3891077296",
+    "job_id": "3901995721",
     "methods": [
      "rrf"
     ]
@@ -3121,7 +3291,8 @@
    {
     "job_id": "3885859444",
     "methods": [
-     "dense"
+     "dense",
+     "hybrid"
     ]
    },
    {
@@ -3153,13 +3324,13 @@
     ]
    },
    {
-    "job_id": "3901995721",
+    "job_id": "3903833114",
     "methods": [
      "rrf"
     ]
    },
    {
-    "job_id": "3903833114",
+    "job_id": "3901378486",
     "methods": [
      "rrf"
     ]
@@ -3184,9 +3355,9 @@
     ]
    },
    {
-    "job_id": "3901378486",
+    "job_id": "3901344486",
     "methods": [
-     "rrf"
+     "rerank"
     ]
    },
    {
@@ -3197,7 +3368,7 @@
     ]
    },
    {
-    "job_id": "3888486864",
+    "job_id": "3884800381",
     "methods": [
      "hybrid"
     ]
@@ -3219,7 +3390,6 @@
     "job_id": "3894996733",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -3233,14 +3403,14 @@
    {
     "job_id": "3884433257",
     "methods": [
-     "dense"
+     "dense",
+     "hybrid"
     ]
    },
    {
-    "job_id": "3901344486",
+    "job_id": "3888820654",
     "methods": [
-     "hybrid",
-     "rerank"
+     "hybrid"
     ]
    }
   ],
@@ -3299,7 +3469,7 @@
     ]
    },
    {
-    "job_id": "3904584467",
+    "job_id": "3901951194",
     "methods": [
      "hybrid"
     ]
@@ -3325,10 +3495,9 @@
     ]
    },
    {
-    "job_id": "3888028751",
+    "job_id": "3902815021",
     "methods": [
-     "rrf",
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -3345,7 +3514,7 @@
     ]
    },
    {
-    "job_id": "3902877558",
+    "job_id": "3903445488",
     "methods": [
      "rerank"
     ]
@@ -3358,13 +3527,13 @@
     ]
    },
    {
-    "job_id": "3902359183",
+    "job_id": "3902866638",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3902772892",
+    "job_id": "3884812229",
     "methods": [
      "rerank"
     ]
@@ -3372,12 +3541,11 @@
    {
     "job_id": "3902790003",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    },
    {
-    "job_id": "3900076890",
+    "job_id": "3891075241",
     "methods": [
      "hybrid"
     ]
@@ -3399,11 +3567,12 @@
     "job_id": "3901995721",
     "methods": [
      "bm25",
+     "hybrid",
      "rrf"
     ]
    },
    {
-    "job_id": "3884812229",
+    "job_id": "3902877558",
     "methods": [
      "rerank"
     ]
@@ -3426,7 +3595,6 @@
     "job_id": "3906247358",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
@@ -3438,9 +3606,10 @@
     ]
    },
    {
-    "job_id": "3884935447",
+    "job_id": "3902772892",
     "methods": [
-     "hybrid"
+     "hybrid",
+     "rerank"
     ]
    },
    {
@@ -3450,8 +3619,9 @@
     ]
    },
    {
-    "job_id": "3903445488",
+    "job_id": "3888028751",
     "methods": [
+     "rrf",
      "rerank"
     ]
    }
@@ -3473,7 +3643,7 @@
     ]
    },
    {
-    "job_id": "3902345777",
+    "job_id": "3902347683",
     "methods": [
      "dense",
      "rerank"
@@ -3509,18 +3679,17 @@
     "job_id": "3901957732",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
    {
-    "job_id": "3902868050",
+    "job_id": "3904394012",
     "methods": [
-     "hybrid"
+     "rerank"
     ]
    },
    {
-    "job_id": "3885822686",
+    "job_id": "3887883818",
     "methods": [
      "hybrid"
     ]
@@ -3533,10 +3702,9 @@
     ]
    },
    {
-    "job_id": "3901967175",
+    "job_id": "3901953415",
     "methods": [
-     "hybrid",
-     "rrf"
+     "hybrid"
     ]
    },
    {
@@ -3548,10 +3716,9 @@
     ]
    },
    {
-    "job_id": "3902347683",
+    "job_id": "3898165722",
     "methods": [
-     "dense",
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -3561,16 +3728,22 @@
     ]
    },
    {
-    "job_id": "3904394012",
+    "job_id": "3885854571",
     "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3885854571",
+    "job_id": "3902345777",
     "methods": [
-     "hybrid",
+     "dense",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3901344832",
+    "methods": [
+     "hybrid"
     ]
    },
    {
@@ -3597,6 +3770,13 @@
     "job_id": "3895560402",
     "methods": [
      "bm25"
+    ]
+   },
+   {
+    "job_id": "3901967175",
+    "methods": [
+     "hybrid",
+     "rrf"
     ]
    },
    {
@@ -3631,7 +3811,6 @@
     "job_id": "3901652222",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -3639,11 +3818,18 @@
     "job_id": "3888947086",
     "methods": [
      "bm25",
+     "hybrid",
      "rrf"
     ]
    }
   ],
   "61677751": [
+   {
+    "job_id": "3902924862",
+    "methods": [
+     "rerank"
+    ]
+   },
    {
     "job_id": "3901988457",
     "methods": [
@@ -3651,26 +3837,9 @@
     ]
    },
    {
-    "job_id": "3905664874",
+    "job_id": "3905294420",
     "methods": [
-     "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3898169527",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3903801053",
-    "methods": [
-     "bm25"
+     "dense"
     ]
    },
    {
@@ -3680,34 +3849,19 @@
     ]
    },
    {
+    "job_id": "3905249970",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905292765",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
     "job_id": "3899528741",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3905859107",
-    "methods": [
-     "dense",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902918540",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902924862",
-    "methods": [
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902748418",
     "methods": [
      "bm25",
      "rrf"
@@ -3721,6 +3875,14 @@
     ]
    },
    {
+    "job_id": "3898169527",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
     "job_id": "3904724415",
     "methods": [
      "bm25",
@@ -3729,36 +3891,69 @@
     ]
    },
    {
-    "job_id": "3905292765",
+    "job_id": "3902748418",
     "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3898180070",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3905294420",
-    "methods": [
-     "dense"
+     "bm25",
+     "rrf"
     ]
    },
    {
     "job_id": "3902780852",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3898171424",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902918540",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905664874",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905839796",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905859107",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903801053",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902950725",
+    "methods": [
+     "hybrid"
     ]
    },
    {
     "job_id": "3899524216",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -3784,7 +3979,25 @@
     ]
    },
    {
-    "job_id": "3898171424",
+    "job_id": "3902835525",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3886444827",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884447063",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903487293",
     "methods": [
      "hybrid"
     ]
@@ -3793,7 +4006,6 @@
     "job_id": "3900953577",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
@@ -3801,7 +4013,6 @@
     "job_id": "3899524220",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -3810,17 +4021,16 @@
     "job_id": "3901995100",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    }
   ],
   "93002334": [
    {
-    "job_id": "3905845036",
+    "job_id": "3903872980",
     "methods": [
-     "dense",
-     "hybrid"
+     "bm25",
+     "rrf"
     ]
    },
    {
@@ -3830,35 +4040,26 @@
     ]
    },
    {
-    "job_id": "3889755785",
+    "job_id": "3905294982",
     "methods": [
-     "bm25"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3902359161",
+    "job_id": "3891011926",
     "methods": [
-     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901690869",
+    "methods": [
      "hybrid",
      "rerank"
     ]
    },
    {
     "job_id": "3901965047",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3903877609",
-    "methods": [
-     "dense",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3903872980",
     "methods": [
      "bm25",
      "rrf"
@@ -3872,18 +4073,29 @@
     ]
    },
    {
-    "job_id": "3895504958",
+    "job_id": "3889755785",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905302266",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3906237175",
+    "job_id": "3905845036",
     "methods": [
      "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903877609",
+    "methods": [
+     "dense",
+     "rrf"
     ]
    },
    {
@@ -3906,15 +4118,17 @@
     ]
    },
    {
-    "job_id": "3901690869",
+    "job_id": "3902359161",
     "methods": [
-     "hybrid",
+     "dense",
      "rerank"
     ]
    },
    {
-    "job_id": "3894981322",
+    "job_id": "3906237175",
     "methods": [
+     "dense",
+     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -3927,10 +4141,15 @@
     ]
    },
    {
+    "job_id": "3895848391",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3889760206",
     "methods": [
      "bm25",
-     "hybrid",
      "rrf"
     ]
    },
@@ -3948,9 +4167,15 @@
     ]
    },
    {
-    "job_id": "3901167349",
+    "job_id": "3899534687",
     "methods": [
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3906253918",
+    "methods": [
+     "hybrid"
     ]
    },
    {
@@ -3960,8 +4185,9 @@
     ]
    },
    {
-    "job_id": "3899534687",
+    "job_id": "3894981322",
     "methods": [
+     "rrf",
      "rerank"
     ]
    },
@@ -3972,9 +4198,10 @@
     ]
    },
    {
-    "job_id": "3895848391",
+    "job_id": "3901167349",
     "methods": [
-     "hybrid"
+     "hybrid",
+     "rerank"
     ]
    },
    {
@@ -3995,19 +4222,68 @@
     "job_id": "3901938528",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
    {
     "job_id": "3904924378",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    }
   ],
   "28609364": [
+   {
+    "job_id": "3903875395",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905336439",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3895212900",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901372215",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904395130",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905342974",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901685552",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905369977",
+    "methods": [
+     "rerank"
+    ]
+   },
    {
     "job_id": "3905202767",
     "methods": [
@@ -4018,49 +4294,7 @@
    {
     "job_id": "3905337382",
     "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3904575512",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3895212900",
-    "methods": [
      "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3889029399",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905342974",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3906259103",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3905336439",
-    "methods": [
      "hybrid"
     ]
    },
@@ -4072,13 +4306,13 @@
     ]
    },
    {
-    "job_id": "3904430618",
+    "job_id": "3906203022",
     "methods": [
-     "rerank"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3905878109",
+    "job_id": "3904430618",
     "methods": [
      "rerank"
     ]
@@ -4088,38 +4322,6 @@
     "methods": [
      "dense",
      "rerank"
-    ]
-   },
-   {
-    "job_id": "3885109963",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3903875395",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3901685552",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3901910411",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3895211010",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rrf"
     ]
    },
    {
@@ -4137,9 +4339,49 @@
     ]
    },
    {
-    "job_id": "3905369977",
+    "job_id": "3906259103",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904575512",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905878109",
     "methods": [
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3895211010",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901910411",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902841919",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884433264",
+    "methods": [
+     "hybrid"
     ]
    },
    {
@@ -4182,7 +4424,7 @@
     ]
    },
    {
-    "job_id": "3884433264",
+    "job_id": "3902842733",
     "methods": [
      "hybrid"
     ]
@@ -4195,50 +4437,24 @@
     ]
    },
    {
-    "job_id": "3895239929",
+    "job_id": "3889029399",
     "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3901372215",
-    "methods": [
-     "bm25",
      "rerank"
     ]
    },
    {
-    "job_id": "3906203022",
+    "job_id": "3895239929",
     "methods": [
-     "hybrid"
+     "dense"
     ]
    }
   ],
   "64589506": [
    {
-    "job_id": "3905871381",
+    "job_id": "3885857037",
     "methods": [
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3891277162",
-    "methods": [
-     "hybrid",
+     "dense",
      "rrf"
-    ]
-   },
-   {
-    "job_id": "3901677079",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3898170237",
-    "methods": [
-     "rerank"
     ]
    },
    {
@@ -4258,11 +4474,9 @@
     ]
    },
    {
-    "job_id": "3901940795",
+    "job_id": "3899526571",
     "methods": [
-     "bm25",
-     "rrf",
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -4272,14 +4486,38 @@
     ]
    },
    {
-    "job_id": "3905395125",
+    "job_id": "3894944227",
     "methods": [
-     "hybrid",
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3894554912",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904897588",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901960579",
+    "methods": [
+     "dense",
      "rrf"
     ]
    },
    {
-    "job_id": "3904389540",
+    "job_id": "3898170237",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901677079",
     "methods": [
      "bm25"
     ]
@@ -4291,17 +4529,21 @@
     ]
    },
    {
-    "job_id": "3889482097",
+    "job_id": "3891277162",
     "methods": [
-     "hybrid"
+     "rrf"
     ]
    },
    {
-    "job_id": "3901960579",
+    "job_id": "3887700861",
     "methods": [
-     "dense",
-     "hybrid",
-     "rrf"
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904389540",
+    "methods": [
+     "bm25"
     ]
    },
    {
@@ -4313,15 +4555,23 @@
     ]
    },
    {
-    "job_id": "3904361481",
+    "job_id": "3894655281",
     "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901940795",
+    "methods": [
+     "bm25",
+     "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3887700861",
+    "job_id": "3904361481",
     "methods": [
-     "dense"
+     "rerank"
     ]
    },
    {
@@ -4339,7 +4589,26 @@
     ]
    },
    {
-    "job_id": "3902353310",
+    "job_id": "3905871381",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905395125",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898167529",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902740047",
     "methods": [
      "hybrid"
     ]
@@ -4348,7 +4617,6 @@
     "job_id": "3904724004",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -4370,8 +4638,7 @@
    {
     "job_id": "3904098737",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    },
    {
@@ -4387,17 +4654,15 @@
     ]
    },
    {
-    "job_id": "3894944227",
+    "job_id": "3902353310",
     "methods": [
-     "dense"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3885857037",
+    "job_id": "3906223620",
     "methods": [
-     "dense",
-     "hybrid",
-     "rrf"
+     "hybrid"
     ]
    }
   ],
@@ -4409,16 +4674,37 @@
     ]
    },
    {
-    "job_id": "3898161440",
+    "job_id": "3905237612",
     "methods": [
      "dense",
+     "hybrid",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3884445938",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900955245",
+    "methods": [
+     "dense"
     ]
    },
    {
     "job_id": "3888408574",
     "methods": [
      "bm25"
+    ]
+   },
+   {
+    "job_id": "3905211571",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
     ]
    },
    {
@@ -4429,11 +4715,15 @@
     ]
    },
    {
-    "job_id": "3905237612",
+    "job_id": "3906261687",
     "methods": [
-     "dense",
-     "hybrid",
-     "rerank"
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3906232057",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -4444,22 +4734,20 @@
     ]
    },
    {
-    "job_id": "3900955245",
+    "job_id": "3905332839",
     "methods": [
-     "dense"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3902861326",
+    "job_id": "3901946326",
     "methods": [
-     "hybrid",
-     "rerank"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3906232057",
+    "job_id": "3901380016",
     "methods": [
-     "dense",
      "hybrid"
     ]
    },
@@ -4467,36 +4755,27 @@
     "job_id": "3904363989",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
+    ]
+   },
+   {
+    "job_id": "3888934750",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3898161440",
+    "methods": [
+     "dense",
+     "rerank"
     ]
    },
    {
     "job_id": "3902851017",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3906261687",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3903471847",
-    "methods": [
-     "hybrid",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3903467169",
-    "methods": [
-     "hybrid",
      "rerank"
     ]
    },
@@ -4504,6 +4783,81 @@
     "job_id": "3902762051",
     "methods": [
      "dense"
+    ]
+   },
+   {
+    "job_id": "3903471847",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891071812",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905839508",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887101178",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3888405908",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3885111309",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3889424889",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894868463",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894287037",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902861326",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903467169",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3888411793",
+    "methods": [
+     "bm25"
     ]
    },
    {
@@ -4519,28 +4873,10 @@
     ]
    },
    {
-    "job_id": "3891071812",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3903472580",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3894287037",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3894868463",
+    "job_id": "3902751978",
     "methods": [
      "dense",
-     "rerank"
+     "rrf"
     ]
    },
    {
@@ -4550,99 +4886,65 @@
     ]
    },
    {
-    "job_id": "3902751978",
+    "job_id": "3903472580",
     "methods": [
-     "dense",
      "hybrid",
      "rrf"
-    ]
-   },
-   {
-    "job_id": "3888411793",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3888405908",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3905839508",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3889424889",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3905211571",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
     ]
    }
   ],
   "25990239": [
    {
-    "job_id": "3900074788",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3901622148",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3905341000",
+    "job_id": "3905847774",
     "methods": [
      "dense",
-     "hybrid",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3891071593",
-    "methods": [
-     "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3889418026",
-    "methods": [
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3894400248",
-    "methods": [
-     "bm25",
      "rerank"
     ]
    },
    {
-    "job_id": "3904390564",
+    "job_id": "3887101802",
     "methods": [
-     "bm25",
-     "rrf"
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902368485",
+    "methods": [
+     "bm25"
     ]
    },
    {
     "job_id": "3903440936",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3895214576",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900965317",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902350375",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904919938",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906098480",
     "methods": [
      "dense"
     ]
@@ -4661,9 +4963,51 @@
     ]
    },
    {
-    "job_id": "3887101802",
+    "job_id": "3894400253",
     "methods": [
-     "bm25"
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891071593",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901622148",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894610113",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894400248",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904390564",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905341000",
+    "methods": [
+     "dense",
+     "rrf"
     ]
    },
    {
@@ -4673,38 +5017,23 @@
     ]
    },
    {
-    "job_id": "3894400253",
+    "job_id": "3900074788",
     "methods": [
-     "bm25",
-     "hybrid",
-     "rrf",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905310024",
+    "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3895214576",
-    "methods": [
-     "hybrid",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902368485",
-    "methods": [
-     "bm25"
-    ]
-   },
-   {
-    "job_id": "3905847774",
+    "job_id": "3899930721",
     "methods": [
      "dense",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3902915218",
-    "methods": [
-     "rerank"
+     "hybrid",
+     "rrf"
     ]
    },
    {
@@ -4716,17 +5045,21 @@
     ]
    },
    {
-    "job_id": "3894610113",
+    "job_id": "3889418026",
     "methods": [
-     "hybrid",
-     "rerank"
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884442757",
+    "methods": [
+     "hybrid"
     ]
    },
    {
     "job_id": "3904723267",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    },
    {
@@ -4751,37 +5084,34 @@
     ]
    },
    {
-    "job_id": "3905310024",
+    "job_id": "3901945351",
     "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3906098480",
-    "methods": [
-     "dense"
+     "dense",
+     "rrf"
     ]
    },
    {
     "job_id": "3898163036",
     "methods": [
-     "hybrid",
      "rerank"
     ]
    },
    {
-    "job_id": "3899930721",
+    "job_id": "3902915218",
     "methods": [
-     "dense",
-     "hybrid",
-     "rrf"
+     "rerank"
     ]
    },
    {
-    "job_id": "3901945351",
+    "job_id": "3905803022",
     "methods": [
-     "dense",
-     "rrf"
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3872787865",
+    "methods": [
+     "hybrid"
     ]
    }
   ],
@@ -4790,12 +5120,11 @@
     "job_id": "3904959220",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
    {
-    "job_id": "3898166879",
+    "job_id": "3904722893",
     "methods": [
      "hybrid"
     ]
@@ -4827,15 +5156,17 @@
     ]
    },
    {
-    "job_id": "3903449152",
+    "job_id": "3894928250",
     "methods": [
-     "dense"
+     "hybrid",
+     "rerank"
     ]
    },
    {
     "job_id": "3898156389",
     "methods": [
      "bm25",
+     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -4869,10 +5200,9 @@
     ]
    },
    {
-    "job_id": "3894928250",
+    "job_id": "3901360008",
     "methods": [
-     "hybrid",
-     "rerank"
+     "rrf"
     ]
    },
    {
@@ -4885,6 +5215,7 @@
     "job_id": "3894401715",
     "methods": [
      "dense",
+     "hybrid",
      "rerank"
     ]
    },
@@ -4902,10 +5233,15 @@
     ]
    },
    {
-    "job_id": "3901360008",
+    "job_id": "3903449152",
     "methods": [
-     "hybrid",
-     "rrf"
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3894278962",
+    "methods": [
+     "hybrid"
     ]
    },
    {
@@ -4928,7 +5264,6 @@
     "job_id": "3900071888",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
@@ -4972,7 +5307,7 @@
     ]
    },
    {
-    "job_id": "3895278490",
+    "job_id": "3884438406",
     "methods": [
      "hybrid"
     ]
@@ -4987,6 +5322,7 @@
     "job_id": "3904599757",
     "methods": [
      "bm25",
+     "hybrid",
      "rerank"
     ]
    },
@@ -5001,12 +5337,11 @@
     "job_id": "3902927004",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
    {
-    "job_id": "3884438406",
+    "job_id": "3904964110",
     "methods": [
      "hybrid"
     ]
@@ -5028,6 +5363,7 @@
     "job_id": "3891079268",
     "methods": [
      "bm25",
+     "hybrid",
      "rrf"
     ]
    },
@@ -5073,7 +5409,7 @@
     ]
    },
    {
-    "job_id": "3904571444",
+    "job_id": "3906232310",
     "methods": [
      "rerank"
     ]
@@ -5096,12 +5432,11 @@
     "job_id": "3904392705",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
    {
-    "job_id": "3901353398",
+    "job_id": "3895278490",
     "methods": [
      "hybrid"
     ]
@@ -5110,7 +5445,6 @@
     "job_id": "3901939725",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
@@ -5124,26 +5458,32 @@
     "job_id": "3891074775",
     "methods": [
      "bm25",
+     "hybrid",
      "rerank"
+    ]
+   },
+   {
+    "job_id": "3898166081",
+    "methods": [
+     "hybrid"
     ]
    },
    {
     "job_id": "3891074946",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3901978822",
+    "job_id": "3898158434",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3906232310",
+    "job_id": "3904571444",
     "methods": [
      "rerank"
     ]
@@ -5170,13 +5510,13 @@
     ]
    },
    {
-    "job_id": "3884429788",
+    "job_id": "3894561711",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3904061702",
+    "job_id": "3891073400",
     "methods": [
      "hybrid"
     ]
@@ -5207,7 +5547,7 @@
     ]
    },
    {
-    "job_id": "3901677046",
+    "job_id": "3905338391",
     "methods": [
      "hybrid"
     ]
@@ -5234,7 +5574,7 @@
     ]
    },
    {
-    "job_id": "3895531199",
+    "job_id": "3904061702",
     "methods": [
      "hybrid"
     ]
@@ -5266,7 +5606,8 @@
    {
     "job_id": "3904950787",
     "methods": [
-     "dense"
+     "dense",
+     "hybrid"
     ]
    },
    {
@@ -5293,7 +5634,7 @@
     ]
    },
    {
-    "job_id": "3904423505",
+    "job_id": "3890893956",
     "methods": [
      "hybrid"
     ]
@@ -5334,7 +5675,6 @@
     "job_id": "3903429245",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -5348,28 +5688,27 @@
   ],
   "74512244": [
    {
-    "job_id": "3887710913",
+    "job_id": "3903443660",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903869822",
     "methods": [
      "bm25"
     ]
    },
    {
-    "job_id": "3903874896",
+    "job_id": "3894976427",
     "methods": [
-     "bm25"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3900979015",
+    "job_id": "3903489686",
     "methods": [
-     "dense"
-    ]
-   },
-   {
-    "job_id": "3905230703",
-    "methods": [
-     "bm25",
-     "rrf"
+     "hybrid"
     ]
    },
    {
@@ -5380,20 +5719,14 @@
     ]
    },
    {
-    "job_id": "3901995721",
+    "job_id": "3904719458",
     "methods": [
-     "hybrid",
+     "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3906079019",
-    "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3903869822",
+    "job_id": "3903874896",
     "methods": [
      "bm25"
     ]
@@ -5401,29 +5734,29 @@
    {
     "job_id": "3903888718",
     "methods": [
-     "hybrid",
      "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3889437728",
+    "job_id": "3905230703",
     "methods": [
-     "rerank"
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3906086023",
+    "methods": [
+     "hybrid"
     ]
    },
    {
     "job_id": "3906256333",
     "methods": [
      "dense",
+     "hybrid",
      "rerank"
-    ]
-   },
-   {
-    "job_id": "3894562535",
-    "methods": [
-     "bm25",
-     "rrf"
     ]
    },
    {
@@ -5433,7 +5766,7 @@
     ]
    },
    {
-    "job_id": "3902877558",
+    "job_id": "3903844328",
     "methods": [
      "hybrid"
     ]
@@ -5446,31 +5779,57 @@
     ]
    },
    {
+    "job_id": "3902863746",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3887710913",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3889769625",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905299649",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904365653",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900979015",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905395336",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901938895",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
     "job_id": "3902768782",
     "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3901944084",
-    "methods": [
-     "dense",
-     "hybrid",
-     "rrf",
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3903443660",
-    "methods": [
-     "rerank"
-    ]
-   },
-   {
-    "job_id": "3904719458",
-    "methods": [
-     "hybrid",
-     "rrf",
      "rerank"
     ]
    },
@@ -5478,7 +5837,6 @@
     "job_id": "3891078543",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
@@ -5489,22 +5847,21 @@
     ]
    },
    {
-    "job_id": "3904365653",
+    "job_id": "3898165979",
     "methods": [
-     "rerank"
+     "bm25"
     ]
    },
    {
-    "job_id": "3886886429",
+    "job_id": "3889437728",
     "methods": [
-     "dense"
+     "rerank"
     ]
    },
    {
     "job_id": "3902760602",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
@@ -5522,46 +5879,44 @@
     ]
    },
    {
-    "job_id": "3889769625",
+    "job_id": "3901995721",
     "methods": [
-     "hybrid"
+     "hybrid",
+     "rerank"
     ]
    },
    {
-    "job_id": "3905299649",
+    "job_id": "3894562535",
     "methods": [
      "bm25",
      "rrf"
     ]
    },
    {
-    "job_id": "3905395336",
+    "job_id": "3886886429",
     "methods": [
-     "bm25"
+     "dense"
     ]
    },
    {
-    "job_id": "3894976427",
+    "job_id": "3901944084",
     "methods": [
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3898165979",
-    "methods": [
-     "bm25"
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
     ]
    }
   ],
   "31602598": [
    {
-    "job_id": "3901951194",
+    "job_id": "3889771110",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3905340387",
+    "job_id": "3900986006",
     "methods": [
      "hybrid"
     ]
@@ -5579,9 +5934,9 @@
     ]
    },
    {
-    "job_id": "3900955077",
+    "job_id": "3900962710",
     "methods": [
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -5598,7 +5953,7 @@
     ]
    },
    {
-    "job_id": "3903448903",
+    "job_id": "3905340387",
     "methods": [
      "hybrid"
     ]
@@ -5610,9 +5965,10 @@
     ]
    },
    {
-    "job_id": "3901978351",
+    "job_id": "3895201263",
     "methods": [
-     "rerank"
+     "dense",
+     "rrf"
     ]
    },
    {
@@ -5623,7 +5979,7 @@
     ]
    },
    {
-    "job_id": "3903455559",
+    "job_id": "3901346496",
     "methods": [
      "hybrid"
     ]
@@ -5653,7 +6009,6 @@
     "job_id": "3904414054",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
@@ -5668,16 +6023,14 @@
     "job_id": "3904965823",
     "methods": [
      "dense",
-     "hybrid",
      "rrf",
      "rerank"
     ]
    },
    {
-    "job_id": "3906256333",
+    "job_id": "3891083041",
     "methods": [
-     "hybrid",
-     "rerank"
+     "hybrid"
     ]
    },
    {
@@ -5688,9 +6041,10 @@
     ]
    },
    {
-    "job_id": "3902870074",
+    "job_id": "3887906609",
     "methods": [
-     "hybrid"
+     "hybrid",
+     "rerank"
     ]
    },
    {
@@ -5714,7 +6068,7 @@
     ]
    },
    {
-    "job_id": "3904708103",
+    "job_id": "3901978351",
     "methods": [
      "rerank"
     ]
@@ -5726,7 +6080,7 @@
     ]
    },
    {
-    "job_id": "3887906609",
+    "job_id": "3900955077",
     "methods": [
      "rerank"
     ]
@@ -5745,6 +6099,12 @@
     ]
    },
    {
+    "job_id": "3904708103",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
     "job_id": "3902790003",
     "methods": [
      "dense",
@@ -5753,18 +6113,19 @@
     ]
    },
    {
-    "job_id": "3895201263",
+    "job_id": "3906256333",
     "methods": [
-     "dense",
-     "rrf"
+     "hybrid",
+     "rerank"
     ]
    }
   ],
   "11605833": [
    {
-    "job_id": "3884444371",
+    "job_id": "3905307723",
     "methods": [
-     "rerank"
+     "dense",
+     "rrf"
     ]
    },
    {
@@ -5782,18 +6143,16 @@
     ]
    },
    {
-    "job_id": "3905307723",
+    "job_id": "3905335840",
     "methods": [
      "dense",
-     "hybrid",
-     "rrf"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3906226094",
+    "job_id": "3887591902",
     "methods": [
-     "dense",
-     "hybrid",
+     "bm25",
      "rrf"
     ]
    },
@@ -5805,10 +6164,27 @@
     ]
    },
    {
-    "job_id": "3901943613",
+    "job_id": "3902863840",
     "methods": [
-     "hybrid",
-     "rrf"
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902863839",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905209236",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904972375",
+    "methods": [
+     "dense"
     ]
    },
    {
@@ -5824,23 +6200,16 @@
     ]
    },
    {
-    "job_id": "3887596450",
-    "methods": [
-     "bm25",
-     "rrf"
-    ]
-   },
-   {
-    "job_id": "3905335840",
-    "methods": [
-     "dense",
-     "hybrid"
-    ]
-   },
-   {
-    "job_id": "3904972375",
+    "job_id": "3904973230",
     "methods": [
      "dense"
+    ]
+   },
+   {
+    "job_id": "3906226094",
+    "methods": [
+     "dense",
+     "rrf"
     ]
    },
    {
@@ -5851,23 +6220,16 @@
     ]
    },
    {
-    "job_id": "3887591902",
+    "job_id": "3887596450",
     "methods": [
      "bm25",
      "rrf"
     ]
    },
    {
-    "job_id": "3904973230",
-    "methods": [
-     "dense"
-    ]
-   },
-   {
     "job_id": "3906098178",
     "methods": [
-     "dense",
-     "hybrid"
+     "dense"
     ]
    },
    {
@@ -5887,9 +6249,16 @@
     ]
    },
    {
-    "job_id": "3902863840",
+    "job_id": "3895593836",
     "methods": [
-     "rerank"
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901943613",
+    "methods": [
+     "hybrid",
+     "rrf"
     ]
    },
    {
@@ -5905,13 +6274,13 @@
     ]
    },
    {
-    "job_id": "3903482440",
+    "job_id": "3887872942",
     "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3884440235",
+    "job_id": "3903818044",
     "methods": [
      "hybrid"
     ]
@@ -5924,13 +6293,13 @@
     ]
    },
    {
-    "job_id": "3902863839",
+    "job_id": "3905332997",
     "methods": [
-     "rerank"
+     "hybrid"
     ]
    },
    {
-    "job_id": "3887872942",
+    "job_id": "3903482440",
     "methods": [
      "rerank"
     ]
@@ -5950,11 +6319,17 @@
      "bm25",
      "rrf"
     ]
+   },
+   {
+    "job_id": "3884444371",
+    "methods": [
+     "rerank"
+    ]
    }
   ],
   "23396633": [
    {
-    "job_id": "3903885401",
+    "job_id": "3905846984",
     "methods": [
      "rerank"
     ]
@@ -5972,7 +6347,7 @@
     ]
    },
    {
-    "job_id": "3903800604",
+    "job_id": "3903885401",
     "methods": [
      "rerank"
     ]
@@ -5981,19 +6356,20 @@
     "job_id": "3901960014",
     "methods": [
      "dense",
-     "hybrid",
      "rrf"
     ]
    },
    {
-    "job_id": "3905846984",
+    "job_id": "3900094559",
     "methods": [
+     "rrf",
      "rerank"
     ]
    },
    {
     "job_id": "3902748418",
     "methods": [
+     "hybrid",
      "rrf",
      "rerank"
     ]
@@ -6072,9 +6448,10 @@
     ]
    },
    {
-    "job_id": "3888999810",
+    "job_id": "3895257024",
     "methods": [
-     "hybrid"
+     "hybrid",
+     "rerank"
     ]
    },
    {
@@ -6102,7 +6479,6 @@
     "job_id": "3901388937",
     "methods": [
      "dense",
-     "hybrid",
      "rerank"
     ]
    },
@@ -6113,13 +6489,13 @@
     ]
    },
    {
-    "job_id": "3905326811",
+    "job_id": "3901996705",
     "methods": [
      "hybrid"
     ]
    },
    {
-    "job_id": "3901943478",
+    "job_id": "3903800604",
     "methods": [
      "rerank"
     ]
@@ -6131,13 +6507,13 @@
     ]
    },
    {
-    "job_id": "3895257024",
+    "job_id": "3901943478",
     "methods": [
      "rerank"
     ]
    },
    {
-    "job_id": "3904992054",
+    "job_id": "3900941693",
     "methods": [
      "hybrid"
     ]
@@ -6152,10 +6528,9 @@
     ]
    },
    {
-    "job_id": "3900094559",
+    "job_id": "3901944654",
     "methods": [
-     "rrf",
-     "rerank"
+     "hybrid"
     ]
    }
   ]
