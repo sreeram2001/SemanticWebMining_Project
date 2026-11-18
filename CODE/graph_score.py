@@ -105,12 +105,12 @@ def without_graph(betas=None):
     return {**DEFAULT_BETAS, **(betas or {}), "b2": 0.0}
 
 
-def rank_candidates(candidates, job_records, resume_record, betas=None, lambdas=None):
+def rank_candidates(candidates, job_records, resume_record, betas=None, lambdas=None, weights=None):
     lam = {**DEFAULT_LAMBDAS, **(lambdas or {})}
     out = []
     for job_id, ce in candidates:
         rec = job_records.get(str(job_id))
-        g = graph_score(rec, resume_record, **lam)
+        g = graph_score(rec, resume_record, weights=weights, **lam)
         p = penalty(rec, resume_record)
         out.append(
             {

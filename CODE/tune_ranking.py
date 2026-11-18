@@ -7,6 +7,7 @@ import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import graph_score as gs
+import rerank as rr
 import pooling as pl
 import retrieval as rt
 
@@ -15,6 +16,8 @@ GRID = {
     "b2": [0.0, 0.25, 0.5, 1.0],
     "b3": [0.0, 0.25, 0.5],
     "lambdas": [(0.5, 0.25), (0.6, 0.3), (0.8, 0.4)],
+    "w_required": [1.0, 2.0, 3.0],
+    "top": [20, 30, 50],
 }
 
 
@@ -22,22 +25,40 @@ def ids_of(ranking):
     return [str(item[0]) for item in ranking]
 
 
-def full_run(rerank, jobs, resumes, betas, lambdas=None):
+def shortlist(data, rid, top=None):
+    rows = data.get("rerank", {}).get(rid, [])
+    if top is None:
+        return [(str(r[0]), r[2]) for r in rows]
+    keep = set(ids_of(data["runs"]["rrf"].get(rid, []))[:top])
+    rows = [r for r in rows if str(r[0]) in keep]
+    return list(zip([str(r[0]) for r in rows], rr.minmax([r[1] for r in rows])))
+
+
+def full_run(data, jobs, resumes, betas, lambdas=None, weights=None, top=None, ids=None):
     out = {}
-    for rid, rows in rerank.items():
-        cands = [(str(r[0]), r[2]) for r in rows]
-        scored = gs.rank_candidates(cands, jobs, resumes.get(str(rid)), betas, lambdas)
+    for rid in data.get("rerank", {}):
+        if ids is not None and str(rid) not in ids:
+            continue
+        cands = shortlist(data, rid, top)
+        scored = gs.rank_candidates(cands, jobs, resumes.get(str(rid)), betas, lambdas, weights)
         out[str(rid)] = [r["job_id"] for r in scored]
     return out
 
 
-def method_runs(data, jobs, resumes, betas, lambdas=None):
+def setting_args(setting):
+    w = setting.get("w_required")
+    return {"lambdas": setting.get("lambdas"),
+            "weights": {"required": w, "preferred": 1.0} if w else None,
+            "top": setting.get("top")}
+
+
+def method_runs(data, jobs, resumes, betas, lambdas=None, weights=None, top=None):
     runs = {m: {str(r): ids_of(v) for r, v in data["runs"][m].items()}
             for m in ("bm25", "dense", "hybrid", "rrf")}
     rerank = data.get("rerank", {})
     runs["rerank"] = {str(r): ids_of(v) for r, v in rerank.items()}
-    runs["full"] = full_run(rerank, jobs, resumes, betas, lambdas)
-    runs["full_no_graph"] = full_run(rerank, jobs, resumes, gs.without_graph(betas), lambdas)
+    runs["full"] = full_run(data, jobs, resumes, betas, lambdas, weights, top)
+    runs["full_no_graph"] = full_run(data, jobs, resumes, gs.without_graph(betas), lambdas, weights, top)
     return runs
 
 
@@ -48,13 +69,17 @@ def subset(run, ids):
 
 def tune(data, jobs, resumes, qrels, dev_ids, grid=None, k=10):
     grid = grid or GRID
-    rerank = {r: v for r, v in data.get("rerank", {}).items() if str(r) in set(dev_ids)}
+    dev = {str(i) for i in dev_ids}
     tried, best = [], None
-    for b2, b3, (ls, lc) in itertools.product(grid["b2"], grid["b3"], grid["lambdas"]):
-        betas = {"b1": 1.0, "b2": b2, "b3": b3}
-        lambdas = {"lam_sub": ls, "lam_cat": lc}
-        score = rt.evaluate(full_run(rerank, jobs, resumes, betas, lambdas), qrels, k)[f"nDCG@{k}"]
-        tried.append({"betas": betas, "lambdas": lambdas, f"nDCG@{k}": score})
+    combos = itertools.product(grid["b2"], grid["b3"], grid["lambdas"],
+                               grid.get("w_required", [2.0]), grid.get("top", [None]))
+    for b2, b3, (ls, lc), w, top in combos:
+        setting = {"betas": {"b1": 1.0, "b2": b2, "b3": b3},
+                   "lambdas": {"lam_sub": ls, "lam_cat": lc}, "w_required": w, "top": top}
+        run = full_run(data, jobs, resumes, setting["betas"], ids=dev, **setting_args(setting))
+        setting[f"nDCG@{k}"] = rt.evaluate(run, qrels, k)[f"nDCG@{k}"]
+        tried.append(setting)
+        score = setting[f"nDCG@{k}"]
         if best is None or score > best[f"nDCG@{k}"]:
             best = tried[-1]
     return best, tried
@@ -70,7 +95,8 @@ def compare(runs, qrels, ids, k=10):
 def markdown(table, title, k=10, setting=None):
     lines = [f"# {title}", ""]
     if setting:
-        lines += [f"Setting: betas {setting['betas']}, lambdas {setting['lambdas']}", ""]
+        lines += [f"Setting: betas {setting['betas']}, lambdas {setting['lambdas']}, "
+                  f"w_required {setting.get('w_required')}, shortlist {setting.get('top')}", ""]
     lines += [f"| Method | n | P@{k} | nDCG@{k} |", "|---|---|---|---|"]
     for m, row in table.items():
         if m != "delta_graph":
@@ -132,7 +158,7 @@ def main(argv=None):
     else:
         print("warning: no tuned_scoring.json; using default betas and lambdas")
         setting = {"betas": dict(gs.DEFAULT_BETAS), "lambdas": dict(gs.DEFAULT_LAMBDAS)}
-    runs = method_runs(data, jobs, resumes, setting["betas"], setting["lambdas"])
+    runs = method_runs(data, jobs, resumes, setting["betas"], **setting_args(setting))
     table = compare(runs, qrels, chosen[a.split], a.k)
     with open(out_json, "w") as f:
         json.dump({"split": a.split, "setting": setting, "results": table,
