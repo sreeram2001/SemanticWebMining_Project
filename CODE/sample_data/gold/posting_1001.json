@@ -1,0 +1,64 @@
+{
+  "doc_id": "1001",
+  "kind": "posting",
+  "category": null,
+  "annotator": "sample",
+  "facts": {
+    "required_skills": [
+      {
+        "name": "Python",
+        "importance": "required",
+        "source_span": "Python"
+      },
+      {
+        "name": "SQL",
+        "importance": "required",
+        "source_span": "SQL"
+      },
+      {
+        "name": "Apache Spark",
+        "importance": "required",
+        "source_span": "Apache Spark"
+      },
+      {
+        "name": "Kafka",
+        "importance": "required",
+        "source_span": "Kafka"
+      },
+      {
+        "name": "AWS",
+        "importance": "required",
+        "source_span": "AWS"
+      },
+      {
+        "name": "ETL",
+        "importance": "required",
+        "source_span": "ETL"
+      },
+      {
+        "name": "Databricks",
+        "importance": "preferred",
+        "source_span": "Databricks"
+      },
+      {
+        "name": "Airflow",
+        "importance": "preferred",
+        "source_span": "Airflow"
+      }
+    ],
+    "required_degrees": [
+      {
+        "level": "bachelors",
+        "field": "Computer Science",
+        "importance": "required",
+        "source_span": "Bachelor's degree in Computer Science"
+      }
+    ],
+    "experience_required": {
+      "min_years": 3,
+      "importance": "required",
+      "source_span": "3+ years of experience"
+    }
+  },
+  "text": "Desert Analytics is hiring a Data Engineer to build batch and streaming pipelines for our retail clients. You will design ETL jobs and own our data warehouse. Requirements: 3+ years of experience as a data engineer. Strong Python and SQL. Hands-on experience with Apache Spark and Kafka. Experience with AWS. Databricks or Airflow experience is a plus. Bachelor's degree in Computer Science or a related field."
+}

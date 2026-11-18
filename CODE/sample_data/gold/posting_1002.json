@@ -1,0 +1,49 @@
+{
+  "doc_id": "1002",
+  "kind": "posting",
+  "category": null,
+  "annotator": "sample",
+  "facts": {
+    "required_skills": [
+      {
+        "name": "Machine Learning",
+        "importance": "required",
+        "source_span": "machine learning"
+      },
+      {
+        "name": "Deep Learning",
+        "importance": "required",
+        "source_span": "Deep learning"
+      },
+      {
+        "name": "SQL",
+        "importance": "required",
+        "source_span": "SQL"
+      },
+      {
+        "name": "Python",
+        "importance": "required",
+        "source_span": "Python"
+      },
+      {
+        "name": "NLP",
+        "importance": "preferred",
+        "source_span": "NLP"
+      }
+    ],
+    "required_degrees": [
+      {
+        "level": "masters",
+        "field": "Computer Science",
+        "importance": "required",
+        "source_span": "Master's degree in Computer Science"
+      }
+    ],
+    "experience_required": {
+      "min_years": 2,
+      "importance": "required",
+      "source_span": "2+ years of experience"
+    }
+  },
+  "text": "Saguaro AI builds computer-vision products for agriculture. As a Data Scientist you will train and deploy models. What you bring: 2+ years of experience building machine learning models. Deep learning experience and strong SQL skills are required. Python is required. Experience with NLP is nice to have. Master's degree in Computer Science, Statistics, or a related field."
+}

@@ -1,0 +1,12 @@
+{
+ "tier": "auto",
+ "dev_nDCG": 0.9743981145206908,
+ "configs_tried": 108,
+ "scoring": {
+  "beta_ce": 0.4,
+  "beta_graph": 0.4,
+  "beta_penalty": 0.0,
+  "lambda_sub": 0.5,
+  "lambda_cat": 0.3
+ }
+}

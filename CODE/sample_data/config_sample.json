@@ -1,0 +1,40 @@
+{
+  "_comment": "Runs the whole pipeline offline on the synthetic sample: rule-based extraction, no API keys, no downloads. Sample numbers are not results.",
+  "paths": {
+    "postings": "CODE/sample_data/postings_cleaned.csv",
+    "resumes": "CODE/sample_data/resumes_cleaned.csv",
+    "extracted_postings": "CODE/sample_data/out/extracted/postings.jsonl",
+    "extracted_resumes": "CODE/sample_data/out/extracted/resumes.jsonl",
+    "skills": "CODE/sample_data/skills.json",
+    "split": "CODE/sample_data/out/split.json",
+    "graded_qrels": "CODE/sample_data/relevance/graded_qrels.csv",
+    "linking_gold": "CODE/sample_data/linking/linking_gold.csv",
+    "out_dir": "CODE/sample_data/out/runs"
+  },
+  "corpus": {
+    "n_postings": null
+  },
+  "extraction": {
+    "mode": "rules"
+  },
+  "linking": {
+    "dense_model": null,
+    "use_llm": false
+  },
+  "retrieval": {
+    "dense_model": null
+  },
+  "rerank": {
+    "model": null,
+    "top_n": 20
+  },
+  "evaluation": {
+    "bootstrap": 500,
+    "permutations": 2000
+  },
+  "labeling": {
+    "gold_dir": "CODE/sample_data/gold",
+    "gold_second_dir": "CODE/sample_data/gold_second",
+    "sheets_dir": "CODE/sample_data/out/labeling"
+  }
+}

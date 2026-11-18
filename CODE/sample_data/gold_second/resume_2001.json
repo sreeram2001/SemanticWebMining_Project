@@ -1,0 +1,66 @@
+{
+  "doc_id": "2001",
+  "kind": "resume",
+  "category": "INFORMATION-TECHNOLOGY",
+  "annotator": "sample2",
+  "facts": {
+    "skills": [
+      {
+        "name": "Python",
+        "source_span": "Python"
+      },
+      {
+        "name": "PySpark",
+        "source_span": "PySpark"
+      },
+      {
+        "name": "Kafka",
+        "source_span": "Kafka"
+      },
+      {
+        "name": "Azure",
+        "source_span": "Azure"
+      },
+      {
+        "name": "Databricks",
+        "source_span": "Databricks"
+      },
+      {
+        "name": "PostgreSQL",
+        "source_span": "PostgreSQL"
+      },
+      {
+        "name": "Git",
+        "source_span": "Git"
+      },
+      {
+        "name": "Spark",
+        "source_span": "Spark;"
+      }
+    ],
+    "degrees": [
+      {
+        "level": "bachelors",
+        "field": "Computer Science",
+        "institution": "Arizona State University",
+        "year": "2016",
+        "source_span": "Bachelor of Science : Computer Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Data Engineer",
+        "company": "Company Name",
+        "duration_months": 48,
+        "source_span": "Data Engineer"
+      },
+      {
+        "title": "Junior Developer",
+        "company": "Company Name",
+        "duration_months": 19,
+        "source_span": "Junior Developer"
+      }
+    ]
+  },
+  "text": "         DATA ENGINEER       Summary     Data engineer building batch and streaming pipelines on cloud platforms.     Skills     Python, PySpark, Kafka, Azure, Databricks, PostgreSQL, Git     Experience      Data Engineer    Jan 2018 to Current      Company Name   City , State    Built streaming ingestion with Kafka and Spark; maintained the data warehouse.      Junior Developer    Jun 2016 to Dec 2017      Company Name   City , State    Wrote ETL scripts in Python.      Education      Bachelor of Science : Computer Science    2016      Arizona State University   City , State  "
+}

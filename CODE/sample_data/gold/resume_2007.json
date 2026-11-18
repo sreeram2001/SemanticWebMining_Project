@@ -1,0 +1,48 @@
+{
+  "doc_id": "2007",
+  "kind": "resume",
+  "category": "FINANCE",
+  "annotator": "sample",
+  "facts": {
+    "skills": [
+      {
+        "name": "Financial Modeling",
+        "source_span": "Financial Modeling"
+      },
+      {
+        "name": "Budgeting",
+        "source_span": "Budgeting"
+      },
+      {
+        "name": "Forecasting",
+        "source_span": "Forecasting"
+      },
+      {
+        "name": "Excel",
+        "source_span": "Excel"
+      },
+      {
+        "name": "PowerPoint",
+        "source_span": "PowerPoint"
+      }
+    ],
+    "degrees": [
+      {
+        "level": "bachelors",
+        "field": "Finance",
+        "institution": null,
+        "year": "2019",
+        "source_span": "Bachelor of Science : Finance"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Financial Analyst",
+        "company": "Company Name",
+        "duration_months": 30,
+        "source_span": "Financial Analyst"
+      }
+    ]
+  },
+  "text": "         FINANCIAL ANALYST       Summary     Analyst supporting budgeting and forecasting.     Skills     Financial Modeling, Budgeting, Forecasting, Excel, PowerPoint     Experience      Financial Analyst    Jul 2019 to Current      Company Name   City , State    Built three-statement financial models.      Education      Bachelor of Science : Finance    2019      University   City , State  "
+}

@@ -1,0 +1,59 @@
+{
+  "doc_id": "1009",
+  "kind": "posting",
+  "category": null,
+  "annotator": "sample",
+  "facts": {
+    "required_skills": [
+      {
+        "name": "Financial Modeling",
+        "importance": "required",
+        "source_span": "financial modeling"
+      },
+      {
+        "name": "Forecasting",
+        "importance": "required",
+        "source_span": "forecasting"
+      },
+      {
+        "name": "Budgeting",
+        "importance": "required",
+        "source_span": "budgeting"
+      },
+      {
+        "name": "Excel",
+        "importance": "required",
+        "source_span": "Excel"
+      },
+      {
+        "name": "Variance Analysis",
+        "importance": "required",
+        "source_span": "variance analysis"
+      },
+      {
+        "name": "PowerPoint",
+        "importance": "preferred",
+        "source_span": "PowerPoint"
+      },
+      {
+        "name": "SQL",
+        "importance": "preferred",
+        "source_span": "SQL"
+      }
+    ],
+    "required_degrees": [
+      {
+        "level": "bachelors",
+        "field": "Finance",
+        "importance": "required",
+        "source_span": "Bachelor's degree in Finance"
+      }
+    ],
+    "experience_required": {
+      "min_years": 1,
+      "importance": "required",
+      "source_span": "1+ years of experience"
+    }
+  },
+  "text": "Copper State Bank seeks a Financial Analyst for its planning team. You will build financial models and prepare monthly variance analysis. Requirements: financial modeling, forecasting and budgeting. Advanced Excel. PowerPoint and SQL are a plus. Bachelor's degree in Finance or Economics. 1+ years of experience."
+}

@@ -1,0 +1,342 @@
+{
+ "results": {
+  "rules": {
+   "resume": {
+    "run": {
+     "ok": 0,
+     "error": 0,
+     "skipped": 3
+    },
+    "facts": {
+     "documents": 3,
+     "errors": 0,
+     "truncated": 0,
+     "fields": {
+      "skills": {
+       "kept": 20,
+       "unsupported": 0,
+       "invalid": 0,
+       "unsupported_rate": 0.0
+      },
+      "degrees": {
+       "kept": 3,
+       "unsupported": 0,
+       "invalid": 0,
+       "unsupported_rate": 0.0
+      },
+      "experience": {
+       "kept": 4,
+       "unsupported": 0,
+       "invalid": 0,
+       "unsupported_rate": 0.0
+      }
+     },
+     "reasons": {}
+    },
+    "grounded": {
+     "documents": 3,
+     "missing_predictions": 0,
+     "fields": {
+      "skills": {
+       "tp": 19,
+       "fp": 1,
+       "fn": 2,
+       "precision": 0.95,
+       "recall": 0.9047619047619048,
+       "f1": 0.926829268292683
+      },
+      "degrees": {
+       "tp": 0,
+       "fp": 3,
+       "fn": 3,
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0
+      },
+      "experience": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0
+      }
+     },
+     "macro_f1": 0.6422764227642276,
+     "macro_f1_ci95": [
+      0.6190476190476191,
+      0.6666666666666666
+     ]
+    },
+    "ungrounded": {
+     "documents": 3,
+     "missing_predictions": 0,
+     "fields": {
+      "skills": {
+       "tp": 19,
+       "fp": 1,
+       "fn": 2,
+       "precision": 0.95,
+       "recall": 0.9047619047619048,
+       "f1": 0.926829268292683
+      },
+      "degrees": {
+       "tp": 0,
+       "fp": 3,
+       "fn": 3,
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0
+      },
+      "experience": {
+       "tp": 4,
+       "fp": 0,
+       "fn": 0,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0
+      }
+     },
+     "macro_f1": 0.6422764227642276,
+     "macro_f1_ci95": [
+      0.6190476190476191,
+      0.6666666666666666
+     ]
+    }
+   },
+   "posting": {
+    "run": {
+     "ok": 0,
+     "error": 0,
+     "skipped": 3
+    },
+    "facts": {
+     "documents": 3,
+     "errors": 0,
+     "truncated": 0,
+     "fields": {
+      "required_skills": {
+       "kept": 19,
+       "unsupported": 0,
+       "invalid": 0,
+       "unsupported_rate": 0.0
+      },
+      "required_degrees": {
+       "kept": 3,
+       "unsupported": 0,
+       "invalid": 0,
+       "unsupported_rate": 0.0
+      },
+      "experience_required": {
+       "kept": 3,
+       "unsupported": 0,
+       "invalid": 0,
+       "unsupported_rate": 0.0
+      }
+     },
+     "reasons": {}
+    },
+    "grounded": {
+     "documents": 3,
+     "missing_predictions": 0,
+     "fields": {
+      "required_skills": {
+       "tp": 19,
+       "fp": 0,
+       "fn": 1,
+       "precision": 1.0,
+       "recall": 0.95,
+       "f1": 0.9743589743589743
+      },
+      "required_degrees": {
+       "tp": 0,
+       "fp": 3,
+       "fn": 3,
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0
+      },
+      "experience_required": {
+       "tp": 3,
+       "fp": 0,
+       "fn": 0,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0
+      }
+     },
+     "macro_f1": 0.6581196581196581,
+     "macro_f1_ci95": [
+      0.6444444444444445,
+      0.6666666666666666
+     ]
+    },
+    "ungrounded": {
+     "documents": 3,
+     "missing_predictions": 0,
+     "fields": {
+      "required_skills": {
+       "tp": 19,
+       "fp": 0,
+       "fn": 1,
+       "precision": 1.0,
+       "recall": 0.95,
+       "f1": 0.9743589743589743
+      },
+      "required_degrees": {
+       "tp": 0,
+       "fp": 3,
+       "fn": 3,
+       "precision": 0.0,
+       "recall": 0.0,
+       "f1": 0.0
+      },
+      "experience_required": {
+       "tp": 3,
+       "fp": 0,
+       "fn": 0,
+       "precision": 1.0,
+       "recall": 1.0,
+       "f1": 1.0
+      }
+     },
+     "macro_f1": 0.6581196581196581,
+     "macro_f1_ci95": [
+      0.6444444444444445,
+      0.6666666666666666
+     ]
+    }
+   }
+  }
+ },
+ "rows": [
+  {
+   "model": "rules",
+   "kind": "resume",
+   "mode": "grounded",
+   "macro_f1": 0.6422764227642276,
+   "ci95": [
+    0.6190476190476191,
+    0.6666666666666666
+   ],
+   "failed_docs": 0,
+   "skills_f1": 0.926829268292683,
+   "degrees_f1": 0.0,
+   "experience_f1": 1.0,
+   "unsupported_rate": 0.0
+  },
+  {
+   "model": "rules",
+   "kind": "resume",
+   "mode": "ungrounded",
+   "macro_f1": 0.6422764227642276,
+   "ci95": [
+    0.6190476190476191,
+    0.6666666666666666
+   ],
+   "failed_docs": 0,
+   "skills_f1": 0.926829268292683,
+   "degrees_f1": 0.0,
+   "experience_f1": 1.0,
+   "unsupported_rate": 0.0
+  },
+  {
+   "model": "rules",
+   "kind": "posting",
+   "mode": "grounded",
+   "macro_f1": 0.6581196581196581,
+   "ci95": [
+    0.6444444444444445,
+    0.6666666666666666
+   ],
+   "failed_docs": 0,
+   "required_skills_f1": 0.9743589743589743,
+   "required_degrees_f1": 0.0,
+   "experience_required_f1": 1.0,
+   "unsupported_rate": 0.0
+  },
+  {
+   "model": "rules",
+   "kind": "posting",
+   "mode": "ungrounded",
+   "macro_f1": 0.6581196581196581,
+   "ci95": [
+    0.6444444444444445,
+    0.6666666666666666
+   ],
+   "failed_docs": 0,
+   "required_skills_f1": 0.9743589743589743,
+   "required_degrees_f1": 0.0,
+   "experience_required_f1": 1.0,
+   "unsupported_rate": 0.0
+  }
+ ],
+ "agreement": {
+  "resume": {
+   "documents": 1,
+   "missing_predictions": 0,
+   "fields": {
+    "skills": {
+     "tp": 8,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.8888888888888888,
+     "recall": 1.0,
+     "f1": 0.9411764705882353
+    },
+    "degrees": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "experience": {
+     "tp": 2,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "macro_f1": 0.9803921568627452,
+   "macro_f1_ci95": null
+  },
+  "posting": {
+   "documents": 1,
+   "missing_predictions": 0,
+   "fields": {
+    "required_skills": {
+     "tp": 7,
+     "fp": 1,
+     "fn": 0,
+     "precision": 0.875,
+     "recall": 1.0,
+     "f1": 0.9333333333333333
+    },
+    "required_degrees": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    },
+    "experience_required": {
+     "tp": 1,
+     "fp": 0,
+     "fn": 0,
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0
+    }
+   },
+   "macro_f1": 0.9777777777777779,
+   "macro_f1_ci95": null
+  }
+ },
+ "gold_problems": [],
+ "unlabeled": 0
+}

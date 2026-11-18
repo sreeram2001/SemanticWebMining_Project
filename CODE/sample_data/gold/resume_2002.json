@@ -1,0 +1,56 @@
+{
+  "doc_id": "2002",
+  "kind": "resume",
+  "category": "INFORMATION-TECHNOLOGY",
+  "annotator": "sample",
+  "facts": {
+    "skills": [
+      {
+        "name": "Python",
+        "source_span": "Python"
+      },
+      {
+        "name": "PyTorch",
+        "source_span": "PyTorch"
+      },
+      {
+        "name": "TensorFlow",
+        "source_span": "TensorFlow"
+      },
+      {
+        "name": "scikit-learn",
+        "source_span": "scikit-learn"
+      },
+      {
+        "name": "PostgreSQL",
+        "source_span": "PostgreSQL"
+      },
+      {
+        "name": "Docker",
+        "source_span": "Docker"
+      },
+      {
+        "name": "Computer Vision",
+        "source_span": "computer-vision"
+      }
+    ],
+    "degrees": [
+      {
+        "level": "masters",
+        "field": "Computer Science",
+        "institution": null,
+        "year": "2019",
+        "source_span": "Master of Science : Computer Science"
+      }
+    ],
+    "experience": [
+      {
+        "title": "Machine Learning Engineer",
+        "company": "Company Name",
+        "duration_months": 34,
+        "source_span": "Machine Learning Engineer"
+      }
+    ]
+  },
+  "text": "         MACHINE LEARNING ENGINEER       Summary     Engineer training computer-vision and language models.     Skills     Python, PyTorch, TensorFlow, scikit-learn, PostgreSQL, Docker     Experience      Machine Learning Engineer    Mar 2019 to Current      Company Name   City , State    Trained image classifiers and deployed them with Docker.      Education      Master of Science : Computer Science    2019      University   City , State  "
+}

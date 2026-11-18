@@ -1,0 +1,21 @@
+mention_id,kind,doc_id,mention,context,candidates,gold_skill_id,annotator
+M0001,,,Postgres,"Java and PostgreSQL, Postgres in production",,SAMPLE007,sample
+M0002,,,Postgre SQL,Experience with Postgre SQL databases,,SAMPLE007,sample
+M0003,,,PySpark,"Skills Python, PySpark, Kafka",,SAMPLE011,sample
+M0004,,,ReactJS,"Skills JavaScript, ReactJS, Node.js",,SAMPLE036,sample
+M0005,,,K8s,Docker and K8s in production,,SAMPLE022,sample
+M0006,,,JS,"Must have: JS, React",,SAMPLE004,sample
+M0007,,,Java,Java and PostgreSQL for backend services,,SAMPLE002,sample
+M0008,,,US GAAP,"Skills US GAAP, Accounts Payable",,SAMPLE049,sample
+M0009,,,MS Excel,"Skills MS Excel, Account Reconciliation",,SAMPLE043,sample
+M0010,,,Keras,Trained image classifiers with Keras,,NIL,sample
+M0011,,,Snowflake,Snowflake and dbt are a plus,,NIL,sample
+M0012,,,Jira,Track work in Jira,,NIL,sample
+M0013,,,neural networks,Built neural networks for image tasks,,SAMPLE033,sample
+M0014,,,Kubernets,"Docker, Kubernets, AWS",,SAMPLE022,sample
+M0015,,,Salesforse,"Salesforse, Lead Generation",,SAMPLE063,sample
+M0016,,,Financial Models,Built financial models,,SAMPLE055,sample
+M0017,,,Payroll,"support recruiting, onboarding, payroll",,SAMPLE072,sample
+M0018,,,Search Engine Optimisation,search engine optimisation and SEM,,SAMPLE082,sample
+M0019,,,Talent Acquisition,Talent Acquisition lead,,SAMPLE069,sample
+M0020,,,Microsoft Office,Microsoft Office suite,,NIL,sample
