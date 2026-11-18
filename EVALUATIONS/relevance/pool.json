@@ -1,0 +1,6163 @@
+{
+ "seed": 573,
+ "depth": 10,
+ "methods": [
+  "bm25",
+  "dense",
+  "hybrid",
+  "rrf",
+  "rerank"
+ ],
+ "resumes": {
+  "dev": [
+   "13328680",
+   "51681660",
+   "29050809",
+   "86184722",
+   "42304307",
+   "11415967",
+   "30713796",
+   "16702198",
+   "25959103",
+   "17095812",
+   "27914096",
+   "10985403",
+   "28679359",
+   "28663949",
+   "14470533"
+  ],
+  "test": [
+   "29821051",
+   "17963031",
+   "61677751",
+   "93002334",
+   "28609364",
+   "64589506",
+   "30288581",
+   "25990239",
+   "23951429",
+   "31217840",
+   "15620421",
+   "74512244",
+   "31602598",
+   "11605833",
+   "23396633"
+  ]
+ },
+ "assignment": {
+  "aakash": [
+   "13328680",
+   "51681660",
+   "29050809",
+   "86184722",
+   "17095812",
+   "29821051",
+   "30288581",
+   "31602598"
+  ],
+  "chandana": [
+   "13328680",
+   "51681660",
+   "29050809",
+   "42304307",
+   "27914096",
+   "17963031",
+   "25990239",
+   "11605833"
+  ],
+  "chirag": [
+   "13328680",
+   "51681660",
+   "29050809",
+   "11415967",
+   "10985403",
+   "61677751",
+   "23951429",
+   "23396633"
+  ],
+  "kaushal": [
+   "13328680",
+   "51681660",
+   "29050809",
+   "30713796",
+   "28679359",
+   "93002334",
+   "31217840"
+  ],
+  "richitha": [
+   "13328680",
+   "51681660",
+   "29050809",
+   "16702198",
+   "28663949",
+   "28609364",
+   "15620421"
+  ],
+  "sreeram": [
+   "13328680",
+   "51681660",
+   "29050809",
+   "25959103",
+   "14470533",
+   "64589506",
+   "74512244"
+  ]
+ },
+ "stats": {
+  "resumes": 30,
+  "pairs": 898,
+  "mean_per_resume": 29.933333333333334
+ },
+ "pool": {
+  "13328680": [
+   {
+    "job_id": "3903459792",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899525202",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902354417",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902342942",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905249756",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905341105",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902349768",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884896651",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904928899",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902371357",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904574374",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884933304",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906098428",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899516779",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902840735",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3886894136",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3906097241",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902367662",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3906099041",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3888823376",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905225709",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905372904",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902346859",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905377271",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894901116",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3888825690",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905237869",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3898169794",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901946524",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902344828",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889104364",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904373722",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902354400",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3891076772",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905256332",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884929286",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904365421",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904511357",
+    "methods": [
+     "bm25",
+     "hybrid"
+    ]
+   }
+  ],
+  "51681660": [
+   {
+    "job_id": "3901640979",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905393271",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902937252",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905391559",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905391561",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903871967",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905389911",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901647510",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905394169",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901395357",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894282688",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901349910",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901941241",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904384838",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905393267",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905695814",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900071888",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891069786",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903467185",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901689549",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906096658",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904944370",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891074265",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901631043",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3891091648",
+    "methods": [
+     "rerank"
+    ]
+   }
+  ],
+  "29050809": [
+   {
+    "job_id": "3902772892",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904988743",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3885859444",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905377123",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901634983",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901938661",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3906247358",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894271267",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887581836",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901995721",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895280035",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884803147",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905311217",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904965823",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894562535",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901983584",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901951194",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901941531",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884433257",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904929063",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885115045",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901693597",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903879634",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904953959",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894979614",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902790003",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906256333",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900962710",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904958338",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901377575",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902916919",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905340387",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901392460",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905871759",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   }
+  ],
+  "86184722": [
+   {
+    "job_id": "3902348924",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902668440",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906226836",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905242006",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905873700",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901960784",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3887103382",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902785002",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904719444",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902875974",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887107156",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3894299506",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901668999",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894284830",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905295445",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901393821",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905824247",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905335957",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3891011926",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3887857987",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904086620",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899526643",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901630033",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3895826753",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904392601",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891256442",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901677830",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901932974",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906202115",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3899531612",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902806579",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904944231",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901661179",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904365451",
+    "methods": [
+     "bm25"
+    ]
+   }
+  ],
+  "42304307": [
+   {
+    "job_id": "3904403904",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904721983",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3888002437",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3898172830",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3885115007",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898168038",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3894612556",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902358950",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902754749",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3898178340",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3895546115",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900981609",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884898860",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3898165366",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898167222",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889436502",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3898169008",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3886835914",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901667664",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887899819",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904071983",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898178335",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3889435639",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884851481",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884429786",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898165238",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902863724",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905612332",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901377099",
+    "methods": [
+     "bm25",
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889279966",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3888973758",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3900945020",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884434209",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   }
+  ],
+  "11415967": [
+   {
+    "job_id": "3906230100",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887909807",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903847544",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904988780",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3889412913",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904384636",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903472866",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905650597",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904962481",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906097526",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901676222",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901698745",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904383858",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901949253",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884440264",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884915227",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903840833",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3895242424",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905832930",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3887946450",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884438592",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901344663",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903844788",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902865779",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905311253",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904394032",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905364612",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900069923",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901344591",
+    "methods": [
+     "hybrid"
+    ]
+   }
+  ],
+  "30713796": [
+   {
+    "job_id": "3904991519",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901372781",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905331606",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906260988",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3887889015",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905327736",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905392551",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904390351",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895547174",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903842158",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895545204",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904567708",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895544405",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901469933",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901631125",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901949193",
+    "methods": [
+     "bm25",
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904388489",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904569468",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903869822",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887886524",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901941737",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902353765",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902790093",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905885478",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894400134",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905205568",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903842933",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894401091",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905303186",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902783910",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903813021",
+    "methods": [
+     "bm25"
+    ]
+   }
+  ],
+  "16702198": [
+   {
+    "job_id": "3901672281",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901372215",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904717669",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902861834",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904435355",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904727072",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901375852",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902735893",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902814021",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902737513",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3906227955",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902751839",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904963010",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899532269",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902846241",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904392090",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905204757",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904426393",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891248749",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902812476",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3906250525",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884920769",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901349069",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894992038",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901175613",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904727071",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903800663",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884441917",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895520299",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   }
+  ],
+  "25959103": [
+   {
+    "job_id": "3903806888",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901351878",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900067885",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902349760",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3885854571",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901945098",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3885826873",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3895508231",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891285732",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885823916",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901962235",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905201407",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905254732",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905859137",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905284704",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902739664",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3894546216",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905885070",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905214623",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905342098",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901967175",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902740422",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3899524648",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903844554",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901341765",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901949285",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904383638",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905886139",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891288484",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889718748",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891289141",
+    "methods": [
+     "rerank"
+    ]
+   }
+  ],
+  "17095812": [
+   {
+    "job_id": "3900981838",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903477241",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887860395",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902738664",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902780852",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884820702",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904421475",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902344439",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3887860416",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904430633",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3886897291",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904359985",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901695972",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905237882",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902922510",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904429720",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898168765",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3885833298",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904419251",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894541769",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887496959",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3890899968",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3889412923",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904960915",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903463481",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902343476",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884440238",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3885811459",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902341738",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904363371",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904429947",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887860394",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904419242",
+    "methods": [
+     "hybrid"
+    ]
+   }
+  ],
+  "27914096": [
+   {
+    "job_id": "3890899193",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905287351",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904969510",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900958891",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887905793",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3885108059",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889744181",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3906259800",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901392460",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3899509417",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902350480",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899523380",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902930908",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887870852",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894562535",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887908536",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894980651",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887470450",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904503431",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3903455559",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3899521424",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898165987",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905302985",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902358312",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3898166224",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905656058",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905359773",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902948538",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894279082",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894260885",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903879634",
+    "methods": [
+     "bm25"
+    ]
+   }
+  ],
+  "10985403": [
+   {
+    "job_id": "3905253038",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902833833",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3895490955",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901393098",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901989567",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903807798",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905873984",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906258307",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904358881",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901942967",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3898167036",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901358327",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905331963",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902367719",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905334122",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3887904814",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900071624",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3780003361",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884811464",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902832643",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905243287",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905231370",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901392966",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901357185",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901936927",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884814773",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891080309",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3906225638",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894254894",
+    "methods": [
+     "dense"
+    ]
+   }
+  ],
+  "28679359": [
+   {
+    "job_id": "3905216404",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3886877053",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884437433",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3900960597",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904391385",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884433264",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884819675",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905864300",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901390852",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889770752",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3885111456",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3890891706",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905821192",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3906225502",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903456269",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905372904",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905858584",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904942553",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903459078",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902840735",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887713709",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901960681",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891072541",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901976733",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898169794",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889749822",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884929286",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906074302",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905249090",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905377271",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895532863",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887997132",
+    "methods": [
+     "dense"
+    ]
+   }
+  ],
+  "28663949": [
+   {
+    "job_id": "3904095007",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887483831",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903863453",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3693083161",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905218400",
+    "methods": [
+     "bm25",
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901479956",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895201186",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3903457515",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889485009",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905241545",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3898173319",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891248759",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887879690",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904987266",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904725434",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905299454",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3886442799",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902759261",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899522876",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903494319",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902310200",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902759224",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901680178",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903479151",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3899529274",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   }
+  ],
+  "14470533": [
+   {
+    "job_id": "3900970381",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3894909721",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903803942",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901951194",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901628021",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3891013967",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901392460",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901949376",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902740669",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884800381",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3888028751",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905340387",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3891261998",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902865848",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906074311",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905211044",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891077296",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3885852967",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885859444",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901344871",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904965823",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898164454",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3836602983",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901995721",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903833114",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884442544",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901654418",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905302985",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901378486",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901944084",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3888486864",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903826924",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903469876",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894996733",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901607136",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884433257",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901344486",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   }
+  ],
+  "29821051": [
+   {
+    "job_id": "3891261998",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3899509417",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901944084",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3885859444",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901607136",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895280035",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903879634",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904068452",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904584467",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906256333",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885853924",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894979614",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3888028751",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900970381",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3899521424",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902877558",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885108059",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902359183",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902772892",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902790003",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900076890",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884920915",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905302985",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901995721",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884812229",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884433257",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903888718",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3906247358",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889744181",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884935447",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903810369",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3903445488",
+    "methods": [
+     "rerank"
+    ]
+   }
+  ],
+  "17963031": [
+   {
+    "job_id": "3901993008",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902349760",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902345777",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898161482",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903826756",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901386874",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3900942500",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901957732",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902868050",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3885822686",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902756303",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901967175",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3899525436",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902347683",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902943796",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904394012",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885854571",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901393115",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904384476",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905272866",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895560402",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904383638",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903845358",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904942701",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905303027",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901652222",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3888947086",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   }
+  ],
+  "61677751": [
+   {
+    "job_id": "3901988457",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905664874",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898169527",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903801053",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905673375",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3899528741",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905859107",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902918540",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902924862",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902748418",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3886884054",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904724415",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905292765",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3898180070",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905294420",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902780852",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899524216",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902320958",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904724538",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905309367",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898171424",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900953577",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3899524220",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901995100",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   }
+  ],
+  "93002334": [
+   {
+    "job_id": "3905845036",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901351032",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3889755785",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902359161",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901965047",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903877609",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903872980",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894213083",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3895504958",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906237175",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902743889",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901377600",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901389277",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901690869",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894981322",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889417464",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889760206",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884924864",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3906248433",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901167349",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904420443",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3899534687",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895591992",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895848391",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904578900",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3906234522",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901938528",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904924378",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   }
+  ],
+  "28609364": [
+   {
+    "job_id": "3905202767",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905337382",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904575512",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3895212900",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3889029399",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905342974",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906259103",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905336439",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884924066",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904430618",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905878109",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905237869",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885109963",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903875395",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901685552",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901910411",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895211010",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904926878",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894899318",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905369977",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904391385",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904724538",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901364485",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902814864",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904426393",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884819675",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884433264",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904396164",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895239929",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901372215",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906203022",
+    "methods": [
+     "hybrid"
+    ]
+   }
+  ],
+  "64589506": [
+   {
+    "job_id": "3905871381",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891277162",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901677079",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3898170237",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904394269",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905882724",
+    "methods": [
+     "bm25",
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901940795",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899532513",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905395125",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904389540",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3894957980",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3889482097",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901960579",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891287717",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904361481",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887700861",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3894945687",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3898168070",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902353310",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904724004",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906075231",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904384957",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904098737",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902863845",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905689130",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3894944227",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3885857037",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   }
+  ],
+  "30288581": [
+   {
+    "job_id": "3901563038",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898161440",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3888408574",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887834531",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905237612",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903810493",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3900955245",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902861326",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906232057",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904363989",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902851017",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906261687",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903471847",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903467169",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902762051",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902340705",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901389847",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3891071812",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903472580",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894287037",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894868463",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889424888",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902751978",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3888411793",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3888405908",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905839508",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3889424889",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905211571",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   }
+  ],
+  "25990239": [
+   {
+    "job_id": "3900074788",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901622148",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905341000",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891071593",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3889418026",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3894400248",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904390564",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903440936",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3906253707",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3894932959",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887101802",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3902756365",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3894400253",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3895214576",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902368485",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905847774",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902915218",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3890895164",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894610113",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904723267",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884433564",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889414919",
+    "methods": [
+     "dense",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898160286",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905310024",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906098480",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3898163036",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3899930721",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901945351",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   }
+  ],
+  "23951429": [
+   {
+    "job_id": "3904959220",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898166879",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3894996815",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904956706",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905350291",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904710008",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903449152",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3898156389",
+    "methods": [
+     "bm25",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905372892",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904941771",
+    "methods": [
+     "bm25",
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903462766",
+    "methods": [
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905380158",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3894928250",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901668384",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894401715",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900087063",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3906223961",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901360008",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901677561",
+    "methods": [
+     "bm25",
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901689549",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900071888",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905859954",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905861146",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887103519",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901929980",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   }
+  ],
+  "31217840": [
+   {
+    "job_id": "3902348430",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895278490",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905253018",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904599757",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885824272",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902927004",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884438406",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901934969",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904727336",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3891079268",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905337823",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902359432",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3898161253",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905332414",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3898178274",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901391029",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904571444",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900983482",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3899544212",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904392705",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901353398",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901939725",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901376658",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3891074775",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891074946",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901978822",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3906232310",
+    "methods": [
+     "rerank"
+    ]
+   }
+  ],
+  "15620421": [
+   {
+    "job_id": "3904394268",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887989739",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894943510",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3884429788",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904061702",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3884434958",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903875867",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905348415",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904429720",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901677046",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3691793998",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904420443",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891073516",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895531199",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905868994",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905609717",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3884821454",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904950787",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3904430633",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901989073",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905349283",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904423505",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904921852",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903462740",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3885848861",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894940776",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3887710913",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903429245",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901346514",
+    "methods": [
+     "dense"
+    ]
+   }
+  ],
+  "74512244": [
+   {
+    "job_id": "3887710913",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903874896",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3900979015",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905230703",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3900961456",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901995721",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906079019",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903869822",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903888718",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3889437728",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906256333",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3894562535",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3887870852",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902877558",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903874106",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902768782",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901944084",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3903443660",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904719458",
+    "methods": [
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3891078543",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904381596",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3904365653",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3886886429",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3902760602",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889757250",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3884433257",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889769625",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905299649",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905395336",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3894976427",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3898165979",
+    "methods": [
+     "bm25"
+    ]
+   }
+  ],
+  "31602598": [
+   {
+    "job_id": "3901951194",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3905340387",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3900955409",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3899509417",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3900955077",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905207609",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898161216",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903448903",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3899523817",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901978351",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901995721",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903455559",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904098288",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3891809352",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3903479134",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904414054",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902347510",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904965823",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3906256333",
+    "methods": [
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904394338",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902870074",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3891080783",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3900970381",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887910318",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904708103",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3898159597",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3887906609",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3905247971",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3885115045",
+    "methods": [
+     "dense",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902790003",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3895201263",
+    "methods": [
+     "dense",
+     "rrf"
+    ]
+   }
+  ],
+  "11605833": [
+   {
+    "job_id": "3884444371",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904384357",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901939699",
+    "methods": [
+     "bm25",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905307723",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3906226094",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904988280",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901943613",
+    "methods": [
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904704983",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3906233662",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887596450",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905335840",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904972375",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3903879086",
+    "methods": [
+     "bm25",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887591902",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3904973230",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3906098178",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904921852",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901394182",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902863840",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904385320",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905235617",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903482440",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884440235",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3903879087",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3902863839",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3887872942",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904969561",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902916076",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   }
+  ],
+  "23396633": [
+   {
+    "job_id": "3903885401",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3886834889",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3886836819",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3903800604",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901960014",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3905846984",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902748418",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3886885192",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3889122238",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3905600035",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3895239929",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3902354554",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3886834971",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905297547",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3901953541",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3903844495",
+    "methods": [
+     "dense"
+    ]
+   },
+   {
+    "job_id": "3901988295",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3904095140",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3888999810",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901942610",
+    "methods": [
+     "dense",
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901372234",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3902837858",
+    "methods": [
+     "bm25",
+     "rrf"
+    ]
+   },
+   {
+    "job_id": "3901388937",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3901800114",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3905326811",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901943478",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3884924066",
+    "methods": [
+     "bm25"
+    ]
+   },
+   {
+    "job_id": "3895257024",
+    "methods": [
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3904992054",
+    "methods": [
+     "hybrid"
+    ]
+   },
+   {
+    "job_id": "3901688270",
+    "methods": [
+     "dense",
+     "hybrid",
+     "rrf",
+     "rerank"
+    ]
+   },
+   {
+    "job_id": "3900094559",
+    "methods": [
+     "rrf",
+     "rerank"
+    ]
+   }
+  ]
+ }
+}

@@ -156,6 +156,8 @@ class ParseJsonTest(unittest.TestCase):
         self.assertEqual(parse_json('<think>\nreasoning {x}\n</think>\n{"a": 1}'), {"a": 1})
         self.assertEqual(parse_json('```json\n{"a": 1}\n```'), {"a": 1})
         self.assertEqual(parse_json('Here you go: {"a": 1} hope it helps'), {"a": 1})
+        # raw tab and newline inside a string, as Qwen sometimes returns
+        self.assertEqual(parse_json('{"a": "x\ty\nz"}'), {"a": "x\ty\nz"})
 
     def test_garbage(self):
         with self.assertRaises(ValueError):
