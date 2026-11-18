@@ -106,3 +106,27 @@ class CliTests(unittest.TestCase):
         with self.assertRaises(SystemExit) as cm:
             rb.main(["--help"])
         self.assertEqual(cm.exception.code, 0)
+
+
+class PriorRunTests(unittest.TestCase):
+    def test_hybrid_uses_prior_indexes(self):
+        bm25, dense, tfidf = build()
+        ids = list(JOBS)
+        prior = {"skills": ["python"], "tfidf": rt.prior_tfidf(ids, list(JOBS.values())),
+                 "dense": rt.DenseIndex(ids, [EMB[i] for i in ids])}
+        runs = rb.run_rankers({"r1": "python sql"}, bm25, dense, tfidf, fake_encode, k=2, prior=prior)
+        self.assertIn(runs["hybrid"]["r1"][0][0], {"j1", "j3"})
+
+    def test_prior_order_mismatch(self):
+        bm25, dense, tfidf = build()
+        prior = {"skills": [], "tfidf": tfidf, "dense": rt.DenseIndex(["x"] * 4, [[1, 0]] * 4)}
+        with self.assertRaises(ValueError):
+            rb.run_rankers({"r1": "x"}, bm25, dense, tfidf, fake_encode, prior=prior)
+
+    def test_split_ids_and_hash(self):
+        with tempfile.TemporaryDirectory() as d:
+            path = os.path.join(d, "s.json")
+            with open(path, "w") as f:
+                f.write('{"docs": {"resume:1": "dev", "posting:9": "dev", "resume:2": "test"}}')
+            self.assertEqual(rb.split_resume_ids(path), ["1", "2"])
+            self.assertEqual(len(rb.file_hash(path)), 12)

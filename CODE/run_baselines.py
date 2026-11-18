@@ -23,19 +23,30 @@ def select_resumes(df, per_category=3, seed=573, ids=None):
     return pd.concat(parts) if parts else df.head(0)
 
 
-def run_rankers(queries, bm25, dense, tfidf, encode_query, k=100):
+def run_rankers(queries, bm25, dense, tfidf, encode_query, k=100, prior=None):
     if not (bm25.ids == dense.ids == tfidf.ids):
         raise ValueError("BM25, dense and TF-IDF indexes must share the same job order")
+    if prior is not None and not (prior["tfidf"].ids == prior["dense"].ids == dense.ids):
+        raise ValueError("prior indexes must share the same job order")
     runs = {m: {} for m in ("bm25", "dense", "hybrid", "rrf")}
     rids = list(queries)
     qvecs = encode_query([queries[r] for r in rids])
+    if prior is not None:
+        pq = {r: rt.prior_query(queries[r], prior["skills"]) for r in rids}
+        pvecs = dict(zip(rids, encode_query([pq[r] for r in rids])))
     for rid, qvec in zip(rids, qvecs):
         text = queries[rid]
         runs["bm25"][rid] = bm25.search(text, k)
         runs["dense"][rid] = dense.search(qvec, k)
-        runs["hybrid"][rid] = rt.weighted_hybrid(
-            tfidf.similarities(text), dense.similarities(qvec), dense.ids, k=k
-        )
+        if prior is None:
+            runs["hybrid"][rid] = rt.weighted_hybrid(
+                tfidf.similarities(text), dense.similarities(qvec), dense.ids, k=k
+            )
+        else:
+            runs["hybrid"][rid] = rt.weighted_hybrid(
+                prior["tfidf"].similarities(pq[rid]),
+                prior["dense"].similarities(pvecs[rid]), dense.ids, k=k
+            )
         runs["rrf"][rid] = rt.rrf([runs["bm25"][rid], runs["dense"][rid]], top=k)
     return runs
 
@@ -53,6 +64,22 @@ def build_dense_index(ids, texts, cache_path, model_name=DEFAULT_MODEL):
     return idx
 
 
+def split_resume_ids(path):
+    with open(path) as f:
+        docs = json.load(f)["docs"]
+    return [k.split(":", 1)[1] for k in docs if k.startswith("resume:")]
+
+
+def file_hash(*paths):
+    import hashlib
+    h = hashlib.sha256()
+    for path in paths:
+        with open(path, "rb") as f:
+            for block in iter(lambda: f.read(1 << 20), b""):
+                h.update(block)
+    return h.hexdigest()[:12]
+
+
 def main(argv=None):
     p = argparse.ArgumentParser(description="Run the baseline rankers for each resume.")
     p.add_argument("--processed", default="DATA/processed")
@@ -62,6 +89,9 @@ def main(argv=None):
     p.add_argument("--k", type=int, default=100, help="results kept per method")
     p.add_argument("--per-category", type=int, default=3)
     p.add_argument("--resume-ids", help="text file with one resume id per line")
+    p.add_argument("--split", help="use the resumes in a gold split json (e.g. EVALUATIONS/gold_split.json)")
+    p.add_argument("--prior-cache", default="DATA/embeddings/postings_prior.npz")
+    p.add_argument("--no-prior", action="store_true", help="hybrid on our job text instead of the previous team's")
     p.add_argument(
         "--limit-postings", type=int, help="use only the first N postings (smoke test)"
     )
@@ -83,6 +113,8 @@ def main(argv=None):
     if a.resume_ids:
         with open(a.resume_ids) as f:
             ids_filter = [line.strip() for line in f if line.strip()]
+    if a.split:
+        ids_filter = split_resume_ids(a.split)
     chosen = select_resumes(resumes, a.per_category, a.seed, ids_filter)
     queries = {str(r["ID"]): r["Resume_clean"] for r in chosen.to_dict("records")}
     print(f"{len(queries)} resumes")
@@ -90,8 +122,13 @@ def main(argv=None):
     bm25 = rt.BM25Index(ids, texts)
     tfidf = rt.TfidfIndex(ids, texts)
     dense = build_dense_index(ids, texts, a.cache, a.model)
+    prior = None
+    if not a.no_prior:
+        ptexts = [rt.prior_job_text(r) for r in posts.to_dict("records")]
+        prior = {"skills": rt.load_prior_skills(), "tfidf": rt.prior_tfidf(ids, ptexts),
+                 "dense": build_dense_index(ids, ptexts, a.prior_cache, a.model)}
     runs = run_rankers(
-        queries, bm25, dense, tfidf, lambda t: rt.encode_texts(t, a.model), a.k
+        queries, bm25, dense, tfidf, lambda t: rt.encode_texts(t, a.model), a.k, prior
     )
 
     result = {
@@ -102,6 +139,9 @@ def main(argv=None):
             "rrf_k": rt.DEFAULT_RRF_K,
             "n_postings": len(ids),
             "n_resumes": len(queries),
+            "hybrid": "previous team (phase2_pipeline.py)" if prior else "ours",
+            "data_hash": file_hash(os.path.join(a.processed, "postings_cleaned.csv"),
+                                   os.path.join(a.processed, "resumes_cleaned.csv")),
         },
         "runs": runs,
     }
