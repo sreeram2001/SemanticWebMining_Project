@@ -1,0 +1,865 @@
+{
+ "source": "SYNTHETIC sample in Lightcast cache format (not real Lightcast IDs)",
+ "version": "sample",
+ "fields": "id,name,type,category,subcategory,description",
+ "fetched": "2026-11-17",
+ "count": 107,
+ "skills": [
+  {
+   "id": "SAMPLE001",
+   "name": "Python (Programming Language)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Programming Languages",
+   "description": "High-level general-purpose programming language."
+  },
+  {
+   "id": "SAMPLE002",
+   "name": "Java (Programming Language)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Programming Languages",
+   "description": "Object-oriented programming language for enterprise software."
+  },
+  {
+   "id": "SAMPLE003",
+   "name": "Scala (Programming Language)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Programming Languages",
+   "description": "Functional and object-oriented language on the JVM."
+  },
+  {
+   "id": "SAMPLE004",
+   "name": "JavaScript (Programming Language)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Programming Languages",
+   "description": "Scripting language for web browsers and servers."
+  },
+  {
+   "id": "SAMPLE005",
+   "name": "TypeScript",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Programming Languages",
+   "description": "Typed superset of JavaScript."
+  },
+  {
+   "id": "SAMPLE006",
+   "name": "SQL (Programming Language)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Databases",
+   "description": "Language for querying relational databases."
+  },
+  {
+   "id": "SAMPLE007",
+   "name": "PostgreSQL",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Databases",
+   "description": "Open-source object-relational database."
+  },
+  {
+   "id": "SAMPLE008",
+   "name": "MySQL",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Databases",
+   "description": "Open-source relational database management system."
+  },
+  {
+   "id": "SAMPLE009",
+   "name": "Microsoft SQL Servers",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Databases",
+   "description": "Relational database server from Microsoft."
+  },
+  {
+   "id": "SAMPLE010",
+   "name": "MongoDB",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Databases",
+   "description": "Document-oriented NoSQL database."
+  },
+  {
+   "id": "SAMPLE011",
+   "name": "Apache Spark",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Big Data",
+   "description": "Distributed engine for large-scale data processing."
+  },
+  {
+   "id": "SAMPLE012",
+   "name": "Apache Kafka",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Big Data",
+   "description": "Distributed event streaming platform."
+  },
+  {
+   "id": "SAMPLE013",
+   "name": "Apache Hadoop",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Big Data",
+   "description": "Framework for distributed storage and batch processing."
+  },
+  {
+   "id": "SAMPLE014",
+   "name": "Apache Airflow",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Big Data",
+   "description": "Platform to author, schedule and monitor workflows."
+  },
+  {
+   "id": "SAMPLE015",
+   "name": "Databricks",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Big Data",
+   "description": "Unified analytics platform built on Apache Spark."
+  },
+  {
+   "id": "SAMPLE016",
+   "name": "Extract Transform Load (ETL)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Big Data",
+   "description": "Process of moving data from sources into a data warehouse."
+  },
+  {
+   "id": "SAMPLE017",
+   "name": "Data Warehousing",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Big Data",
+   "description": "Storing integrated data for reporting and analysis."
+  },
+  {
+   "id": "SAMPLE018",
+   "name": "Amazon Web Services",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Cloud Computing",
+   "description": "Cloud computing platform from Amazon."
+  },
+  {
+   "id": "SAMPLE019",
+   "name": "Microsoft Azure",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Cloud Computing",
+   "description": "Cloud computing platform from Microsoft."
+  },
+  {
+   "id": "SAMPLE020",
+   "name": "Google Cloud Platform (GCP)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Cloud Computing",
+   "description": "Cloud computing platform from Google."
+  },
+  {
+   "id": "SAMPLE021",
+   "name": "Docker (Software)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "DevOps",
+   "description": "Platform for building and running containers."
+  },
+  {
+   "id": "SAMPLE022",
+   "name": "Kubernetes",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "DevOps",
+   "description": "Container orchestration system."
+  },
+  {
+   "id": "SAMPLE023",
+   "name": "Continuous Integration/Continuous Deployment (CI/CD)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "DevOps",
+   "description": "Automated building, testing and release of software."
+  },
+  {
+   "id": "SAMPLE024",
+   "name": "Terraform",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "DevOps",
+   "description": "Infrastructure as code tool."
+  },
+  {
+   "id": "SAMPLE025",
+   "name": "Git (Version Control System)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "DevOps",
+   "description": "Distributed version control system."
+  },
+  {
+   "id": "SAMPLE026",
+   "name": "Linux",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Operating Systems",
+   "description": "Open-source Unix-like operating system."
+  },
+  {
+   "id": "SAMPLE027",
+   "name": "Machine Learning",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Machine Learning",
+   "description": "Algorithms that learn patterns from data."
+  },
+  {
+   "id": "SAMPLE028",
+   "name": "Deep Learning",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Machine Learning",
+   "description": "Machine learning with multi-layer neural networks."
+  },
+  {
+   "id": "SAMPLE029",
+   "name": "PyTorch (Machine Learning Library)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Machine Learning",
+   "description": "Open-source deep learning framework."
+  },
+  {
+   "id": "SAMPLE030",
+   "name": "TensorFlow",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Machine Learning",
+   "description": "Open-source machine learning framework."
+  },
+  {
+   "id": "SAMPLE031",
+   "name": "Scikit-Learn (Python Package)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Machine Learning",
+   "description": "Python library for classical machine learning."
+  },
+  {
+   "id": "SAMPLE032",
+   "name": "Natural Language Processing",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Machine Learning",
+   "description": "Computational processing of human language."
+  },
+  {
+   "id": "SAMPLE033",
+   "name": "Artificial Neural Networks",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Machine Learning",
+   "description": "Computing systems inspired by biological neurons."
+  },
+  {
+   "id": "SAMPLE034",
+   "name": "Tableau (Business Intelligence Software)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Data Visualization",
+   "description": "Interactive data visualization software."
+  },
+  {
+   "id": "SAMPLE035",
+   "name": "Power BI",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Data Visualization",
+   "description": "Business analytics service from Microsoft."
+  },
+  {
+   "id": "SAMPLE036",
+   "name": "React.js",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Web Development",
+   "description": "JavaScript library for building user interfaces."
+  },
+  {
+   "id": "SAMPLE037",
+   "name": "Node.js",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Web Development",
+   "description": "JavaScript runtime for server-side applications."
+  },
+  {
+   "id": "SAMPLE038",
+   "name": "HTML5",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Web Development",
+   "description": "Markup language for web pages."
+  },
+  {
+   "id": "SAMPLE039",
+   "name": "Cascading Style Sheets (CSS)",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Web Development",
+   "description": "Style sheet language for web pages."
+  },
+  {
+   "id": "SAMPLE040",
+   "name": "Active Directory",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Network and System Administration",
+   "description": "Directory service for Windows domain networks."
+  },
+  {
+   "id": "SAMPLE041",
+   "name": "Technical Support",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Network and System Administration",
+   "description": "Helping users resolve technology problems."
+  },
+  {
+   "id": "SAMPLE042",
+   "name": "Help Desk Support",
+   "type": "Specialized Skill",
+   "category": "Information Technology",
+   "subcategory": "Network and System Administration",
+   "description": "First-line IT support for end users."
+  },
+  {
+   "id": "SAMPLE043",
+   "name": "Microsoft Excel",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Office and Productivity Tools",
+   "description": "Spreadsheet software."
+  },
+  {
+   "id": "SAMPLE044",
+   "name": "Microsoft PowerPoint",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Office and Productivity Tools",
+   "description": "Presentation software."
+  },
+  {
+   "id": "SAMPLE045",
+   "name": "Microsoft Word",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Office and Productivity Tools",
+   "description": "Word processing software."
+  },
+  {
+   "id": "SAMPLE046",
+   "name": "Project Management",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Project Management",
+   "description": "Planning and executing projects to meet goals."
+  },
+  {
+   "id": "SAMPLE047",
+   "name": "Stakeholder Management",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Project Management",
+   "description": "Managing relationships with project stakeholders."
+  },
+  {
+   "id": "SAMPLE048",
+   "name": "Accounting",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Accounting",
+   "description": "Recording and reporting financial transactions."
+  },
+  {
+   "id": "SAMPLE049",
+   "name": "Generally Accepted Accounting Principles",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Accounting",
+   "description": "Standard accounting rules in the United States."
+  },
+  {
+   "id": "SAMPLE050",
+   "name": "Accounts Payable",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Accounting",
+   "description": "Managing money a company owes to suppliers."
+  },
+  {
+   "id": "SAMPLE051",
+   "name": "Accounts Receivable",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Accounting",
+   "description": "Managing money owed to a company by customers."
+  },
+  {
+   "id": "SAMPLE052",
+   "name": "Financial Statements",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Accounting",
+   "description": "Reports of a company's financial performance."
+  },
+  {
+   "id": "SAMPLE053",
+   "name": "Account Reconciliation",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Accounting",
+   "description": "Comparing records to verify balances."
+  },
+  {
+   "id": "SAMPLE054",
+   "name": "QuickBooks (Accounting Software)",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Accounting",
+   "description": "Small-business accounting software."
+  },
+  {
+   "id": "SAMPLE055",
+   "name": "Financial Modeling",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Financial Analysis",
+   "description": "Building models of a company's financial performance."
+  },
+  {
+   "id": "SAMPLE056",
+   "name": "Forecasting",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Financial Analysis",
+   "description": "Projecting future financial outcomes."
+  },
+  {
+   "id": "SAMPLE057",
+   "name": "Budgeting",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Financial Analysis",
+   "description": "Planning and controlling expenditures."
+  },
+  {
+   "id": "SAMPLE058",
+   "name": "Variance Analysis",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Financial Analysis",
+   "description": "Comparing planned and actual financial results."
+  },
+  {
+   "id": "SAMPLE059",
+   "name": "Loan Origination",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Banking",
+   "description": "Process of creating a new loan."
+  },
+  {
+   "id": "SAMPLE060",
+   "name": "Underwriting",
+   "type": "Specialized Skill",
+   "category": "Finance",
+   "subcategory": "Banking",
+   "description": "Assessing the risk of lending or insuring."
+  },
+  {
+   "id": "SAMPLE061",
+   "name": "Customer Service",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "Customer Relationship Management",
+   "description": "Helping customers before and after a purchase."
+  },
+  {
+   "id": "SAMPLE062",
+   "name": "Customer Relationship Management",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "Customer Relationship Management",
+   "description": "Managing interactions with customers."
+  },
+  {
+   "id": "SAMPLE063",
+   "name": "Salesforce",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "Customer Relationship Management",
+   "description": "Cloud CRM software."
+  },
+  {
+   "id": "SAMPLE064",
+   "name": "Lead Generation",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "Sales Prospecting and Qualification",
+   "description": "Identifying potential customers."
+  },
+  {
+   "id": "SAMPLE065",
+   "name": "Cold Calling",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "Sales Prospecting and Qualification",
+   "description": "Unsolicited calls to prospective customers."
+  },
+  {
+   "id": "SAMPLE066",
+   "name": "Negotiation",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "General Sales Practices",
+   "description": "Reaching agreements through discussion."
+  },
+  {
+   "id": "SAMPLE067",
+   "name": "Account Management",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "General Sales Practices",
+   "description": "Maintaining relationships with existing clients."
+  },
+  {
+   "id": "SAMPLE068",
+   "name": "Business Development",
+   "type": "Specialized Skill",
+   "category": "Sales",
+   "subcategory": "General Sales Practices",
+   "description": "Creating long-term value through new customers and markets."
+  },
+  {
+   "id": "SAMPLE069",
+   "name": "Recruitment",
+   "type": "Specialized Skill",
+   "category": "Human Resources",
+   "subcategory": "Talent Acquisition",
+   "description": "Finding and hiring candidates."
+  },
+  {
+   "id": "SAMPLE070",
+   "name": "Onboarding",
+   "type": "Specialized Skill",
+   "category": "Human Resources",
+   "subcategory": "Talent Acquisition",
+   "description": "Integrating new hires into an organization."
+  },
+  {
+   "id": "SAMPLE071",
+   "name": "Applicant Tracking Systems",
+   "type": "Specialized Skill",
+   "category": "Human Resources",
+   "subcategory": "Talent Acquisition",
+   "description": "Software that manages recruiting workflows."
+  },
+  {
+   "id": "SAMPLE072",
+   "name": "Payroll Processing",
+   "type": "Specialized Skill",
+   "category": "Human Resources",
+   "subcategory": "Compensation and Benefits",
+   "description": "Paying employees accurately and on time."
+  },
+  {
+   "id": "SAMPLE073",
+   "name": "Employee Benefits",
+   "type": "Specialized Skill",
+   "category": "Human Resources",
+   "subcategory": "Compensation and Benefits",
+   "description": "Non-wage compensation for employees."
+  },
+  {
+   "id": "SAMPLE074",
+   "name": "Employee Relations",
+   "type": "Specialized Skill",
+   "category": "Human Resources",
+   "subcategory": "Employee Relations",
+   "description": "Managing relationships between employer and employees."
+  },
+  {
+   "id": "SAMPLE075",
+   "name": "User Experience (UX)",
+   "type": "Specialized Skill",
+   "category": "Design",
+   "subcategory": "User Interface and User Experience (UI/UX) Design",
+   "description": "How a person experiences a product."
+  },
+  {
+   "id": "SAMPLE076",
+   "name": "Wireframing",
+   "type": "Specialized Skill",
+   "category": "Design",
+   "subcategory": "User Interface and User Experience (UI/UX) Design",
+   "description": "Low-fidelity layouts of a product's screens."
+  },
+  {
+   "id": "SAMPLE077",
+   "name": "Prototyping",
+   "type": "Specialized Skill",
+   "category": "Design",
+   "subcategory": "User Interface and User Experience (UI/UX) Design",
+   "description": "Building early models of a product."
+  },
+  {
+   "id": "SAMPLE078",
+   "name": "Figma (Design Software)",
+   "type": "Specialized Skill",
+   "category": "Design",
+   "subcategory": "User Interface and User Experience (UI/UX) Design",
+   "description": "Collaborative interface design tool."
+  },
+  {
+   "id": "SAMPLE079",
+   "name": "Adobe Photoshop",
+   "type": "Specialized Skill",
+   "category": "Design",
+   "subcategory": "Graphic and Visual Design Software",
+   "description": "Raster graphics editor."
+  },
+  {
+   "id": "SAMPLE080",
+   "name": "Adobe Illustrator",
+   "type": "Specialized Skill",
+   "category": "Design",
+   "subcategory": "Graphic and Visual Design Software",
+   "description": "Vector graphics editor."
+  },
+  {
+   "id": "SAMPLE081",
+   "name": "Graphic Design",
+   "type": "Specialized Skill",
+   "category": "Design",
+   "subcategory": "Visual Design and Presentation",
+   "description": "Visual communication through images and type."
+  },
+  {
+   "id": "SAMPLE082",
+   "name": "Search Engine Optimization",
+   "type": "Specialized Skill",
+   "category": "Marketing and Public Relations",
+   "subcategory": "Digital Marketing",
+   "description": "Improving a site's ranking in search results."
+  },
+  {
+   "id": "SAMPLE083",
+   "name": "Search Engine Marketing",
+   "type": "Specialized Skill",
+   "category": "Marketing and Public Relations",
+   "subcategory": "Digital Marketing",
+   "description": "Paid advertising in search engines."
+  },
+  {
+   "id": "SAMPLE084",
+   "name": "Social Media Marketing",
+   "type": "Specialized Skill",
+   "category": "Marketing and Public Relations",
+   "subcategory": "Digital Marketing",
+   "description": "Promoting products through social media."
+  },
+  {
+   "id": "SAMPLE085",
+   "name": "Google Analytics",
+   "type": "Specialized Skill",
+   "category": "Marketing and Public Relations",
+   "subcategory": "Digital Marketing",
+   "description": "Web analytics service from Google."
+  },
+  {
+   "id": "SAMPLE086",
+   "name": "Content Marketing",
+   "type": "Specialized Skill",
+   "category": "Marketing and Public Relations",
+   "subcategory": "Content Development and Management",
+   "description": "Creating content to attract customers."
+  },
+  {
+   "id": "SAMPLE087",
+   "name": "Copywriting",
+   "type": "Specialized Skill",
+   "category": "Marketing and Public Relations",
+   "subcategory": "Content Development and Management",
+   "description": "Writing text for advertising and marketing."
+  },
+  {
+   "id": "SAMPLE088",
+   "name": "Patient Care",
+   "type": "Specialized Skill",
+   "category": "Health Care",
+   "subcategory": "Nursing and Patient Care",
+   "description": "Services that support patients' health."
+  },
+  {
+   "id": "SAMPLE089",
+   "name": "Electronic Medical Record",
+   "type": "Specialized Skill",
+   "category": "Health Care",
+   "subcategory": "Health Information Management",
+   "description": "Digital version of a patient's chart."
+  },
+  {
+   "id": "SAMPLE090",
+   "name": "Medication Administration",
+   "type": "Specialized Skill",
+   "category": "Health Care",
+   "subcategory": "Nursing and Patient Care",
+   "description": "Giving medicines to patients safely."
+  },
+  {
+   "id": "SAMPLE091",
+   "name": "Cardiopulmonary Resuscitation (CPR)",
+   "type": "Specialized Skill",
+   "category": "Health Care",
+   "subcategory": "Basic Patient Care",
+   "description": "Emergency procedure for cardiac arrest."
+  },
+  {
+   "id": "SAMPLE092",
+   "name": "Basic Life Support (BLS)",
+   "type": "Specialized Skill",
+   "category": "Health Care",
+   "subcategory": "Basic Patient Care",
+   "description": "Life-support care until advanced help arrives."
+  },
+  {
+   "id": "SAMPLE093",
+   "name": "Vital Signs",
+   "type": "Specialized Skill",
+   "category": "Health Care",
+   "subcategory": "Basic Patient Care",
+   "description": "Measurements of the body's basic functions."
+  },
+  {
+   "id": "SAMPLE094",
+   "name": "Phlebotomy",
+   "type": "Specialized Skill",
+   "category": "Health Care",
+   "subcategory": "Basic Patient Care",
+   "description": "Drawing blood from patients."
+  },
+  {
+   "id": "SAMPLE095",
+   "name": "Computer-Aided Design",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Mechanical Engineering",
+   "description": "Using software to create technical drawings."
+  },
+  {
+   "id": "SAMPLE096",
+   "name": "SolidWorks (CAD)",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Mechanical Engineering",
+   "description": "3D CAD software for mechanical design."
+  },
+  {
+   "id": "SAMPLE097",
+   "name": "AutoCAD",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Mechanical Engineering",
+   "description": "2D and 3D CAD software."
+  },
+  {
+   "id": "SAMPLE098",
+   "name": "Finite Element Methods",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Mechanical Engineering",
+   "description": "Numerical method for engineering analysis."
+  },
+  {
+   "id": "SAMPLE099",
+   "name": "Lean Manufacturing",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Manufacturing Processes",
+   "description": "Minimizing waste in manufacturing."
+  },
+  {
+   "id": "SAMPLE100",
+   "name": "Six Sigma Methodology",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Manufacturing Processes",
+   "description": "Data-driven process improvement."
+  },
+  {
+   "id": "SAMPLE101",
+   "name": "Circuit Design",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Electrical and Computer Engineering",
+   "description": "Designing electronic circuits."
+  },
+  {
+   "id": "SAMPLE102",
+   "name": "Programmable Logic Controllers",
+   "type": "Specialized Skill",
+   "category": "Engineering",
+   "subcategory": "Electrical and Computer Engineering",
+   "description": "Industrial computers for automation."
+  },
+  {
+   "id": "SAMPLE103",
+   "name": "Management Consulting",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Consulting",
+   "description": "Helping organizations improve performance."
+  },
+  {
+   "id": "SAMPLE104",
+   "name": "Business Process Improvement",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Consulting",
+   "description": "Redesigning business processes."
+  },
+  {
+   "id": "SAMPLE105",
+   "name": "Communication",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Communication",
+   "description": "Exchanging information clearly."
+  },
+  {
+   "id": "SAMPLE106",
+   "name": "Leadership",
+   "type": "Specialized Skill",
+   "category": "Business",
+   "subcategory": "Leadership",
+   "description": "Guiding and motivating a team."
+  },
+  {
+   "id": "SAMPLE900",
+   "name": "Java (Coffee)",
+   "type": "Common Skill",
+   "category": "Hospitality",
+   "subcategory": "Food and Beverage",
+   "description": "Brewed coffee beverage."
+  }
+ ]
+}

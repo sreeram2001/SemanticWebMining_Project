@@ -27,6 +27,7 @@ A resume and job matching assistant that extracts facts from resumes and posting
    - The graph ablation sets b2 = 0.
 8. Relevance judgments (`pooling.py`): 30 resumes (15 dev, 15 test) chosen from the gold split by category. The top 10 jobs of each method are pooled (898 pairs) and split into one grading sheet per person, with 3 resumes shared by everyone for agreement (weighted Cohen's kappa).
 9. Tuning and evaluation (`tune_ranking.py`): b2, b3 and the partial-credit values are tuned on dev only. Every method is reported with P@10 and nDCG@10, plus ΔnDCG@10 between the full score and the no-graph ablation.
+10. Chat assistant (`assistant.py`, `app.py`): a Gradio web UI over the modules above. Load a resume (sample, .txt/.pdf upload or pasted text), then ask for the top jobs, the skill evidence behind a match, missing skills, job details, or a side-by-side comparison, and switch the ranking method.
 
 ## Status
 
@@ -62,6 +63,18 @@ SemanticWebMining_Project/
 ├── CODE/
 │   ├── SWM_Project_Linkedin_Assistant.ipynb
 │   ├── ontology.json
+│   ├── extraction.py
+│   ├── evaluation.py
+│   ├── skill_linking.py
+│   ├── skill_aliases.json
+│   ├── linking_evaluation.py
+│   ├── retrieval.py
+│   ├── rerank.py
+│   ├── run_baselines.py
+│   ├── assistant.py            # chat logic over the modules above
+│   ├── app.py                  # Gradio web UI
+│   ├── requirements.txt
+│   ├── sample_data/            # small synthetic corpus for the offline demo
 │   ├── extraction.py, evaluation.py          # grounded extraction and its evaluation
 │   ├── skill_linking.py, linking_evaluation.py, skill_aliases.json
 │   ├── prepare_data.py                       # cleaning, same rules as the notebook
@@ -78,6 +91,29 @@ SemanticWebMining_Project/
     ├── sample_extraction.json
     └── skill_linking_demo.json
 ```
+
+## Run the chat assistant
+
+From the repository root:
+
+```bash
+pip install -r CODE/requirements.txt
+python CODE/app.py --sample       # offline demo on CODE/sample_data, no keys needed
+python CODE/app.py                # real data
+```
+
+Then open http://127.0.0.1:7860. `--share` gives a public link (e.g. from Colab), and `--limit-postings N` ranks only the first N postings for a faster start.
+
+The real-data run reads:
+
+- `DATA/processed/postings_cleaned.csv` and `resumes_cleaned.csv` (notebook Step 1)
+- `DATA/lightcast/skills.json` (`skill_linking.download_and_cache`)
+- `DATA/extracted/postings.jsonl` and `resumes.jsonl` (notebook Step 3b), optional
+- `DATA/embeddings/postings.npz`, the same embedding cache as `run_baselines.py`, built on first run if missing
+
+Ranks and scores come from the team's rankers, with the resume text as the query. Skills come from the extraction records, linked to Lightcast with `skill_linking.Linker`. Each job skill is checked with `skill_linking.check_missing`, which searches the resume text before calling a skill missing. With `ASU_VOYAGER_KEY` set, a resume or posting with no extraction record is extracted on demand with `extraction.Extractor`. Uploaded resumes are never written to disk.
+
+Without `sentence-transformers` (or with `--no-models`) only BM25 is offered. Tests: `python -m unittest discover -s CODE`.
 
 ## Data
 
