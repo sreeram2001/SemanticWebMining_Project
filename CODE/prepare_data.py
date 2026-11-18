@@ -1,17 +1,3 @@
-"""Clean the raw datasets into DATA/processed/ for the retrieval scripts.
-
-    python CODE/prepare_data.py --postings job_posting/postings.csv \\
-        --resumes resume/Resume/Resume.csv
-
-This repeats the notebook's Step 1 so the rankers can run on a laptop with the
-downloaded Kaggle files, without Colab. The rules are the notebook's: drop
-postings with no description, duplicate ids or a description under 50 characters;
-keep the 12 resume categories that overlap with the postings; mask emails,
-phone numbers and URLs in resumes. The output files are the same:
-  DATA/processed/postings_cleaned.csv
-  DATA/processed/resumes_cleaned.csv   (adds the Resume_clean column)
-If the team's notebook rules change, change them here too.
-"""
 import argparse
 import os
 import re
@@ -34,7 +20,6 @@ _URL = re.compile(r"https?://\S+")
 
 
 def mask_pii(text):
-    """Mask emails, phone numbers and URLs (same order as the notebook)."""
     text = _EMAIL.sub("[EMAIL]", text)
     text = _PHONE.sub("[PHONE]", text)
     return _URL.sub("[URL]", text)

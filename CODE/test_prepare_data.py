@@ -1,7 +1,3 @@
-"""Unit tests for prepare_data.py.
-
-    cd CODE && python -m unittest test_prepare_data
-"""
 import unittest
 
 import pandas as pd

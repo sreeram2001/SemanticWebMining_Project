@@ -94,7 +94,7 @@ class DenseCacheTests(unittest.TestCase):
             path = os.path.join(d, "e.npz")
             rt.DenseIndex(["a", "b"], [[1, 0], [0, 1]]).save(path)
             idx = rb.build_dense_index(["a", "b"], ["x", "y"], path, "unused-model")
-            self.assertEqual(idx.ids, ["a", "b"])  # no model needed -> cache hit
+            self.assertEqual(idx.ids, ["a", "b"])
 
 
 if __name__ == "__main__":

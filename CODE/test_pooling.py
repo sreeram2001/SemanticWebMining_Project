@@ -1,7 +1,3 @@
-"""Unit tests for pooling.py (standard library only).
-
-    cd CODE && python -m unittest test_pooling
-"""
 import csv
 import os
 import tempfile
@@ -60,11 +56,11 @@ class SheetTests(unittest.TestCase):
         paths = pl.write_sheets(self.pool, {"r1": "resume text"},
                                 {"j1": {"title": "Dev", "description": "x" * 1000}},
                                 self.tmp.name, ["ann", "bob"], {"r1": "IT"})
-        self.assertEqual(len(paths), 3)  # resumes.csv + one sheet each
+        self.assertEqual(len(paths), 3)
         with open(paths[1], newline="", encoding="utf-8") as f:
             rows = list(csv.DictReader(f))
         self.assertEqual(len(rows), 3)
-        self.assertNotIn("methods", rows[0])           # hidden from annotators
+        self.assertNotIn("methods", rows[0])
         self.assertTrue(all(r["grade"] == "" for r in rows))
         self.assertLessEqual(max(len(r["description"]) for r in rows), pl.DESC_CHARS)
 
@@ -90,7 +86,7 @@ class MergeTests(unittest.TestCase):
 
     def test_mean_rounded_half_up(self):
         a, b = {("r", "j"): 2, ("r", "k"): 0}, {("r", "j"): 1, ("r", "k"): 0}
-        self.assertEqual(pl.merge_grades([a, b])["r"], {"j": 2, "k": 0})  # 1.5 -> 2
+        self.assertEqual(pl.merge_grades([a, b])["r"], {"j": 2, "k": 0})
 
     def test_union_of_pairs(self):
         out = pl.merge_grades([{("r1", "a"): 1}, {("r2", "b"): 2}])
@@ -156,14 +152,13 @@ class SelectTests(unittest.TestCase):
 
     def test_categories_covered_before_repeats(self):
         out = pl.select_relevance_resumes(self.SPLIT, self.CATS, n_dev=2, n_test=2)
-        # dev ids are odd -> categories C1, C3 only; both must appear
         self.assertEqual({self.CATS[r] for r in out["dev"]}, {"C1", "C3"})
 
     def test_deterministic_and_capped(self):
         a = pl.select_relevance_resumes(self.SPLIT, self.CATS, n_dev=50, n_test=1)
         b = pl.select_relevance_resumes(self.SPLIT, self.CATS, n_dev=50, n_test=1)
         self.assertEqual(a, b)
-        self.assertEqual(len(a["dev"]), 12)  # only 12 dev resumes exist
+        self.assertEqual(len(a["dev"]), 12)
 
     def test_ignores_postings(self):
         out = pl.select_relevance_resumes({"posting:9": "dev"}, {}, 3, 3)

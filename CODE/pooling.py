@@ -1,20 +1,3 @@
-"""Relevance pooling and grading sheets (Step 6b, owner: Sreeram).
-
-Builds the graded relevance judgments (0 = not relevant, 1 = partly, 2 = relevant)
-for the 30 test resumes:
-
-  1. build_pool       take the top `depth` jobs from every method's run, merge
-                      them, and shuffle so annotators cannot tell which method
-                      ranked a job first
-  2. write_sheets     write a jobs sheet and a resumes file for the annotators
-  3. read_grades      read each annotator's filled-in sheet
-  4. merge_grades     one grade per (resume, job) for the evaluation harness
-  5. weighted_kappa   inter-annotator agreement on the shared items
-
-The merged grades have the shape {resume id: {job id: grade}} that
-retrieval.evaluate() expects.
-"""
-
 import csv
 import os
 import random
@@ -25,15 +8,7 @@ GRADES = (0, 1, 2)
 DESC_CHARS = 600
 
 
-# ------------------------------------------------------------------- pooling
 def build_pool(runs, resume_ids, depth=10, seed=573, methods=None):
-    """Pool the top `depth` jobs of each method for each resume.
-
-    `runs`: {method: {resume id: [(job id, score), ...]}}. Returns
-    {resume id: [{"job_id", "methods": [...]}, ...]} in a seeded shuffled
-    order, where "methods" lists every method that put the job in its top
-    `depth`. The methods are kept for analysis and left out of the sheets.
-    """
     names = list(methods or runs)
     pool = {}
     for rid in resume_ids:
@@ -56,15 +31,7 @@ def pool_stats(pool):
     }
 
 
-# -------------------------------------------------------------------- sheets
 def select_relevance_resumes(split, categories, n_dev=15, n_test=15, seed=573):
-    """Pick the graded resumes from the frozen gold split, stratified by category.
-
-    `split`: the "docs" map of EVALUATIONS/gold_split.json ("resume:<id>" ->
-    "dev" or "test"). `categories`: {resume id: category}. Within each split,
-    resumes are taken round-robin over categories in a seeded order, so every
-    category is covered before any repeats. Returns {"dev": [...], "test": [...]}.
-    """
     out = {}
     for name, n in (("dev", n_dev), ("test", n_test)):
         by_cat = defaultdict(list)
@@ -88,8 +55,6 @@ def select_relevance_resumes(split, categories, n_dev=15, n_test=15, seed=573):
 
 
 def assign_resumes(resume_ids, annotators, shared=3):
-    """{annotator: [resume ids]}. The first `shared` resumes go to everyone
-    (for agreement); the rest are dealt out round-robin, one owner each."""
     ids = list(resume_ids)
     common, rest = ids[:shared], ids[shared:]
     out = {a: list(common) for a in annotators}
@@ -107,13 +72,6 @@ def write_sheets(
     resume_categories=None,
     assignment=None,
 ):
-    """Write the files annotators fill in.
-
-    One sheet per annotator: resume_id, job_id, title, company, description
-    (excerpt), grade (blank). resumes.csv has the full resume text. With an
-    `assignment` ({annotator: [resume ids]}) each sheet only holds that
-    person's resumes; otherwise everyone gets every pair. Returns the paths.
-    """
     os.makedirs(out_dir, exist_ok=True)
     paths = []
     resumes_path = os.path.join(out_dir, "resumes.csv")
@@ -151,11 +109,6 @@ def write_sheets(
 
 
 def read_grades(path):
-    """Read one annotator's sheet into {(resume id, job id): grade}.
-
-    Blank grades are skipped. A grade outside 0, 1, 2 raises ValueError with
-    the row, so typos are caught before they reach the metrics.
-    """
     out = {}
     with open(path, newline="", encoding="utf-8") as f:
         for n, row in enumerate(csv.DictReader(f), start=2):
@@ -173,12 +126,6 @@ def read_grades(path):
 
 
 def merge_grades(sheets):
-    """Combine annotators into {resume id: {job id: grade}}.
-
-    `sheets`: list of {(resume id, job id): grade}. The final grade is the mean
-    of the available grades, rounded half up, so one annotator's grade stands
-    when only one graded the pair.
-    """
     collected = defaultdict(list)
     for sheet in sheets:
         for key, g in sheet.items():
@@ -189,14 +136,7 @@ def merge_grades(sheets):
     return dict(qrels)
 
 
-# ----------------------------------------------------------------- agreement
 def weighted_kappa(a, b, categories=len(GRADES)):
-    """Quadratic-weighted Cohen's kappa for two annotators' ordinal grades.
-
-    1.0 is perfect agreement, 0 is chance level. If both annotators gave one
-    identical grade throughout, chance agreement is total and the result is
-    1.0 when they agree and 0.0 otherwise.
-    """
     if len(a) != len(b):
         raise ValueError("the two grade lists must have the same length")
     n = len(a)
@@ -220,11 +160,6 @@ def weighted_kappa(a, b, categories=len(GRADES)):
 
 
 def agreement(sheets):
-    """Mean pairwise weighted kappa over annotators, with the item counts.
-
-    Only pairs graded by both annotators are compared. Returns
-    {"pairs": {(i, j): (kappa, n)}, "mean_kappa": float or None}.
-    """
     pairs = {}
     for i, j in combinations(range(len(sheets)), 2):
         shared = sorted(set(sheets[i]) & set(sheets[j]))
@@ -239,7 +174,6 @@ def agreement(sheets):
     return {"pairs": pairs, "mean_kappa": mean}
 
 
-# ----------------------------------------------------------------------- CLI
 ANNOTATORS = ["aakash", "chandana", "chirag", "kaushal", "richitha", "sreeram"]
 POOL_METHODS = ("bm25", "dense", "hybrid", "rrf", "rerank")
 

@@ -1,8 +1,3 @@
-"""Unit tests for graph_score.py (standard library only).
-
-cd CODE && python -m unittest test_graph_score
-"""
-
 import json
 import os
 import tempfile
@@ -18,7 +13,6 @@ NIL = {"id": None, "name": None, "category": None, "subcategory": None}
 
 
 def job(skills=(), degrees=(), exp=None):
-    """Linked posting record in the extraction.run_batch shape."""
     return {
         "doc_id": "j",
         "kind": "posting",
